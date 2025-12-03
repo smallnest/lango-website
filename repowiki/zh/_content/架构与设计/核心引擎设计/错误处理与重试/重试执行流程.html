@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../../项目概述.html">项目概述</a></li><li><a class="" href="../../../快速入门.html">快速入门</a></li><li><a class="" href="../../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../架构与设计.html">架构与设计</a></li><li><a class="" href="../../架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="active" href="重试执行流程.html">重试执行流程</a></li><li><a class="" href="重试策略配置.html">重试策略配置</a></li><li><a class="" href="错误判定机制.html">错误判定机制</a></li><li><a class="" href="错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../../../教程与示例/LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../../../教程与示例/MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../../../教程与示例/人机协作.html">人机协作</a></li><li><a class="" href="../../../教程与示例/基础示例教程.html">基础示例教程</a></li><li><a class="" href="../../../教程与示例/多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../../../教程与示例/多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../../../教程与示例/并行执行.html">并行执行</a></li><li><a class="" href="../../../教程与示例/技能集成.html">技能集成</a></li><li><a class="" href="../../../教程与示例/教程与示例.html">教程与示例</a></li><li><a class="" href="../../../教程与示例/条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../../../教程与示例/流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../../../教程与示例/RAG 示例系列/RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../../../教程与示例/RAG 示例系列/基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../../../教程与示例/RAG 示例系列/向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../../../教程与示例/RAG 示例系列/向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../../../教程与示例/RAG 示例系列/向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../../../教程与示例/RAG 示例系列/向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="../../../教程与示例/RAG 示例系列/高级RAG模式/条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="" href="../../../教程与示例/RAG 示例系列/高级RAG模式/检索后重排序.html">检索后重排序</a></li><li><a class="" href="../../../教程与示例/RAG 示例系列/高级RAG模式/高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../../../教程与示例/子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../../../教程与示例/子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../../../教程与示例/子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../../../教程与示例/工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../../../教程与示例/工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../../../教程与示例/工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../../../教程与示例/工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="../../../教程与示例/智能代理示例/ReAct代理.html">ReAct代理</a></li><li><a class="" href="../../../教程与示例/智能代理示例/代理协调器.html">代理协调器</a></li><li><a class="" href="../../../教程与示例/智能代理示例/代理群.html">代理群</a></li><li><a class="" href="../../../教程与示例/智能代理示例/动态技能系统.html">动态技能系统</a></li><li><a class="" href="../../../教程与示例/智能代理示例/基础代理创建.html">基础代理创建</a></li><li><a class="" href="../../../教程与示例/智能代理示例/智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../../../教程与示例/检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../../../教程与示例/检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../../../教程与示例/检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../../../教程与示例/检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="" href="../../../教程与示例/状态管理与模式/基础内存管理.html">基础内存管理</a></li><li><a class="" href="../../../教程与示例/状态管理与模式/状态模式定义.html">状态模式定义</a></li><li><a class="" href="../../../教程与示例/状态管理与模式/状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="../../../教程与示例/状态管理与模式/自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../../../教程与示例/高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../../../教程与示例/高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../../../教程与示例/高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../../../教程与示例/高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../../../教程与示例/高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../../../教程与示例/高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../../../教程与示例/高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../../../教程与示例/高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../../../教程与示例/高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../../../核心概念/核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="../../../核心概念/图结构工作流/入口点.html">入口点</a></li><li><a class="" href="../../../核心概念/图结构工作流/图结构工作流.html">图结构工作流</a></li><li><a class="" href="../../../核心概念/图结构工作流/子图.html">子图</a></li><li><a class="" href="../../../核心概念/图结构工作流/并行执行.html">并行执行</a></li><li><a class="" href="../../../核心概念/图结构工作流/条件边.html">条件边</a></li><li><a class="" href="../../../核心概念/图结构工作流/节点.html">节点</a></li><li><a class="" href="../../../核心概念/图结构工作流/边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="" href="../../../核心概念/持久化检查点/持久化检查点.html">持久化检查点</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点监听器.html">检查点监听器</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../../../核心概念/流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../../../核心概念/流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../../../核心概念/流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../../../核心概念/流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../../../核心概念/流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../../../核心概念/流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="" href="../../../核心概念/状态管理/状态归约器.html">状态归约器</a></li><li><a class="" href="../../../核心概念/状态管理/状态模式.html">状态模式</a></li><li><a class="" href="../../../核心概念/状态管理/状态管理.html">状态管理</a></li><li><a class="" href="../../../核心概念/状态管理/瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../../核心概念/监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../../../核心概念/监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../../../核心概念/监听器/监听器.html">监听器</a></li><li><a class="" href="../../../核心概念/监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../../../核心概念/监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../../../核心概念/监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../../../核心概念/监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../../../核心概念/监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../../../核心概念/监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../../../核心概念/监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../../../核心概念/监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../../../核心概念/监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../../../核心概念/监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../../高级特性/子图.html">子图</a></li><li><a class="" href="../../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E9%87%8D%E8%AF%95%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B">重试执行流程 <a class="heading-anchor-permalink" href="#%E9%87%8D%E8%AF%95%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档中引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go">retry.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/retry_test.go">retry_test.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go">state_graph.go</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E6%9E%B6%E6%9E%84">核心组件架构</a></li>
+<li><a href="#retrynode-%E7%BB%93%E6%9E%84%E4%BD%93%E8%AF%A6%E8%A7%A3">RetryNode 结构体详解</a></li>
+<li><a href="#staterunnable-%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6">StateRunnable 执行机制</a></li>
+<li><a href="#%E9%87%8D%E8%AF%95%E7%AD%96%E7%95%A5%E9%85%8D%E7%BD%AE">重试策略配置</a></li>
+<li><a href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F%E5%9B%BE">执行流程时序图</a></li>
+<li><a href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E4%B8%8E%E6%81%A2%E5%A4%8D">错误处理与恢复</a></li>
+<li><a href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>langgraphgo 提供了强大的重试机制，确保图执行过程中的节点操作能够应对临时性故障。该系统通过两个主要组件实现：<code>RetryNode</code> 结构体用于包装单个节点的重试逻辑，以及 <code>StateRunnable</code> 中的 <code>executeNodeWithRetry</code> 方法用于图级别的重试控制。</p>
+<p>重试机制的核心特点包括：</p>
+<ul>
+<li>支持指数退避、线性退避和固定间隔三种退避策略</li>
+<li>可配置的最大重试次数和初始延迟时间</li>
+<li>基于错误类型的可插拔重试决策机制</li>
+<li>完整的上下文取消支持</li>
+<li>图级别和节点级别的双重重试控制</li>
+</ul>
+<h2 id="%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E6%9E%B6%E6%9E%84">核心组件架构 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E6%9E%B6%E6%9E%84">#</a></h2>
+<pre><code class="language-mermaid">classDiagram
+class RetryNode {
++Node node
++RetryConfig config
++Execute(ctx, state) (interface, error)
+}
+class RetryConfig {
++int MaxAttempts
++time.Duration InitialDelay
++time.Duration MaxDelay
++float64 BackoffFactor
++func(error) bool RetryableErrors
+}
+class StateRunnable {
++StateGraph graph
++executeNodeWithRetry(ctx, node, state) (interface, error)
++isRetryableError(err) bool
++calculateBackoffDelay(attempt) time.Duration
+}
+class RetryPolicy {
++int MaxRetries
++BackoffStrategy BackoffStrategy
++[]string RetryableErrors
+}
+class Node {
++string Name
++func(ctx, state) (interface, error) Function
+}
+RetryNode --&gt; RetryConfig : "使用"
+RetryNode --&gt; Node : "包装"
+StateRunnable --&gt; RetryPolicy : "应用"
+StateRunnable --&gt; Node : "执行"
+StateGraph --&gt; RetryPolicy : "配置"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L34-L38)</li>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L99-L101)</li>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L33-L39)</li>
+</ul>
+<h2 id="retrynode-%E7%BB%93%E6%9E%84%E4%BD%93%E8%AF%A6%E8%A7%A3">RetryNode 结构体详解 <a class="heading-anchor-permalink" href="#retrynode-%E7%BB%93%E6%9E%84%E4%BD%93%E8%AF%A6%E8%A7%A3">#</a></h2>
+<h3 id="%E7%BB%93%E6%9E%84%E5%AE%9A%E4%B9%89">结构定义 <a class="heading-anchor-permalink" href="#%E7%BB%93%E6%9E%84%E5%AE%9A%E4%B9%89">#</a></h3>
+<p><code>RetryNode</code> 是一个轻量级的包装器，负责为单个节点添加重试功能：</p>
+<pre><code class="language-mermaid">classDiagram
+class RetryNode {
+-Node node
+-RetryConfig config
++Execute(ctx, state) (interface, error)
+}
+class RetryConfig {
++int MaxAttempts
++time.Duration InitialDelay
++time.Duration MaxDelay
++float64 BackoffFactor
++func(error) bool RetryableErrors
+}
+RetryNode --&gt; RetryConfig : "包含"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L34-L38)</li>
+</ul>
+<h3 id="execute-%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0">Execute 方法实现 <a class="heading-anchor-permalink" href="#execute-%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p><code>Execute</code> 方法是重试逻辑的核心，实现了完整的重试循环：</p>
+<pre><code class="language-mermaid">flowchart TD
+Start([开始执行]) --&gt; InitVars["初始化变量&lt;br/&gt;lastErr = nil&lt;br/&gt;delay = InitialDelay"]
+InitVars --&gt; LoopStart["循环开始&lt;br/&gt;attempt = 1 到 MaxAttempts"]
+LoopStart --&gt; CheckCancel["检查上下文取消&lt;br/&gt;select {&lt;-ctx.Done()}"]
+CheckCancel --&gt; Cancelled{"上下文已取消?"}
+Cancelled --&gt; |是| ReturnCancelled["返回取消错误"]
+Cancelled --&gt; |否| ExecuteNode["执行节点函数&lt;br/&gt;result, err = node.Function()"]
+ExecuteNode --&gt; Success{"执行成功?"}
+Success --&gt; |是| ReturnResult["返回结果"]
+Success --&gt; |否| UpdateError["更新 lastErr = err"]
+UpdateError --&gt; CheckRetryable["检查是否可重试&lt;br/&gt;RetryableErrors(err)"]
+CheckRetryable --&gt; IsRetryable{"可重试?"}
+IsRetryable --&gt; |否| ReturnNonRetryable["返回非重试错误"]
+IsRetryable --&gt; |是| CheckLastAttempt["检查是否最后尝试&lt;br/&gt;attempt &lt; MaxAttempts"]
+CheckLastAttempt --&gt; |否| ReturnMaxRetries["返回最大重试错误"]
+CheckLastAttempt --&gt; |是| Delay["等待退避延迟&lt;br/&gt;time.After(delay)"]
+Delay --&gt; CalcNextDelay["计算下一次延迟&lt;br/&gt;delay = delay * BackoffFactor"]
+CalcNextDelay --&gt; CheckMaxDelay["检查最大延迟限制&lt;br/&gt;delay &gt; MaxDelay"]
+CheckMaxDelay --&gt; ClampDelay["限制延迟&lt;br/&gt;delay = MaxDelay"]
+ClampDelay --&gt; LoopStart
+ReturnResult --&gt; End([结束])
+ReturnCancelled --&gt; End
+ReturnNonRetryable --&gt; End
+ReturnMaxRetries --&gt; End
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L51-L94)</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L51-L94)</li>
+</ul>
+<h3 id="%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7">关键特性 <a class="heading-anchor-permalink" href="#%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7">#</a></h3>
+<ol>
+<li><strong>上下文感知</strong>：在每次重试前检查 <code>ctx.Done()</code>，确保及时响应取消信号</li>
+<li><strong>指数退避</strong>：支持可配置的退避因子，实现指数增长的延迟</li>
+<li><strong>延迟限制</strong>：防止延迟无限增长，设置最大延迟上限</li>
+<li><strong>可插拔错误判断</strong>：允许用户自定义哪些错误应该触发重试</li>
+<li><strong>优雅降级</strong>：当达到最大重试次数时提供详细的错误信息</li>
+</ol>
+<h2 id="staterunnable-%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6">StateRunnable 执行机制 <a class="heading-anchor-permalink" href="#staterunnable-%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6">#</a></h2>
+<h3 id="%E5%9B%BE%E7%BA%A7%E5%88%AB%E9%87%8D%E8%AF%95%E6%8E%A7%E5%88%B6">图级别重试控制 <a class="heading-anchor-permalink" href="#%E5%9B%BE%E7%BA%A7%E5%88%AB%E9%87%8D%E8%AF%95%E6%8E%A7%E5%88%B6">#</a></h3>
+<p><code>StateRunnable</code> 实现了图级别的重试策略，与 <code>RetryNode</code> 形成互补：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Graph as StateGraph
+participant Runnable as StateRunnable
+participant Node as Node
+participant Policy as RetryPolicy
+Graph-&gt;&gt;Runnable : Invoke(ctx, state)
+Runnable-&gt;&gt;Runnable : 获取入口节点
+loop 并行执行所有活跃节点
+Runnable-&gt;&gt;Node : executeNodeWithRetry(ctx, node, state)
+Node-&gt;&gt;Node : 执行节点函数
+alt 执行成功
+Node--&gt;&gt;Runnable : 返回结果
+else 执行失败
+Node-&gt;&gt;Policy : 检查错误类型
+Policy--&gt;&gt;Node : 返回可重试性
+alt 可重试且未达最大重试
+Node-&gt;&gt;Node : 计算退避延迟
+Node-&gt;&gt;Node : 等待延迟
+Node-&gt;&gt;Node : 继续重试
+else 不可重试或已达最大重试
+Node--&gt;&gt;Runnable : 返回错误
+end
+end
+end
+Runnable--&gt;&gt;Graph : 返回最终状态或错误
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L116-L232)</li>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L299-L338)</li>
+</ul>
+<h3 id="executenodewithretry-%E6%96%B9%E6%B3%95">executeNodeWithRetry 方法 <a class="heading-anchor-permalink" href="#executenodewithretry-%E6%96%B9%E6%B3%95">#</a></h3>
+<p>该方法实现了图级别的重试逻辑：</p>
+<pre><code class="language-mermaid">flowchart TD
+Start([开始执行]) --&gt; GetMaxRetries["获取最大重试次数&lt;br/&gt;maxRetries = 1 (默认)&lt;br/&gt;maxRetries = policy.MaxRetries + 1"]
+GetMaxRetries --&gt; LoopStart["循环: attempt = 0 到 maxRetries-1"]
+LoopStart --&gt; Execute["执行节点函数&lt;br/&gt;result, err = node.Function()"]
+Execute --&gt; Success{"执行成功?"}
+Success --&gt; |是| ReturnSuccess["返回结果"]
+Success --&gt; |否| UpdateError["更新 lastErr = err"]
+UpdateError --&gt; CheckPolicy{"有重试策略?"}
+CheckPolicy --&gt; |否| BreakLoop["跳出循环"]
+CheckPolicy --&gt; |是| CheckAttempt{"未达最大重试?"}
+CheckAttempt --&gt; |否| BreakLoop
+CheckAttempt --&gt; |是| CheckRetryable["检查是否可重试&lt;br/&gt;isRetryableError(err)"]
+CheckRetryable --&gt; IsRetryable{"可重试?"}
+IsRetryable --&gt; |否| BreakLoop
+IsRetryable --&gt; |是| CalcDelay["计算退避延迟&lt;br/&gt;calculateBackoffDelay(attempt)"]
+CalcDelay --&gt; HasDelay{"有延迟?"}
+HasDelay --&gt; |否| Continue["继续重试"]
+HasDelay --&gt; |是| WaitDelay["等待延迟&lt;br/&gt;time.After(delay)"]
+WaitDelay --&gt; CheckContext["检查上下文&lt;br/&gt;&lt;-ctx.Done()"]
+CheckContext --&gt; ContextDone{"上下文已取消?"}
+ContextDone --&gt; |是| ReturnContextError["返回上下文错误"]
+ContextDone --&gt; |否| Continue
+Continue --&gt; LoopStart
+BreakLoop --&gt; ReturnError["返回 lastErr"]
+ReturnSuccess --&gt; End([结束])
+ReturnContextError --&gt; End
+ReturnError --&gt; End
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L299-L338)</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L299-L338)</li>
+</ul>
+<h3 id="backoff-%E7%AD%96%E7%95%A5%E5%AE%9E%E7%8E%B0">Backoff 策略实现 <a class="heading-anchor-permalink" href="#backoff-%E7%AD%96%E7%95%A5%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p><code>StateRunnable</code> 支持三种退避策略：</p>
+<table>
+<thead>
+<tr>
+<th>策略类型</th>
+<th>计算公式</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FixedBackoff</td>
+<td><code>baseDelay</code></td>
+<td>固定间隔，简单可靠</td>
+</tr>
+<tr>
+<td>ExponentialBackoff</td>
+<td><code>baseDelay * 2^attempt</code></td>
+<td>指数增长，适合网络故障</td>
+</tr>
+<tr>
+<td>LinearBackoff</td>
+<td><code>baseDelay * (attempt + 1)</code></td>
+<td>线性增长，平衡性能</td>
+</tr>
+</tbody>
+</table>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L375-L394)</li>
+</ul>
+<h2 id="%E9%87%8D%E8%AF%95%E7%AD%96%E7%95%A5%E9%85%8D%E7%BD%AE">重试策略配置 <a class="heading-anchor-permalink" href="#%E9%87%8D%E8%AF%95%E7%AD%96%E7%95%A5%E9%85%8D%E7%BD%AE">#</a></h2>
+<h3 id="retryconfig-%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9">RetryConfig 配置选项 <a class="heading-anchor-permalink" href="#retryconfig-%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9">#</a></h3>
+<p><code>RetryConfig</code> 提供了细粒度的重试行为控制：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaxAttempts</td>
+<td>int</td>
+<td>3</td>
+<td>最大重试次数</td>
+</tr>
+<tr>
+<td>InitialDelay</td>
+<td>time.Duration</td>
+<td>100ms</td>
+<td>初始延迟时间</td>
+</tr>
+<tr>
+<td>MaxDelay</td>
+<td>time.Duration</td>
+<td>5s</td>
+<td>最大延迟时间</td>
+</tr>
+<tr>
+<td>BackoffFactor</td>
+<td>float64</td>
+<td>2.0</td>
+<td>退避因子</td>
+</tr>
+<tr>
+<td>RetryableErrors</td>
+<td>func(error) bool</td>
+<td>全部重试</td>
+<td>错误过滤函数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retrypolicy-%E5%9B%BE%E7%BA%A7%E5%88%AB%E9%85%8D%E7%BD%AE">RetryPolicy 图级别配置 <a class="heading-anchor-permalink" href="#retrypolicy-%E5%9B%BE%E7%BA%A7%E5%88%AB%E9%85%8D%E7%BD%AE">#</a></h3>
+<p><code>RetryPolicy</code> 提供图级别的重试策略：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaxRetries</td>
+<td>int</td>
+<td>最大重试次数</td>
+</tr>
+<tr>
+<td>BackoffStrategy</td>
+<td>BackoffStrategy</td>
+<td>退避策略类型</td>
+</tr>
+<tr>
+<td>RetryableErrors</td>
+<td>[]string</td>
+<td>可重试错误模式列表</td>
+</tr>
+</tbody>
+</table>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L11-L18)</li>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L33-L39)</li>
+</ul>
+<h2 id="%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F%E5%9B%BE">执行流程时序图 <a class="heading-anchor-permalink" href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E6%97%B6%E5%BA%8F%E5%9B%BE">#</a></h2>
+<h3 id="%E8%8A%82%E7%82%B9%E7%BA%A7%E9%87%8D%E8%AF%95%E6%B5%81%E7%A8%8B">节点级重试流程 <a class="heading-anchor-permalink" href="#%E8%8A%82%E7%82%B9%E7%BA%A7%E9%87%8D%E8%AF%95%E6%B5%81%E7%A8%8B">#</a></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Client as 客户端
+participant RetryNode as RetryNode
+participant Node as 原始节点
+participant Timer as 时间控制器
+Client-&gt;&gt;RetryNode : Execute(ctx, state)
+RetryNode-&gt;&gt;RetryNode : 初始化变量
+loop 重试循环 (1 到 MaxAttempts)
+RetryNode-&gt;&gt;RetryNode : 检查上下文取消
+alt 上下文已取消
+RetryNode--&gt;&gt;Client : 返回取消错误
+else 正常执行
+RetryNode-&gt;&gt;Node : 执行节点函数
+Node--&gt;&gt;RetryNode : 返回结果或错误
+alt 执行成功
+RetryNode--&gt;&gt;Client : 返回结果
+else 执行失败
+RetryNode-&gt;&gt;RetryNode : 更新 lastErr
+alt 错误不可重试
+RetryNode--&gt;&gt;Client : 返回非重试错误
+else 错误可重试
+alt 非最后尝试
+RetryNode-&gt;&gt;Timer : 等待退避延迟
+Timer--&gt;&gt;RetryNode : 延迟完成
+RetryNode-&gt;&gt;RetryNode : 计算下一次延迟
+end
+end
+end
+end
+end
+RetryNode--&gt;&gt;Client : 返回最大重试错误
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L51-L94)</li>
+</ul>
+<h3 id="%E5%9B%BE%E7%BA%A7%E5%88%AB%E9%87%8D%E8%AF%95%E6%B5%81%E7%A8%8B">图级别重试流程 <a class="heading-anchor-permalink" href="#%E5%9B%BE%E7%BA%A7%E5%88%AB%E9%87%8D%E8%AF%95%E6%B5%81%E7%A8%8B">#</a></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Client as 客户端
+participant StateGraph as StateGraph
+participant StateRunnable as StateRunnable
+participant Node as 节点
+participant Policy as 重试策略
+Client-&gt;&gt;StateGraph : SetRetryPolicy(policy)
+Client-&gt;&gt;StateGraph : Compile()
+StateGraph--&gt;&gt;StateRunnable : 创建可运行实例
+Client-&gt;&gt;StateRunnable : Invoke(ctx, initialState)
+StateRunnable-&gt;&gt;StateRunnable : 获取入口节点
+loop 并行执行阶段
+par 节点1
+StateRunnable-&gt;&gt;Node : executeNodeWithRetry(ctx, node1, state)
+Node-&gt;&gt;Policy : 检查错误类型
+Policy--&gt;&gt;Node : 返回可重试性
+Node--&gt;&gt;StateRunnable : 返回结果或错误
+and 节点2
+StateRunnable-&gt;&gt;Node : executeNodeWithRetry(ctx, node2, state)
+Node--&gt;&gt;StateRunnable : 返回结果或错误
+end
+end
+alt 所有节点成功
+StateRunnable--&gt;&gt;Client : 返回最终状态
+else 存在失败节点
+StateRunnable--&gt;&gt;Client : 返回错误
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L116-L232)</li>
+</ul>
+<h2 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E4%B8%8E%E6%81%A2%E5%A4%8D">错误处理与恢复 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E4%B8%8E%E6%81%A2%E5%A4%8D">#</a></h2>
+<h3 id="%E9%94%99%E8%AF%AF%E5%88%86%E7%B1%BB%E6%9C%BA%E5%88%B6">错误分类机制 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%88%86%E7%B1%BB%E6%9C%BA%E5%88%B6">#</a></h3>
+<p>系统实现了多层次的错误处理：</p>
+<pre><code class="language-mermaid">flowchart TD
+Error[节点执行错误] --&gt; CheckRetryable["检查 RetryableErrors 函数"]
+CheckRetryable --&gt; IsRetryable{"可重试?"}
+IsRetryable --&gt; |否| NonRetryableError["非重试错误"]
+IsRetryable --&gt; |是| CheckMaxRetries["检查最大重试次数"]
+CheckMaxRetries --&gt; ReachedMax{"达到最大重试?"}
+ReachedMax --&gt; |是| MaxRetriesError["最大重试错误"]
+ReachedMax --&gt; |否| RetryAttempt["执行重试尝试"]
+NonRetryableError --&gt; LogError["记录错误日志"]
+MaxRetriesError --&gt; LogError
+RetryAttempt --&gt; WaitBackoff["等待退避延迟"]
+WaitBackoff --&gt; ExecuteAgain["重新执行节点"]
+LogError --&gt; ReturnError["返回错误"]
+ExecuteAgain --&gt; CheckContext["检查上下文取消"]
+CheckContext --&gt; ContextCancelled{"上下文已取消?"}
+ContextCancelled --&gt; |是| ReturnCancelled["返回取消错误"]
+ContextCancelled --&gt; |否| CheckRetryable
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L71-L94)</li>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L315-L335)</li>
+</ul>
+<h3 id="%E4%B8%8A%E4%B8%8B%E6%96%87%E5%8F%96%E6%B6%88%E5%A4%84%E7%90%86">上下文取消处理 <a class="heading-anchor-permalink" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%8F%96%E6%B6%88%E5%A4%84%E7%90%86">#</a></h3>
+<p>系统提供了完整的上下文取消支持：</p>
+<ol>
+<li><strong>实时检查</strong>：在每个重试循环中检查 <code>ctx.Done()</code></li>
+<li><strong>优雅退出</strong>：检测到取消后立即停止重试</li>
+<li><strong>错误传播</strong>：正确传播取消原因和上下文信息</li>
+<li><strong>资源清理</strong>：确保取消时进行必要的资源清理</li>
+</ol>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[retry.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry.go#L57-L61)</li>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L325-L327)</li>
+</ul>
+<h2 id="%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">#</a></h2>
+<h3 id="%E9%80%80%E9%81%BF%E7%AD%96%E7%95%A5%E4%BC%98%E5%8C%96">退避策略优化 <a class="heading-anchor-permalink" href="#%E9%80%80%E9%81%BF%E7%AD%96%E7%95%A5%E4%BC%98%E5%8C%96">#</a></h3>
+<p>不同的退避策略对性能的影响：</p>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>延迟增长</th>
+<th>CPU 使用</th>
+<th>网络负载</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed</td>
+<td>线性</td>
+<td>低</td>
+<td>稳定</td>
+<td>硬件故障</td>
+</tr>
+<tr>
+<td>Exponential</td>
+<td>指数</td>
+<td>中等</td>
+<td>波动</td>
+<td>网络拥塞</td>
+</tr>
+<tr>
+<td>Linear</td>
+<td>线性</td>
+<td>中等</td>
+<td>渐进</td>
+<td>平衡需求</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E4%BC%98%E5%8C%96">内存使用优化 <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E4%BC%98%E5%8C%96">#</a></h3>
+<ol>
+<li><strong>延迟队列管理</strong>：及时清理过期的调用记录</li>
+<li><strong>错误信息缓存</strong>：避免重复创建相同的错误消息</li>
+<li><strong>上下文传递</strong>：最小化上下文数据的复制</li>
+</ol>
+<h3 id="%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6">并发控制 <a class="heading-anchor-permalink" href="#%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6">#</a></h3>
+<p>系统通过以下方式优化并发性能：</p>
+<ol>
+<li><strong>并行节点执行</strong>：支持多个节点同时重试</li>
+<li><strong>选择器模式</strong>：使用 <code>select</code> 实现非阻塞上下文检查</li>
+<li><strong>goroutine 管理</strong>：合理控制并发 goroutine 数量</li>
+</ol>
+<h2 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践 <a class="heading-anchor-permalink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">#</a></h2>
+<h3 id="%E9%85%8D%E7%BD%AE%E5%BB%BA%E8%AE%AE">配置建议 <a class="heading-anchor-permalink" href="#%E9%85%8D%E7%BD%AE%E5%BB%BA%E8%AE%AE">#</a></h3>
+<ol>
+<li><strong>初始延迟</strong>：根据服务响应时间设置，通常为几百毫秒</li>
+<li><strong>最大重试次数</strong>：根据业务容忍度设置，一般不超过 5 次</li>
+<li><strong>退避因子</strong>：指数退避因子通常设置为 2.0</li>
+<li><strong>最大延迟</strong>：设置合理的上限，避免无限等待</li>
+</ol>
+<h3 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">错误处理策略 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">#</a></h3>
+<ol>
+<li><strong>区分错误类型</strong>：只对临时性错误启用重试</li>
+<li><strong>自定义重试条件</strong>：根据具体业务场景定义重试规则</li>
+<li><strong>监控和告警</strong>：跟踪重试频率和成功率</li>
+<li><strong>降级策略</strong>：重试失败时提供备选方案</li>
+</ol>
+<h3 id="%E6%B5%8B%E8%AF%95%E5%BB%BA%E8%AE%AE">测试建议 <a class="heading-anchor-permalink" href="#%E6%B5%8B%E8%AF%95%E5%BB%BA%E8%AE%AE">#</a></h3>
+<ol>
+<li><strong>单元测试</strong>：验证各种错误场景下的重试行为</li>
+<li><strong>集成测试</strong>：测试整个图的重试流程</li>
+<li><strong>压力测试</strong>：评估高并发情况下的重试性能</li>
+<li><strong>故障注入</strong>：模拟各种故障场景</li>
+</ol>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[retry_test.go](https://github.com/smallnest/langgraphgo/blob/main/graph/retry_test.go#L18-L171)</li>
+</ul>
+<h2 id="%E6%80%BB%E7%BB%93">总结 <a class="heading-anchor-permalink" href="#%E6%80%BB%E7%BB%93">#</a></h2>
+<p>langgraphgo 的重试机制通过 <code>RetryNode</code> 和 <code>StateRunnable</code> 的协同工作，提供了强大而灵活的错误恢复能力。该系统的主要优势包括：</p>
+<ol>
+<li><strong>双层重试控制</strong>：节点级和图级的重试策略相互补充</li>
+<li><strong>灵活的配置选项</strong>：支持多种退避策略和错误过滤机制</li>
+<li><strong>完善的上下文支持</strong>：确保重试过程中的取消和超时处理</li>
+<li><strong>高性能设计</strong>：通过并行执行和优化算法保证系统性能</li>
+</ol>
+<p>通过合理配置和使用这些重试机制，开发者可以构建更加健壮和可靠的图执行系统，有效应对各种临时性故障和异常情况。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>

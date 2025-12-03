@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../项目概述.html">项目概述</a></li><li><a class="" href="../../快速入门.html">快速入门</a></li><li><a class="" href="../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../架构与设计/架构与设计.html">架构与设计</a></li><li><a class="" href="../../架构与设计/架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../架构与设计/扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试执行流程.html">重试执行流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试策略配置.html">重试策略配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误判定机制.html">错误判定机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../架构与设计/状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../../教程与示例/LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../../教程与示例/MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../../教程与示例/人机协作.html">人机协作</a></li><li><a class="" href="../../教程与示例/基础示例教程.html">基础示例教程</a></li><li><a class="" href="../../教程与示例/多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../../教程与示例/多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../../教程与示例/并行执行.html">并行执行</a></li><li><a class="" href="../../教程与示例/技能集成.html">技能集成</a></li><li><a class="" href="../../教程与示例/教程与示例.html">教程与示例</a></li><li><a class="" href="../../教程与示例/条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../../教程与示例/流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/检索后重排序.html">检索后重排序</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../../教程与示例/子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../../教程与示例/工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../../教程与示例/工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="../../教程与示例/智能代理示例/ReAct代理.html">ReAct代理</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理协调器.html">代理协调器</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理群.html">代理群</a></li><li><a class="" href="../../教程与示例/智能代理示例/动态技能系统.html">动态技能系统</a></li><li><a class="" href="../../教程与示例/智能代理示例/基础代理创建.html">基础代理创建</a></li><li><a class="" href="../../教程与示例/智能代理示例/智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../../教程与示例/检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="" href="../../教程与示例/状态管理与模式/基础内存管理.html">基础内存管理</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态模式定义.html">状态模式定义</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="../../教程与示例/状态管理与模式/自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="入口点.html">入口点</a></li><li><a class="" href="图结构工作流.html">图结构工作流</a></li><li><a class="active" href="子图.html">子图</a></li><li><a class="" href="并行执行.html">并行执行</a></li><li><a class="" href="条件边.html">条件边</a></li><li><a class="" href="节点.html">节点</a></li><li><a class="" href="边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="" href="../持久化检查点/持久化检查点.html">持久化检查点</a></li><li><a class="" href="../持久化检查点/检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="../持久化检查点/检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="../持久化检查点/检查点监听器.html">检查点监听器</a></li><li><a class="" href="../持久化检查点/检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="../持久化检查点/内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="../持久化检查点/内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="" href="../状态管理/状态归约器.html">状态归约器</a></li><li><a class="" href="../状态管理/状态模式.html">状态模式</a></li><li><a class="" href="../状态管理/状态管理.html">状态管理</a></li><li><a class="" href="../状态管理/瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../监听器/监听器.html">监听器</a></li><li><a class="" href="../监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../高级特性/子图.html">子图</a></li><li><a class="" href="../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E5%AD%90%E5%9B%BE">子图 <a class="heading-anchor-permalink" href="#%E5%AD%90%E5%9B%BE">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档中引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go">graph/subgraph.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/subgraph/main.go">examples/subgraph/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/subgraphs/main.go">examples/subgraphs/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/subgraph/README.md">examples/subgraph/README.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/subgraphs/README.md">examples/subgraphs/README.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go">graph/graph.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/messages_graph.go">graph/messages_graph.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go">graph/checkpointing.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing_test.go">graph/checkpointing_test.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/update_state_test.go">graph/update_state_test.go</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">项目结构</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6">核心组件</a></li>
+<li><a href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览</a></li>
+<li><a href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析</a></li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90">依赖关系分析</a></li>
+<li><a href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑</a></li>
+<li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南</a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>LangGraphGo 的子图（Subgraph）功能是一个强大的模块化设计特性，允许开发者将复杂的业务流程分解为可复用的模块化组件。通过子图结构体，可以将一个完整的图（如 StateGraph 或 MessageGraph）嵌入到另一个父图中作为一个节点来执行，从而实现工作流的层次化组织和逻辑复用。</p>
+<p>子图功能的核心价值在于：</p>
+<ul>
+<li><strong>模块化设计</strong>：将复杂的工作流分解为更小、更易管理的组件</li>
+<li><strong>代码复用</strong>：创建可在多个地方或项目中重复使用的流程组件</li>
+<li><strong>状态共享</strong>：在父子图之间自动传递状态并合并结果</li>
+<li><strong>层次化架构</strong>：构建具有清晰层级结构的工作流程</li>
+</ul>
+<h2 id="%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">项目结构 <a class="heading-anchor-permalink" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">#</a></h2>
+<p>LangGraphGo 的子图功能主要分布在以下关键文件中：</p>
+<pre><code class="language-mermaid">graph TB
+subgraph "核心子图模块"
+A[graph/subgraph.go] --&gt; B[Subgraph 结构体]
+A --&gt; C[CompositeGraph 复合图]
+A --&gt; D[RecursiveSubgraph 递归子图]
+A --&gt; E[NestedConditionalSubgraph 嵌套条件子图]
+end
+subgraph "示例应用"
+F[examples/subgraph/main.go] --&gt; G[基本子图示例]
+H[examples/subgraphs/main.go] --&gt; I[复合图示例]
+end
+subgraph "基础图形支持"
+J[graph/graph.go] --&gt; K[MessageGraph 基础图]
+L[graph/messages_graph.go] --&gt; M[消息图扩展]
+N[graph/checkpointing.go] --&gt; O[检查点支持]
+end
+A --&gt; F
+A --&gt; H
+K --&gt; A
+M --&gt; K
+O --&gt; K
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L1-L200)</li>
+<li>[examples/subgraph/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/subgraph/main.go#L1-L166)</li>
+<li>[examples/subgraphs/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/subgraphs/main.go#L1-L59)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L1-L200)</li>
+<li>[examples/subgraph/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/subgraph/main.go#L1-L166)</li>
+<li>[examples/subgraphs/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/subgraphs/main.go#L1-L59)</li>
+</ul>
+<h2 id="%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6">核心组件 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6">#</a></h2>
+<h3 id="subgraph-%E7%BB%93%E6%9E%84%E4%BD%93">Subgraph 结构体 <a class="heading-anchor-permalink" href="#subgraph-%E7%BB%93%E6%9E%84%E4%BD%93">#</a></h3>
+<p>Subgraph 是子图功能的核心数据结构，它封装了一个嵌套的图并提供了执行接口：</p>
+<pre><code class="language-mermaid">classDiagram
+class Subgraph {
++string name
++MessageGraph graph
++Runnable runnable
++NewSubgraph(name, graph) Subgraph
++Execute(ctx, state) interface
+}
+class MessageGraph {
++map nodes
++[]Edge edges
++map conditionalEdges
++string entryPoint
++AddNode(name, fn) void
++AddEdge(from, to) void
++Compile() Runnable
+}
+class Runnable {
++MessageGraph graph
++Tracer tracer
++Invoke(ctx, state) interface
++InvokeWithConfig(ctx, state, config) interface
+}
+Subgraph --&gt; MessageGraph : "包含"
+Subgraph --&gt; Runnable : "编译为"
+MessageGraph --&gt; Runnable : "编译产生"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L8-L13)</li>
+<li>[graph/graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L74-L93)</li>
+<li>[graph/graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L140-L146)</li>
+</ul>
+<h3 id="compositegraph-%E5%A4%8D%E5%90%88%E5%9B%BE">CompositeGraph 复合图 <a class="heading-anchor-permalink" href="#compositegraph-%E5%A4%8D%E5%90%88%E5%9B%BE">#</a></h3>
+<p>CompositeGraph 提供了将多个子图组合成单一可执行实体的能力：</p>
+<pre><code class="language-mermaid">classDiagram
+class CompositeGraph {
++map[string]*MessageGraph graphs
++MessageGraph main
++NewCompositeGraph() CompositeGraph
++AddGraph(name, graph) void
++Connect(fromGraph, fromNode, toGraph, toNode, transform) error
++Compile() Runnable
+}
+class MessageGraph {
++AddSubgraph(name, subgraph) error
++Compile() Runnable
+}
+CompositeGraph --&gt; MessageGraph : "管理多个"
+CompositeGraph --&gt; MessageGraph : "主图"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L56-L67)</li>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L96-L106)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L8-L13)</li>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L56-L67)</li>
+</ul>
+<h2 id="%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览 <a class="heading-anchor-permalink" href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">#</a></h2>
+<p>子图系统的整体架构展示了从简单子图到复杂复合图的演进过程：</p>
+<pre><code class="language-mermaid">graph TD
+subgraph "父图层"
+A[父 MessageGraph] --&gt; B[AddSubgraph 方法]
+B --&gt; C[创建 Subgraph 包装器]
+C --&gt; D[注册为普通节点]
+end
+subgraph "子图层"
+E[子 MessageGraph] --&gt; F[编译为 Runnable]
+F --&gt; G[Execute 方法]
+G --&gt; H[调用内部图执行]
+end
+subgraph "状态处理"
+I[父图状态] --&gt; J[状态传递]
+J --&gt; K[子图执行]
+K --&gt; L[结果返回]
+L --&gt; M[状态合并]
+end
+subgraph "检查点集成"
+N[检查点存储] --&gt; O[状态快照]
+O --&gt; P[恢复机制]
+P --&gt; Q[断点续传]
+end
+A --&gt; E
+H --&gt; I
+M --&gt; A
+Q --&gt; A
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L38-L47)</li>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L29-L36)</li>
+<li>[graph/checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L12-L20)</li>
+</ul>
+<h2 id="%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析 <a class="heading-anchor-permalink" href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">#</a></h2>
+<h3 id="subgraph-%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B">Subgraph 执行流程 <a class="heading-anchor-permalink" href="#subgraph-%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B">#</a></h3>
+<p>子图的 Execute 方法是整个子图功能的核心，它接管父图的执行流程并运行内部图：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Parent as 父图节点
+participant Subgraph as 子图包装器
+participant Runnable as 内部可运行对象
+participant Child as 子图内部
+Parent-&gt;&gt;Subgraph : Execute(ctx, state)
+Subgraph-&gt;&gt;Subgraph : 验证状态参数
+Subgraph-&gt;&gt;Runnable : Invoke(ctx, state)
+Runnable-&gt;&gt;Child : 执行子图逻辑
+Child--&gt;&gt;Runnable : 返回执行结果
+Runnable--&gt;&gt;Subgraph : 返回结果
+Subgraph-&gt;&gt;Subgraph : 错误处理
+Subgraph--&gt;&gt;Parent : 返回最终结果
+Note over Parent,Child : 子图执行完全封装在父图上下文中
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L29-L36)</li>
+</ul>
+<h4 id="execute-%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82">Execute 方法实现细节 <a class="heading-anchor-permalink" href="#execute-%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82">#</a></h4>
+<p>Execute 方法的设计遵循简洁性和可靠性的原则：</p>
+<ol>
+<li><strong>状态验证</strong>：接收父图传递的状态参数</li>
+<li><strong>内部调用</strong>：通过编译后的 Runnable 对象执行子图</li>
+<li><strong>错误处理</strong>：提供详细的错误信息，包括子图名称</li>
+<li><strong>结果返回</strong>：将子图执行结果直接返回给父图</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L29-L36)</li>
+</ul>
+<h3 id="%E5%A4%8D%E5%90%88%E5%9B%BE%E6%9E%B6%E6%9E%84">复合图架构 <a class="heading-anchor-permalink" href="#%E5%A4%8D%E5%90%88%E5%9B%BE%E6%9E%B6%E6%9E%84">#</a></h3>
+<p>CompositeGraph 提供了更高级的子图组合能力，支持多图协作和状态转换：</p>
+<pre><code class="language-mermaid">flowchart TD
+A[CompositeGraph 创建] --&gt; B[添加子图集合]
+B --&gt; C[建立图间连接]
+C --&gt; D[配置状态转换函数]
+D --&gt; E[编译复合图]
+E --&gt; F[生成单一 Runnable]
+G[图间通信] --&gt; H[状态映射]
+H --&gt; I[条件路由]
+I --&gt; J[并行执行]
+F --&gt; K[运行时执行]
+K --&gt; L[状态传递]
+L --&gt; M[结果聚合]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L70-L96)</li>
+</ul>
+<h4 id="%E8%BF%9E%E6%8E%A5%E6%9C%BA%E5%88%B6">连接机制 <a class="heading-anchor-permalink" href="#%E8%BF%9E%E6%8E%A5%E6%9C%BA%E5%88%B6">#</a></h4>
+<p>CompositeGraph 的 Connect 方法实现了图间的智能连接：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant CG as CompositeGraph
+participant Bridge as 桥接节点
+participant FG as 来源图
+participant TG as 目标图
+CG-&gt;&gt;Bridge : 创建桥接节点
+Bridge-&gt;&gt;Bridge : 定义转换函数
+CG-&gt;&gt;FG : 注册输出节点
+CG-&gt;&gt;TG : 注册输入节点
+FG-&gt;&gt;Bridge : 传递状态
+Bridge-&gt;&gt;Bridge : 应用转换函数
+Bridge-&gt;&gt;TG : 转换后状态
+TG-&gt;&gt;TG : 执行目标逻辑
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L75-L91)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L70-L96)</li>
+</ul>
+<h3 id="%E9%80%92%E5%BD%92%E5%AD%90%E5%9B%BE%E5%8A%9F%E8%83%BD">递归子图功能 <a class="heading-anchor-permalink" href="#%E9%80%92%E5%BD%92%E5%AD%90%E5%9B%BE%E5%8A%9F%E8%83%BD">#</a></h3>
+<p>RecursiveSubgraph 允许子图在其内部调用自身，实现迭代处理模式：</p>
+<pre><code class="language-mermaid">flowchart TD
+A[递归子图启动] --&gt; B[检查最大深度]
+B --&gt; C{是否超过深度限制?}
+C --&gt; |是| D[返回当前状态]
+C --&gt; |否| E[检查继续条件]
+E --&gt; F{条件满足?}
+F --&gt; |否| D
+F --&gt; |是| G[编译内部图]
+G --&gt; H[执行子图逻辑]
+H --&gt; I[递归调用自身]
+I --&gt; A
+style D fill:#e1f5fe
+style I fill:#fff3e0
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L135-L159)</li>
+</ul>
+<h4 id="%E9%80%92%E5%BD%92%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5">递归执行策略 <a class="heading-anchor-permalink" href="#%E9%80%92%E5%BD%92%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5">#</a></h4>
+<p>递归子图的执行遵循严格的控制流程：</p>
+<ol>
+<li><strong>深度检查</strong>：防止无限递归导致栈溢出</li>
+<li><strong>条件验证</strong>：基于状态和深度动态决定是否继续</li>
+<li><strong>动态编译</strong>：每次递归都重新编译内部图</li>
+<li><strong>状态累积</strong>：将每次递归的结果传递给下一次调用</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L108-L159)</li>
+</ul>
+<h3 id="%E5%B5%8C%E5%A5%97%E6%9D%A1%E4%BB%B6%E5%AD%90%E5%9B%BE">嵌套条件子图 <a class="heading-anchor-permalink" href="#%E5%B5%8C%E5%A5%97%E6%9D%A1%E4%BB%B6%E5%AD%90%E5%9B%BE">#</a></h3>
+<p>NestedConditionalSubgraph 提供了在子图内部实现条件路由的能力：</p>
+<pre><code class="language-mermaid">graph LR
+A[输入状态] --&gt; B[路由器函数]
+B --&gt; C{条件判断}
+C --&gt; |条件1| D[子图1]
+C --&gt; |条件2| E[子图2]
+C --&gt; |条件N| F[子图N]
+D --&gt; G[执行结果]
+E --&gt; G
+F --&gt; G
+style A fill:#e8f5e8
+style G fill:#e8f5e8
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L173-L199)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L173-L199)</li>
+</ul>
+<h2 id="%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90">依赖关系分析 <a class="heading-anchor-permalink" href="#%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90">#</a></h2>
+<p>子图功能的依赖关系展现了其在 LangGraphGo 生态系统中的核心地位：</p>
+<pre><code class="language-mermaid">graph TD
+subgraph "外部依赖"
+A[golang.org/x/net/context] --&gt; B[上下文管理]
+C[fmt] --&gt; D[错误格式化]
+end
+subgraph "内部模块"
+E[graph/graph.go] --&gt; F[MessageGraph 基础]
+G[graph/checkpointing.go] --&gt; H[检查点支持]
+I[graph/schema.go] --&gt; J[状态模式]
+end
+subgraph "子图模块"
+K[graph/subgraph.go] --&gt; L[Subgraph 实现]
+K --&gt; M[CompositeGraph]
+K --&gt; N[RecursiveSubgraph]
+end
+A --&gt; K
+C --&gt; K
+F --&gt; K
+H --&gt; K
+J --&gt; K
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L1-L7)</li>
+<li>[graph/graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L1-L20)</li>
+</ul>
+<h3 id="%E5%85%B3%E9%94%AE%E4%BE%9D%E8%B5%96%E8%AF%B4%E6%98%8E">关键依赖说明 <a class="heading-anchor-permalink" href="#%E5%85%B3%E9%94%AE%E4%BE%9D%E8%B5%96%E8%AF%B4%E6%98%8E">#</a></h3>
+<ol>
+<li><strong>上下文管理</strong>：确保子图执行的生命周期控制</li>
+<li><strong>错误处理</strong>：提供详细的错误信息和调试支持</li>
+<li><strong>图形基础</strong>：依赖 MessageGraph 的核心功能</li>
+<li><strong>状态管理</strong>：与检查点系统紧密集成</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L1-L7)</li>
+<li>[graph/graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L1-L20)</li>
+</ul>
+<h2 id="%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">#</a></h2>
+<p>子图功能在设计时充分考虑了性能优化：</p>
+<h3 id="%E7%BC%96%E8%AF%91%E6%97%B6%E4%BC%98%E5%8C%96">编译时优化 <a class="heading-anchor-permalink" href="#%E7%BC%96%E8%AF%91%E6%97%B6%E4%BC%98%E5%8C%96">#</a></h3>
+<ul>
+<li><strong>延迟编译</strong>：子图仅在需要时才编译，避免不必要的资源消耗</li>
+<li><strong>缓存机制</strong>：编译后的 Runnable 对象被缓存，避免重复编译</li>
+<li><strong>内存管理</strong>：合理管理子图对象的生命周期</li>
+</ul>
+<h3 id="%E6%89%A7%E8%A1%8C%E6%97%B6%E4%BC%98%E5%8C%96">执行时优化 <a class="heading-anchor-permalink" href="#%E6%89%A7%E8%A1%8C%E6%97%B6%E4%BC%98%E5%8C%96">#</a></h3>
+<ul>
+<li><strong>状态传递效率</strong>：最小化状态复制和序列化开销</li>
+<li><strong>错误传播</strong>：快速失败机制减少无效执行</li>
+<li><strong>并发安全</strong>：确保多线程环境下的安全性</li>
+</ul>
+<h3 id="%E6%A3%80%E6%9F%A5%E7%82%B9%E9%9B%86%E6%88%90">检查点集成 <a class="heading-anchor-permalink" href="#%E6%A3%80%E6%9F%A5%E7%82%B9%E9%9B%86%E6%88%90">#</a></h3>
+<p>子图与检查点系统的集成提供了持久化和恢复能力：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Parent as 父图
+participant Subgraph as 子图
+participant Checkpoint as 检查点存储
+Parent-&gt;&gt;Subgraph : 开始执行
+Subgraph-&gt;&gt;Subgraph : 执行到中间点
+Subgraph-&gt;&gt;Checkpoint : 保存检查点
+Subgraph--&gt;&gt;Parent : 中断执行
+Parent-&gt;&gt;Parent : 处理中断
+Parent-&gt;&gt;Subgraph : 恢复执行
+Subgraph-&gt;&gt;Checkpoint : 加载检查点
+Subgraph-&gt;&gt;Subgraph : 继续执行
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L12-L20)</li>
+</ul>
+<h2 id="%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南 <a class="heading-anchor-permalink" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">#</a></h2>
+<h3 id="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见问题及解决方案 <a class="heading-anchor-permalink" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">#</a></h3>
+<h4 id="1.-%E5%AD%90%E5%9B%BE%E7%BC%96%E8%AF%91%E5%A4%B1%E8%B4%A5">1. 子图编译失败 <a class="heading-anchor-permalink" href="#1.-%E5%AD%90%E5%9B%BE%E7%BC%96%E8%AF%91%E5%A4%B1%E8%B4%A5">#</a></h4>
+<p><strong>症状</strong>：调用 NewSubgraph 或 AddSubgraph 时返回错误
+<strong>原因</strong>：子图配置不正确或缺少入口点
+<strong>解决方案</strong>：</p>
+<ul>
+<li>确保子图设置了有效的入口点</li>
+<li>检查节点定义是否完整</li>
+<li>验证边连接的正确性</li>
+</ul>
+<h4 id="2.-%E7%8A%B6%E6%80%81%E4%BC%A0%E9%80%92%E5%BC%82%E5%B8%B8">2. 状态传递异常 <a class="heading-anchor-permalink" href="#2.-%E7%8A%B6%E6%80%81%E4%BC%A0%E9%80%92%E5%BC%82%E5%B8%B8">#</a></h4>
+<p><strong>症状</strong>：子图执行时状态类型不匹配
+<strong>原因</strong>：父图和子图的状态模式不兼容
+<strong>解决方案</strong>：</p>
+<ul>
+<li>使用兼容的状态模式</li>
+<li>在连接处添加状态转换函数</li>
+<li>确保状态结构的一致性</li>
+</ul>
+<h4 id="3.-%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6%E6%BA%A2%E5%87%BA">3. 递归深度溢出 <a class="heading-anchor-permalink" href="#3.-%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6%E6%BA%A2%E5%87%BA">#</a></h4>
+<p><strong>症状</strong>：RecursiveSubgraph 执行时出现栈溢出
+<strong>原因</strong>：递归条件始终为真或深度设置过大
+<strong>解决方案</strong>：</p>
+<ul>
+<li>设置合理的最大深度限制</li>
+<li>改进递归终止条件</li>
+<li>添加深度监控和日志</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L16-L26)</li>
+<li>[graph/subgraph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/subgraph.go#L135-L159)</li>
+</ul>
+<h2 id="%E7%BB%93%E8%AE%BA">结论 <a class="heading-anchor-permalink" href="#%E7%BB%93%E8%AE%BA">#</a></h2>
+<p>LangGraphGo 的子图功能为复杂工作流的设计和实现提供了强大而灵活的工具。通过模块化的设计理念，它成功地解决了大型系统中代码组织和逻辑复用的挑战。</p>
+<h3 id="%E4%B8%BB%E8%A6%81%E4%BC%98%E5%8A%BF">主要优势 <a class="heading-anchor-permalink" href="#%E4%B8%BB%E8%A6%81%E4%BC%98%E5%8A%BF">#</a></h3>
+<ol>
+<li><strong>模块化架构</strong>：将复杂系统分解为可管理的组件</li>
+<li><strong>代码复用</strong>：创建可在多个场景中重复使用的流程模板</li>
+<li><strong>状态一致性</strong>：提供可靠的父子图状态共享机制</li>
+<li><strong>扩展性强</strong>：支持从简单子图到复杂复合图的各种使用场景</li>
+</ol>
+<h3 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E5%BB%BA%E8%AE%AE">最佳实践建议 <a class="heading-anchor-permalink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E5%BB%BA%E8%AE%AE">#</a></h3>
+<ol>
+<li><strong>合理分层</strong>：根据业务逻辑的复杂度设计合适的层次结构</li>
+<li><strong>状态设计</strong>：保持状态模式的一致性和兼容性</li>
+<li><strong>错误处理</strong>：充分利用详细的错误信息进行调试</li>
+<li><strong>性能监控</strong>：关注子图执行的性能指标和资源使用情况</li>
+</ol>
+<p>子图功能不仅提升了代码的可维护性和可扩展性，更为构建企业级的智能工作流系统奠定了坚实的基础。随着项目的不断发展，这一功能将继续发挥其在复杂业务场景中的重要作用。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>

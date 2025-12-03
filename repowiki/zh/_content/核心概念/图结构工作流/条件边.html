@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../项目概述.html">项目概述</a></li><li><a class="" href="../../快速入门.html">快速入门</a></li><li><a class="" href="../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../架构与设计/架构与设计.html">架构与设计</a></li><li><a class="" href="../../架构与设计/架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../架构与设计/扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试执行流程.html">重试执行流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试策略配置.html">重试策略配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误判定机制.html">错误判定机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../架构与设计/状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../../教程与示例/LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../../教程与示例/MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../../教程与示例/人机协作.html">人机协作</a></li><li><a class="" href="../../教程与示例/基础示例教程.html">基础示例教程</a></li><li><a class="" href="../../教程与示例/多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../../教程与示例/多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../../教程与示例/并行执行.html">并行执行</a></li><li><a class="" href="../../教程与示例/技能集成.html">技能集成</a></li><li><a class="" href="../../教程与示例/教程与示例.html">教程与示例</a></li><li><a class="" href="../../教程与示例/条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../../教程与示例/流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/检索后重排序.html">检索后重排序</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../../教程与示例/子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../../教程与示例/工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../../教程与示例/工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="../../教程与示例/智能代理示例/ReAct代理.html">ReAct代理</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理协调器.html">代理协调器</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理群.html">代理群</a></li><li><a class="" href="../../教程与示例/智能代理示例/动态技能系统.html">动态技能系统</a></li><li><a class="" href="../../教程与示例/智能代理示例/基础代理创建.html">基础代理创建</a></li><li><a class="" href="../../教程与示例/智能代理示例/智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../../教程与示例/检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="" href="../../教程与示例/状态管理与模式/基础内存管理.html">基础内存管理</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态模式定义.html">状态模式定义</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="../../教程与示例/状态管理与模式/自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="入口点.html">入口点</a></li><li><a class="" href="图结构工作流.html">图结构工作流</a></li><li><a class="" href="子图.html">子图</a></li><li><a class="" href="并行执行.html">并行执行</a></li><li><a class="active" href="条件边.html">条件边</a></li><li><a class="" href="节点.html">节点</a></li><li><a class="" href="边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="" href="../持久化检查点/持久化检查点.html">持久化检查点</a></li><li><a class="" href="../持久化检查点/检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="../持久化检查点/检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="../持久化检查点/检查点监听器.html">检查点监听器</a></li><li><a class="" href="../持久化检查点/检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="../持久化检查点/内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="../持久化检查点/内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="" href="../状态管理/状态归约器.html">状态归约器</a></li><li><a class="" href="../状态管理/状态模式.html">状态模式</a></li><li><a class="" href="../状态管理/状态管理.html">状态管理</a></li><li><a class="" href="../状态管理/瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../监听器/监听器.html">监听器</a></li><li><a class="" href="../监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../高级特性/子图.html">子图</a></li><li><a class="" href="../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E6%9D%A1%E4%BB%B6%E8%BE%B9">条件边 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6%E8%BE%B9">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档中引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go">graph.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go">state_graph.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/command.go">command.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/conditional_edges_test.go">conditional_edges_test.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/conditional_edges_example/main.go">main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/command_test.go">command_test.go</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">核心概念</a></li>
+<li><a href="#addconditionaledge-%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3">AddConditionalEdge 方法详解</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E8%BE%B9%E5%AD%97%E6%AE%B5%E5%AE%9E%E7%8E%B0">条件边字段实现</a></li>
+<li><a href="#%E6%89%A7%E8%A1%8C%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E6%9D%A1%E4%BB%B6%E8%BE%B9%E5%A4%84%E7%90%86">执行循环中的条件边处理</a></li>
+<li><a href="#simpleintentrouter-%E7%A4%BA%E4%BE%8B%E5%88%86%E6%9E%90">SimpleIntentRouter 示例分析</a></li>
+<li><a href="#%E4%BC%98%E5%85%88%E7%BA%A7%E6%AF%94%E8%BE%83%E6%9D%A1%E4%BB%B6%E8%BE%B9-vs-%E9%9D%99%E6%80%81%E8%BE%B9-vs-commandgoto">优先级比较：条件边 vs 静态边 vs Command.Goto</a></li>
+<li><a href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6">错误处理机制</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>条件边（Conditional Edge）是 langgraphgo 中实现动态工作流路由的核心机制。它允许开发者根据运行时状态动态决定下一个要执行的节点，而不是使用固定的静态边连接。这种机制使得工作流能够根据不同的输入、状态变化或业务逻辑做出智能决策。</p>
+<p>条件边通过 <code>AddConditionalEdge</code> 方法注册，将一个条件函数与源节点关联。该函数在运行时被调用，接收当前状态作为参数，并返回目标节点名称。这种设计提供了极大的灵活性，支持复杂的路由逻辑。</p>
+<h2 id="%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">核心概念 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">#</a></h2>
+<h3 id="%E6%9D%A1%E4%BB%B6%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D">条件函数签名 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D">#</a></h3>
+<p>条件边的核心是一个函数，具有以下签名：</p>
+<pre><code class="language-go">func(ctx context.Context, state interface{}) string
+</code></pre>
+<p>这个函数接受两个参数：</p>
+<ul>
+<li><strong>context.Context</strong>: 当前执行上下文，支持取消和超时</li>
+<li><strong>state interface{}</strong>: 当前工作流状态，可以是任何类型</li>
+</ul>
+<p>返回值必须是非空字符串，表示下一个要执行的节点名称。</p>
+<h3 id="%E6%9D%A1%E4%BB%B6%E8%BE%B9%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">条件边的工作原理 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6%E8%BE%B9%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">#</a></h3>
+<ol>
+<li><strong>注册阶段</strong>: 使用 <code>AddConditionalEdge</code> 将条件函数绑定到特定源节点</li>
+<li><strong>执行阶段</strong>: 在节点执行完成后，检查是否存在针对该节点的条件边</li>
+<li><strong>评估阶段</strong>: 调用条件函数，传入当前状态</li>
+<li><strong>路由阶段</strong>: 根据函数返回值确定下一个节点</li>
+</ol>
+<h2 id="addconditionaledge-%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3">AddConditionalEdge 方法详解 <a class="heading-anchor-permalink" href="#addconditionaledge-%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3">#</a></h2>
+<h3 id="messagegraph-%E5%AE%9E%E7%8E%B0">MessageGraph 实现 <a class="heading-anchor-permalink" href="#messagegraph-%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p>在 <code>MessageGraph</code> 中，<code>AddConditionalEdge</code> 方法负责注册条件边：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Client as 客户端代码
+participant MG as MessageGraph
+participant CE as conditionalEdges映射
+Client-&gt;&gt;MG : AddConditionalEdge(from, condition)
+MG-&gt;&gt;CE : conditionalEdges[from] = condition
+CE--&gt;&gt;MG : 存储完成
+MG--&gt;&gt;Client : 注册成功
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L120-L122)</li>
+</ul>
+<h3 id="stategraph-%E5%AE%9E%E7%8E%B0">StateGraph 实现 <a class="heading-anchor-permalink" href="#stategraph-%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p><code>StateGraph</code> 提供了类似的接口，但扩展了重试和监听功能：</p>
+<pre><code class="language-mermaid">classDiagram
+class StateGraph {
++map[string]Node nodes
++[]Edge edges
++map[string]func(ctx, state) string conditionalEdges
++string entryPoint
++StateMerger stateMerger
++StateSchema Schema
++AddNode(name, fn) void
++AddEdge(from, to) void
++AddConditionalEdge(from, condition) void
++SetEntryPoint(name) void
++Compile() StateRunnable
+}
+class MessageGraph {
++map[string]Node nodes
++[]Edge edges
++map[string]func(ctx, state) string conditionalEdges
++string entryPoint
++StateMerger stateMerger
++StateSchema Schema
++AddNode(name, fn) void
++AddEdge(from, to) void
++AddConditionalEdge(from, condition) void
++SetEntryPoint(name) void
++Compile() Runnable
+}
+StateGraph --|&gt; MessageGraph : 继承
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L11-L32)</li>
+<li>[graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L75-L93)</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L74-L76)</li>
+<li>[graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L120-L122)</li>
+</ul>
+<h2 id="%E6%9D%A1%E4%BB%B6%E8%BE%B9%E5%AD%97%E6%AE%B5%E5%AE%9E%E7%8E%B0">条件边字段实现 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6%E8%BE%B9%E5%AD%97%E6%AE%B5%E5%AE%9E%E7%8E%B0">#</a></h2>
+<h3 id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">数据结构设计 <a class="heading-anchor-permalink" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">#</a></h3>
+<p>条件边在两个主要结构中都有实现：</p>
+<pre><code class="language-mermaid">erDiagram
+MessageGraph {
+map[string]Node nodes
+[]Edge edges
+map[string]func(ctx, state) string conditionalEdges
+string entryPoint
+StateMerger stateMerger
+StateSchema Schema
+}
+StateGraph {
+map[string]Node nodes
+[]Edge edges
+map[string]func(ctx, state) string conditionalEdges
+string entryPoint
+RetryPolicy retryPolicy
+StateMerger stateMerger
+StateSchema Schema
+}
+conditionalEdges {
+string from_node
+func(ctx, state) string condition_function
+}
+MessageGraph ||--|| conditionalEdges : contains
+StateGraph ||--|| conditionalEdges : contains
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L18)</li>
+<li>[graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L82)</li>
+</ul>
+<h3 id="%E5%AD%97%E6%AE%B5%E5%88%9D%E5%A7%8B%E5%8C%96">字段初始化 <a class="heading-anchor-permalink" href="#%E5%AD%97%E6%AE%B5%E5%88%9D%E5%A7%8B%E5%8C%96">#</a></h3>
+<p>在两个实现类中，条件边映射都在构造函数中初始化：</p>
+<ul>
+<li><strong>MessageGraph</strong>: 第 98 行创建空映射</li>
+<li><strong>StateGraph</strong>: 第 54 行创建空映射</li>
+</ul>
+<p>这种设计确保了每个图实例都有独立的条件边配置。</p>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L54)</li>
+<li>[graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L98)</li>
+</ul>
+<h2 id="%E6%89%A7%E8%A1%8C%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E6%9D%A1%E4%BB%B6%E8%BE%B9%E5%A4%84%E7%90%86">执行循环中的条件边处理 <a class="heading-anchor-permalink" href="#%E6%89%A7%E8%A1%8C%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E6%9D%A1%E4%BB%B6%E8%BE%B9%E5%A4%84%E7%90%86">#</a></h2>
+<h3 id="invoke-%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B">Invoke 方法中的处理流程 <a class="heading-anchor-permalink" href="#invoke-%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B">#</a></h3>
+<p>在 <code>Invoke</code> 方法的主执行循环中，条件边的处理遵循以下优先级顺序：</p>
+<pre><code class="language-mermaid">flowchart TD
+Start([开始处理节点]) --&gt; CheckCommands{是否有Command Goto?}
+CheckCommands --&gt; |是| ProcessCommands[处理Command Goto]
+CheckCommands --&gt; |否| CheckConditional{是否有条件边?}
+ProcessCommands --&gt; DeduplicateCommands[去重并添加到nextNodesList]
+DeduplicateCommands --&gt; End([继续执行])
+CheckConditional --&gt; |是| CallCondition[调用条件函数]
+CheckConditional --&gt; |否| CheckStaticEdges[检查静态边]
+CallCondition --&gt; ValidateResult{结果是否为空?}
+ValidateResult --&gt; |是| ErrorEmpty[返回错误：空字符串]
+ValidateResult --&gt; |否| AddToSet[添加到nextNodesSet]
+CheckStaticEdges --&gt; FindEdges[查找所有出边]
+FindEdges --&gt; AddToSet
+AddToSet --&gt; End
+ErrorEmpty --&gt; End
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L225-L268)</li>
+<li>[graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L393-L437)</li>
+</ul>
+<h3 id="%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82">具体实现细节 <a class="heading-anchor-permalink" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82">#</a></h3>
+<p>在 <code>state_graph.go</code> 的 <code>InvokeWithConfig</code> 方法中，条件边处理逻辑如下：</p>
+<ol>
+<li><strong>命令优先检查</strong>: 首先检查是否有来自节点的 <code>Command</code> 对象</li>
+<li><strong>条件边检查</strong>: 如果没有命令，则检查是否存在针对当前节点的条件边</li>
+<li><strong>条件函数调用</strong>: 调用条件函数，传入当前状态</li>
+<li><strong>结果验证</strong>: 确保返回值不是空字符串</li>
+<li><strong>静态边回退</strong>: 如果没有条件边，则使用静态边</li>
+</ol>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L225-L268)</li>
+<li>[graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/graph.go#L393-L437)</li>
+</ul>
+<h2 id="simpleintentrouter-%E7%A4%BA%E4%BE%8B%E5%88%86%E6%9E%90">SimpleIntentRouter 示例分析 <a class="heading-anchor-permalink" href="#simpleintentrouter-%E7%A4%BA%E4%BE%8B%E5%88%86%E6%9E%90">#</a></h2>
+<h3 id="%E7%A4%BA%E4%BE%8B%E6%9E%B6%E6%9E%84">示例架构 <a class="heading-anchor-permalink" href="#%E7%A4%BA%E4%BE%8B%E6%9E%B6%E6%9E%84">#</a></h3>
+<p>SimpleIntentRouter 展示了基于用户意图的智能路由：</p>
+<pre><code class="language-mermaid">graph TD
+A[analyze_intent] --&gt; B{条件函数}
+B --&gt; |包含问号/疑问词| C[handle_question]
+B --&gt; |包含请求关键词| D[handle_command]
+B --&gt; |包含反馈关键词| E[handle_feedback]
+B --&gt; |默认| C
+C --&gt; F[END]
+D --&gt; F
+E --&gt; F
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/conditional_edges_example/main.go#L66-L88)</li>
+</ul>
+<h3 id="%E5%85%B3%E9%94%AE%E5%AE%9E%E7%8E%B0%E7%89%B9%E7%82%B9">关键实现特点 <a class="heading-anchor-permalink" href="#%E5%85%B3%E9%94%AE%E5%AE%9E%E7%8E%B0%E7%89%B9%E7%82%B9">#</a></h3>
+<ol>
+<li><strong>状态分析</strong>: 条件函数分析消息内容中的关键词</li>
+<li><strong>多路分支</strong>: 支持多个不同的路由路径</li>
+<li><strong>默认处理</strong>: 提供默认路由以处理意外情况</li>
+<li><strong>可读性</strong>: 使用清晰的条件逻辑</li>
+</ol>
+<h3 id="%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A6%81%E7%82%B9">代码实现要点 <a class="heading-anchor-permalink" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A6%81%E7%82%B9">#</a></h3>
+<p>条件函数的核心逻辑：</p>
+<ul>
+<li>提取文本内容并转换为小写</li>
+<li>使用 <code>strings.Contains</code> 进行关键词匹配</li>
+<li>返回相应的处理器节点名称</li>
+<li>提供详细的调试输出</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/conditional_edges_example/main.go#L66-L88)</li>
+</ul>
+<h2 id="%E4%BC%98%E5%85%88%E7%BA%A7%E6%AF%94%E8%BE%83%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%BE%B9-vs-%E9%9D%99%E6%80%81%E8%BE%B9-vs-command.goto">优先级比较：条件边 vs 静态边 vs Command.Goto <a class="heading-anchor-permalink" href="#%E4%BC%98%E5%85%88%E7%BA%A7%E6%AF%94%E8%BE%83%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%BE%B9-vs-%E9%9D%99%E6%80%81%E8%BE%B9-vs-command.goto">#</a></h2>
+<h3 id="%E4%BC%98%E5%85%88%E7%BA%A7%E5%B1%82%E6%AC%A1">优先级层次 <a class="heading-anchor-permalink" href="#%E4%BC%98%E5%85%88%E7%BA%A7%E5%B1%82%E6%AC%A1">#</a></h3>
+<p>langgraphgo 中的路由优先级从高到低为：</p>
+<ol>
+<li><strong>Command.Goto</strong> (最高优先级)</li>
+<li><strong>条件边</strong> (次高优先级)</li>
+<li><strong>静态边</strong> (最低优先级)</li>
+</ol>
+<h3 id="command.goto-%E4%BC%98%E5%85%88%E7%BA%A7">Command.Goto 优先级 <a class="heading-anchor-permalink" href="#command.goto-%E4%BC%98%E5%85%88%E7%BA%A7">#</a></h3>
+<p>当节点返回 <code>*Command</code> 对象时，其 <code>Goto</code> 字段会完全覆盖其他路由方式：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Node as 节点
+participant Engine as 执行引擎
+participant Commands as 命令处理
+participant Conditional as 条件边处理
+participant Static as 静态边处理
+Node-&gt;&gt;Engine : 返回Command对象
+Engine-&gt;&gt;Commands : 检查Goto字段
+Commands-&gt;&gt;Commands : 处理Goto逻辑
+Commands--&gt;&gt;Engine : 跳过后续处理
+Note over Engine : 忽略静态边和条件边
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L225-L234)</li>
+</ul>
+<h3 id="%E6%9D%A1%E4%BB%B6%E8%BE%B9-vs-%E9%9D%99%E6%80%81%E8%BE%B9">条件边 vs 静态边 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6%E8%BE%B9-vs-%E9%9D%99%E6%80%81%E8%BE%B9">#</a></h3>
+<p>如果没有 <code>Command.Goto</code>，系统会按以下顺序处理：</p>
+<ol>
+<li><strong>条件边优先</strong>: 检查是否存在针对当前节点的条件边</li>
+<li><strong>静态边回退</strong>: 如果没有条件边，则使用静态边定义的路径</li>
+<li><strong>错误处理</strong>: 如果既没有条件边也没有静态边，返回错误</li>
+</ol>
+<h3 id="%E4%BC%98%E5%85%88%E7%BA%A7%E5%AE%9E%E7%8E%B0">优先级实现 <a class="heading-anchor-permalink" href="#%E4%BC%98%E5%85%88%E7%BA%A7%E5%AE%9E%E7%8E%B0">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+Start([节点执行完成]) --&gt; HasCommand{有Command Goto?}
+HasCommand --&gt; |是| ProcessCommand[处理Command Goto]
+HasCommand --&gt; |否| HasConditional{有条件边?}
+ProcessCommand --&gt; OverrideStatic[覆盖静态边]
+OverrideStatic --&gt; End([确定下一节点])
+HasConditional --&gt; |是| CallCondition[调用条件函数]
+HasConditional --&gt; |否| UseStatic[使用静态边]
+CallCondition --&gt; ValidateNonEmpty{结果非空?}
+ValidateNonEmpty --&gt; |是| UseConditional[使用条件边结果]
+ValidateNonEmpty --&gt; |否| Error[返回错误]
+UseConditional --&gt; End
+UseStatic --&gt; End
+Error --&gt; End
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L225-L268)</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L225-L268)</li>
+<li>[command.go](https://github.com/smallnest/langgraphgo/blob/main/graph/command.go#L10-L13)</li>
+</ul>
+<h2 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6">错误处理机制 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6">#</a></h2>
+<h3 id="%E7%A9%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%94%99%E8%AF%AF">空字符串错误 <a class="heading-anchor-permalink" href="#%E7%A9%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%94%99%E8%AF%AF">#</a></h3>
+<p>条件边函数必须返回非空字符串，否则会触发错误：</p>
+<pre><code class="language-go">if nextNode == "" {
+    return nil, fmt.Errorf("conditional edge returned empty next node from %s", nodeName)
+}
+</code></pre>
+<h3 id="%E9%94%99%E8%AF%AF%E7%B1%BB%E5%9E%8B">错误类型 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E7%B1%BB%E5%9E%8B">#</a></h3>
+<ol>
+<li><strong>空字符串错误</strong>: 条件函数返回空字符串</li>
+<li><strong>节点不存在错误</strong>: 目标节点未定义</li>
+<li><strong>无出边错误</strong>: 没有可用的下一节点</li>
+</ol>
+<h3 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">错误处理策略 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+ConditionCall[调用条件函数] --&gt; CheckEmpty{结果为空?}
+CheckEmpty --&gt; |是| EmptyError[返回空字符串错误]
+CheckEmpty --&gt; |否| CheckNodeExists{节点存在?}
+CheckNodeExists --&gt; |否| NodeError[返回节点不存在错误]
+CheckNodeExists --&gt; |是| CheckHasEdges{有静态边?}
+CheckHasEdges --&gt; |否| NoOutgoingError[返回无出边错误]
+CheckHasEdges --&gt; |是| Success[继续执行]
+EmptyError --&gt; ErrorHandler[错误处理]
+NodeError --&gt; ErrorHandler
+NoOutgoingError --&gt; ErrorHandler
+ErrorHandler --&gt; End([终止执行])
+Success --&gt; End
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L243-L261)</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L243-L261)</li>
+<li>[conditional_edges_test.go](https://github.com/smallnest/langgraphgo/blob/main/graph/conditional_edges_test.go#L183-L189)</li>
+</ul>
+<h2 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践 <a class="heading-anchor-permalink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">#</a></h2>
+<h3 id="%E6%9D%A1%E4%BB%B6%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99">条件函数设计原则 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6%E5%87%BD%E6%95%B0%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99">#</a></h3>
+<ol>
+<li><strong>保持简单</strong>: 条件函数应该快速执行，避免复杂计算</li>
+<li><strong>提供默认</strong>: 始终提供默认路由以处理意外情况</li>
+<li><strong>状态安全</strong>: 确保对状态的访问是线程安全的</li>
+<li><strong>错误处理</strong>: 正确处理状态格式不正确的情况</li>
+</ol>
+<h3 id="%E8%B0%83%E8%AF%95%E5%92%8C%E7%9B%91%E6%8E%A7">调试和监控 <a class="heading-anchor-permalink" href="#%E8%B0%83%E8%AF%95%E5%92%8C%E7%9B%91%E6%8E%A7">#</a></h3>
+<ol>
+<li><strong>详细日志</strong>: 在条件函数中添加适当的调试输出</li>
+<li><strong>状态检查</strong>: 验证状态格式的正确性</li>
+<li><strong>边界测试</strong>: 测试各种边界条件和异常情况</li>
+</ol>
+<h3 id="%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">#</a></h3>
+<ol>
+<li><strong>避免重复计算</strong>: 缓存昂贵的计算结果</li>
+<li><strong>合理分组</strong>: 将相关的条件逻辑组合在一起</li>
+<li><strong>及时返回</strong>: 一旦确定路由就尽早返回</li>
+</ol>
+<h3 id="%E7%A4%BA%E4%BE%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">示例最佳实践 <a class="heading-anchor-permalink" href="#%E7%A4%BA%E4%BE%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">#</a></h3>
+<p>基于 SimpleIntentRouter 示例的最佳实践：</p>
+<pre><code class="language-go">// 推荐的条件函数结构
+g.AddConditionalEdge("analyze_intent", func(ctx context.Context, state interface{}) string {
+    messages := state.([]llms.MessageContent)
+    
+    // 输入验证
+    if len(messages) == 0 {
+        fmt.Println("   → 空消息，使用默认处理")
+        return "handle_question"
+    }
+    
+    // 状态提取和转换
+    text := strings.ToLower(messages[0].Parts[0].(llms.TextContent).Text)
+    
+    // 条件判断
+    if strings.Contains(text, "?") || strings.Contains(text, "what") {
+        fmt.Println("   → 路由到问题处理器")
+        return "handle_question"
+    }
+    
+    // 默认处理
+    fmt.Println("   → 默认：路由到问题处理器")
+    return "handle_question"
+})
+</code></pre>
+<h2 id="%E6%80%BB%E7%BB%93">总结 <a class="heading-anchor-permalink" href="#%E6%80%BB%E7%BB%93">#</a></h2>
+<p>条件边是 langgraphgo 中实现动态工作流路由的核心机制，它提供了以下关键能力：</p>
+<h3 id="%E4%B8%BB%E8%A6%81%E4%BC%98%E5%8A%BF">主要优势 <a class="heading-anchor-permalink" href="#%E4%B8%BB%E8%A6%81%E4%BC%98%E5%8A%BF">#</a></h3>
+<ol>
+<li><strong>动态路由</strong>: 根据运行时状态做出智能决策</li>
+<li><strong>灵活配置</strong>: 支持复杂的路由逻辑和多路分支</li>
+<li><strong>易于扩展</strong>: 可以轻松添加新的路由规则</li>
+<li><strong>类型安全</strong>: 强类型的条件函数签名</li>
+</ol>
+<h3 id="%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9">技术特点 <a class="heading-anchor-permalink" href="#%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9">#</a></h3>
+<ol>
+<li><strong>函数式设计</strong>: 使用纯函数作为条件逻辑</li>
+<li><strong>优先级明确</strong>: 清晰的路由优先级体系</li>
+<li><strong>错误处理完善</strong>: 完整的错误检查和处理机制</li>
+<li><strong>性能优化</strong>: 高效的执行循环和缓存机制</li>
+</ol>
+<h3 id="%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">应用场景 <a class="heading-anchor-permalink" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">#</a></h3>
+<ul>
+<li><strong>聊天机器人</strong>: 基于用户意图的智能路由</li>
+<li><strong>数据处理</strong>: 根据数据质量或类型选择处理路径</li>
+<li><strong>工作流管理</strong>: 动态调整业务流程</li>
+<li><strong>错误恢复</strong>: 根据错误类型选择恢复策略</li>
+</ul>
+<p>条件边机制的设计体现了 langgraphgo 在工作流自动化方面的深度思考，为构建复杂的智能系统提供了强大的基础设施支持。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>

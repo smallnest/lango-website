@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../项目概述.html">项目概述</a></li><li><a class="" href="../../快速入门.html">快速入门</a></li><li><a class="" href="../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../架构与设计/架构与设计.html">架构与设计</a></li><li><a class="" href="../../架构与设计/架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../架构与设计/扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试执行流程.html">重试执行流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试策略配置.html">重试策略配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误判定机制.html">错误判定机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../架构与设计/状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../人机协作.html">人机协作</a></li><li><a class="" href="../基础示例教程.html">基础示例教程</a></li><li><a class="" href="../多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../并行执行.html">并行执行</a></li><li><a class="" href="../技能集成.html">技能集成</a></li><li><a class="" href="../教程与示例.html">教程与示例</a></li><li><a class="" href="../条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../RAG 示例系列/RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../RAG 示例系列/基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../RAG 示例系列/向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../RAG 示例系列/向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../RAG 示例系列/向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../RAG 示例系列/向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="../RAG 示例系列/高级RAG模式/条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="" href="../RAG 示例系列/高级RAG模式/检索后重排序.html">检索后重排序</a></li><li><a class="" href="../RAG 示例系列/高级RAG模式/高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="ReAct代理.html">ReAct代理</a></li><li><a class="" href="代理协调器.html">代理协调器</a></li><li><a class="active" href="代理群.html">代理群</a></li><li><a class="" href="动态技能系统.html">动态技能系统</a></li><li><a class="" href="基础代理创建.html">基础代理创建</a></li><li><a class="" href="智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="" href="../状态管理与模式/基础内存管理.html">基础内存管理</a></li><li><a class="" href="../状态管理与模式/状态模式定义.html">状态模式定义</a></li><li><a class="" href="../状态管理与模式/状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="../状态管理与模式/自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../../核心概念/核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="../../核心概念/图结构工作流/入口点.html">入口点</a></li><li><a class="" href="../../核心概念/图结构工作流/图结构工作流.html">图结构工作流</a></li><li><a class="" href="../../核心概念/图结构工作流/子图.html">子图</a></li><li><a class="" href="../../核心概念/图结构工作流/并行执行.html">并行执行</a></li><li><a class="" href="../../核心概念/图结构工作流/条件边.html">条件边</a></li><li><a class="" href="../../核心概念/图结构工作流/节点.html">节点</a></li><li><a class="" href="../../核心概念/图结构工作流/边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="" href="../../核心概念/持久化检查点/持久化检查点.html">持久化检查点</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点监听器.html">检查点监听器</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../../核心概念/流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../../核心概念/流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../../核心概念/流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../../核心概念/流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../../核心概念/流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../../核心概念/流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="" href="../../核心概念/状态管理/状态归约器.html">状态归约器</a></li><li><a class="" href="../../核心概念/状态管理/状态模式.html">状态模式</a></li><li><a class="" href="../../核心概念/状态管理/状态管理.html">状态管理</a></li><li><a class="" href="../../核心概念/状态管理/瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../核心概念/监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../../核心概念/监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../../核心概念/监听器/监听器.html">监听器</a></li><li><a class="" href="../../核心概念/监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../../核心概念/监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../../核心概念/监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../../核心概念/监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../../核心概念/监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../../核心概念/监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../../核心概念/监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../../核心概念/监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../../核心概念/监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../../核心概念/监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../高级特性/子图.html">子图</a></li><li><a class="" href="../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E4%BB%A3%E7%90%86%E7%BE%A4">代理群 <a class="heading-anchor-permalink" href="#%E4%BB%A3%E7%90%86%E7%BE%A4">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档中引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go">examples/swarm/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/README.md">examples/swarm/README.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/README_CN.md">examples/swarm/README_CN.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/prebuilt/supervisor.go">prebuilt/supervisor.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/supervisor/main.go">examples/supervisor/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go">graph/state_graph.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go">graph/schema.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/conditional_edges_test.go">graph/conditional_edges_test.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/command_api/main.go">examples/command_api/main.go</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">项目结构</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6">核心组件</a></li>
+<li><a href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览</a></li>
+<li><a href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析</a></li>
+<li><a href="#handoff-%E7%A7%BB%E4%BA%A4%E6%9C%BA%E5%88%B6">Handoff 移交机制</a></li>
+<li><a href="#router-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1">Router 动态路由</a></li>
+<li><a href="#%E5%85%B1%E4%BA%AB%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86">共享状态管理</a></li>
+<li><a href="#%E4%B8%8E-supervisor-%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AF%B9%E6%AF%94">与 Supervisor 模式的对比</a></li>
+<li><a href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑</a></li>
+<li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南</a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>Swarm 是一种去中心化的多代理协作模式，灵感来源于 OpenAI 的 Swarm 框架。与传统的 Supervisor 中央调度模式不同，Swarm 允许代理之间直接进行控制权转移，模拟真实专家团队的协作方式——根据各自的专业能力来回传递任务。</p>
+<p>在 Swarm 模式中，代理通过特殊的 Handoff 工具实现代理间的直接控制权转移，而 Router 函数则根据状态中的 ‘next’ 字段进行动态路由决策。这种设计使得代理群能够灵活地处理复杂的协作场景，无需中央协调器的介入。</p>
+<h2 id="%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">项目结构 <a class="heading-anchor-permalink" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">#</a></h2>
+<p>Swarm 实现位于 <code>examples/swarm</code> 目录下，包含以下关键文件：</p>
+<pre><code class="language-mermaid">graph TD
+A["examples/swarm/"] --&gt; B["main.go&lt;br/&gt;主要实现"]
+A --&gt; C["README.md&lt;br/&gt;英文文档"]
+A --&gt; D["README_CN.md&lt;br/&gt;中文文档"]
+E["graph/"] --&gt; F["state_graph.go&lt;br/&gt;状态图实现"]
+E --&gt; G["schema.go&lt;br/&gt;状态模式定义"]
+H["prebuilt/"] --&gt; I["supervisor.go&lt;br/&gt;监督者模式"]
+J["examples/supervisor/"] --&gt; K["main.go&lt;br/&gt;监督者示例"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L1-L244)</li>
+<li>[graph/state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L1-L200)</li>
+<li>[prebuilt/supervisor.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/supervisor.go#L1-L153)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L1-L244)</li>
+<li>[examples/swarm/README.md](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/README.md#L1-L78)</li>
+</ul>
+<h2 id="%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6">核心组件 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6">#</a></h2>
+<p>Swarm 模式的核心组件包括：</p>
+<h3 id="agentstate-%E7%BB%93%E6%9E%84%E4%BD%93">AgentState 结构体 <a class="heading-anchor-permalink" href="#agentstate-%E7%BB%93%E6%9E%84%E4%BD%93">#</a></h3>
+<p>定义了代理的状态结构，包含消息历史和下一个执行的代理标识：</p>
+<pre><code class="language-mermaid">classDiagram
+class AgentState {
++[]MessageContent Messages
++string Next
+}
+class HandoffTool {
++string Type
++FunctionDefinition Function
+}
+class StateGraph {
++map~string,Node~ nodes
++[]Edge edges
++map~string,func~ conditionalEdges
++string entryPoint
++StateSchema Schema
+}
+AgentState --&gt; StateGraph : "使用"
+HandoffTool --&gt; StateGraph : "提供给"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L15-L19)</li>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L21-L38)</li>
+</ul>
+<h3 id="handofftool-%E5%B7%A5%E5%85%B7">HandoffTool 工具 <a class="heading-anchor-permalink" href="#handofftool-%E5%B7%A5%E5%85%B7">#</a></h3>
+<p>实现了代理间控制权转移的特殊工具，具有预定义的参数结构：</p>
+<ul>
+<li><strong>名称</strong>: <code>handoff</code></li>
+<li><strong>描述</strong>: 将控制权移交给另一个代理</li>
+<li><strong>参数</strong>: 必需的 <code>to</code> 字段，可选值为 <code>"Researcher"</code> 或 <code>"Writer"</code></li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L15-L38)</li>
+</ul>
+<h2 id="%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览 <a class="heading-anchor-permalink" href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">#</a></h2>
+<p>Swarm 模式的整体架构采用去中心化设计理念：</p>
+<pre><code class="language-mermaid">graph TB
+subgraph "Swarm 架构"
+A["用户输入"] --&gt; B["Researcher"]
+B --&gt; C["Handoff 检测"]
+C --&gt; D{"是否需要移交?"}
+D --&gt; |是| E["设置 Next 字段"]
+D --&gt; |否| F["正常响应"]
+E --&gt; G["Router 函数"]
+F --&gt; G
+G --&gt; H{"Next 字段"}
+H --&gt; |"Writer"| I["Writer"]
+H --&gt; |"END"| J["结束"]
+I --&gt; K["Handoff 检测"]
+K --&gt; L{"是否完成?"}
+L --&gt; |是| M["设置 Next='END'"]
+L --&gt; |否| N["正常响应"]
+M --&gt; G
+N --&gt; G
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L66-L190)</li>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L192-L200)</li>
+</ul>
+<h2 id="%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析 <a class="heading-anchor-permalink" href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">#</a></h2>
+<h3 id="%E7%A0%94%E7%A9%B6%E5%91%98-(researcher)-%E7%BB%84%E4%BB%B6">研究员 (Researcher) 组件 <a class="heading-anchor-permalink" href="#%E7%A0%94%E7%A9%B6%E5%91%98-(researcher)-%E7%BB%84%E4%BB%B6">#</a></h3>
+<p>研究员是负责信息检索和研究的代理节点：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant U as 用户
+participant R as 研究员
+participant M as 模型
+participant W as 写作器
+U-&gt;&gt;R : 发送请求
+R-&gt;&gt;M : 处理消息并添加系统提示
+M--&gt;&gt;R : 返回响应或工具调用
+alt 需要写作
+R-&gt;&gt;R : 解析 handoff 工具调用
+R-&gt;&gt;R : 更新状态中的 Next 字段
+R-&gt;&gt;W : 移交控制权
+else 继续研究
+R-&gt;&gt;R : 正常响应
+R-&gt;&gt;U : 返回结果
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L67-L132)</li>
+</ul>
+<h3 id="%E5%86%99%E4%BD%9C%E5%99%A8-(writer)-%E7%BB%84%E4%BB%B6">写作器 (Writer) 组件 <a class="heading-anchor-permalink" href="#%E5%86%99%E4%BD%9C%E5%99%A8-(writer)-%E7%BB%84%E4%BB%B6">#</a></h3>
+<p>写作器负责基于收集的信息撰写报告：</p>
+<pre><code class="language-mermaid">flowchart TD
+A["接收移交"] --&gt; B["检查消息历史"]
+B --&gt; C["应用系统提示"]
+C --&gt; D["调用模型"]
+D --&gt; E{"是否有工具调用?"}
+E --&gt; |是| F["解析 handoff 工具"]
+F --&gt; G["更新状态 Next 字段"]
+G --&gt; H["返回工具调用和消息"]
+E --&gt; |否| I["生成普通响应"]
+I --&gt; J["设置 Next='END'"]
+H --&gt; K["等待 Router 路由"]
+J --&gt; K
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L135-L189)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L67-L189)</li>
+</ul>
+<h2 id="handoff-%E7%A7%BB%E4%BA%A4%E6%9C%BA%E5%88%B6">Handoff 移交机制 <a class="heading-anchor-permalink" href="#handoff-%E7%A7%BB%E4%BA%A4%E6%9C%BA%E5%88%B6">#</a></h2>
+<p>Handoff 机制是 Swarm 模式的核心创新，它允许代理之间直接进行控制权转移：</p>
+<h3 id="%E7%A7%BB%E4%BA%A4%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%9E%E7%8E%B0">移交工具的实现 <a class="heading-anchor-permalink" href="#%E7%A7%BB%E4%BA%A4%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p>Handoff 工具的设计遵循以下原则：</p>
+<ol>
+<li><strong>类型安全</strong>: 使用预定义的参数结构确保类型安全</li>
+<li><strong>枚举验证</strong>: 限制目标代理只能是预定义的选项</li>
+<li><strong>JSON 序列化</strong>: 支持工具参数的 JSON 序列化和反序列化</li>
+</ol>
+<h3 id="%E7%A7%BB%E4%BA%A4%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3">移交流程详解 <a class="heading-anchor-permalink" href="#%E7%A7%BB%E4%BA%A4%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3">#</a></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+participant A as 当前代理
+participant S as 状态管理
+participant R as Router
+participant N as 下一代理
+A-&gt;&gt;A : 分析当前状态
+A-&gt;&gt;A : 判断是否需要移交
+alt 需要移交
+A-&gt;&gt;A : 创建工具调用
+A-&gt;&gt;A : 解析参数 (to : 目标代理)
+A-&gt;&gt;S : 更新状态
+Note over S : 设置 Next 字段为目标代理
+A-&gt;&gt;N : 返回工具调用和消息
+N-&gt;&gt;R : 接收状态
+R-&gt;&gt;R : 检查 Next 字段
+R-&gt;&gt;N : 路由到目标代理
+else 不需要移交
+A-&gt;&gt;A : 生成正常响应
+A-&gt;&gt;S : 更新状态
+Note over S : 设置 Next='END'
+A-&gt;&gt;A : 结束执行
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L83-L118)</li>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L151-L177)</li>
+</ul>
+<h3 id="%E7%A7%BB%E4%BA%A4%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0">移交状态更新 <a class="heading-anchor-permalink" href="#%E7%A7%BB%E4%BA%A4%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0">#</a></h3>
+<p>移交操作涉及两个关键状态更新：</p>
+<ol>
+<li><strong>消息历史</strong>: 记录工具调用和响应</li>
+<li><strong>路由指示</strong>: 更新 <code>next</code> 字段为目标代理</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L83-L118)</li>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L151-L177)</li>
+</ul>
+<h2 id="router-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1">Router 动态路由 <a class="heading-anchor-permalink" href="#router-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1">#</a></h2>
+<p>Router 函数是 Swarm 模式中负责动态路由的核心组件：</p>
+<h3 id="%E8%B7%AF%E7%94%B1%E9%80%BB%E8%BE%91%E5%AE%9E%E7%8E%B0">路由逻辑实现 <a class="heading-anchor-permalink" href="#%E8%B7%AF%E7%94%B1%E9%80%BB%E8%BE%91%E5%AE%9E%E7%8E%B0">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+A["Router 函数调用"] --&gt; B["提取状态中的 Next 字段"]
+B --&gt; C{"Next 字段检查"}
+C --&gt; |"END" 或空| D["返回 graph.END"]
+C --&gt; |有效代理名| E["返回代理名称"]
+D --&gt; F["结束执行"]
+E --&gt; G["路由到指定代理"]
+style D fill:#ffcccc
+style E fill:#ccffcc
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L192-L200)</li>
+</ul>
+<h3 id="%E6%9D%A1%E4%BB%B6%E8%BE%B9%E6%9C%BA%E5%88%B6">条件边机制 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6%E8%BE%B9%E6%9C%BA%E5%88%B6">#</a></h3>
+<p>Swarm 使用条件边来实现动态路由：</p>
+<pre><code class="language-mermaid">graph LR
+A["Researcher"] --&gt; B["Router"]
+C["Writer"] --&gt; B
+B --&gt; D["Conditional Edge"]
+D --&gt; E["Next Agent"]
+subgraph "路由决策"
+F["检查 Next 字段"]
+F --&gt; G{"字段值"}
+G --&gt; |"Researcher"| H["路由到 Researcher"]
+G --&gt; |"Writer"| I["路由到 Writer"]
+G --&gt; |"END"| J["结束"]
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L202-L203)</li>
+<li>[graph/state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L240-L268)</li>
+</ul>
+<h3 id="%E8%B7%AF%E7%94%B1%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0">路由函数的具体实现 <a class="heading-anchor-permalink" href="#%E8%B7%AF%E7%94%B1%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p>路由函数的逻辑非常简洁但功能强大：</p>
+<ol>
+<li><strong>状态解析</strong>: 从传入的状态中提取 <code>next</code> 字段</li>
+<li><strong>有效性检查</strong>: 验证字段值的有效性</li>
+<li><strong>默认处理</strong>: 对于无效或空值返回 <code>END</code></li>
+<li><strong>代理路由</strong>: 返回有效的代理名称作为下一节点</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L192-L200)</li>
+<li>[graph/state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L240-L268)</li>
+</ul>
+<h2 id="%E5%85%B1%E4%BA%AB%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86">共享状态管理 <a class="heading-anchor-permalink" href="#%E5%85%B1%E4%BA%AB%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86">#</a></h2>
+<p>Swarm 模式中的共享状态是实现代理协作的关键基础设施：</p>
+<h3 id="%E7%8A%B6%E6%80%81%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">状态结构设计 <a class="heading-anchor-permalink" href="#%E7%8A%B6%E6%80%81%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">#</a></h3>
+<pre><code class="language-mermaid">classDiagram
+class SharedState {
++[]MessageContent messages
++string next
+}
+class MessageContent {
++ChatMessageType Role
++[]ContentPart Parts
+}
+class ContentPart {
+&lt;&lt;interface&gt;&gt;
+}
+class TextContent {
++string Text
+}
+class ToolCall {
++string ID
++FunctionCall FunctionCall
+}
+class ToolCallResponse {
++string ToolCallID
++string Name
++string Content
+}
+SharedState --&gt; MessageContent : "包含"
+MessageContent --&gt; ContentPart : "包含"
+ContentPart &lt;|-- TextContent
+ContentPart &lt;|-- ToolCall
+ContentPart &lt;|-- ToolCallResponse
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L15-L19)</li>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L62-L99)</li>
+</ul>
+<h3 id="%E6%B6%88%E6%81%AF%E5%8E%86%E5%8F%B2%E7%AE%A1%E7%90%86">消息历史管理 <a class="heading-anchor-permalink" href="#%E6%B6%88%E6%81%AF%E5%8E%86%E5%8F%B2%E7%AE%A1%E7%90%86">#</a></h3>
+<p>共享状态中的消息历史通过 AppendReducer 进行管理：</p>
+<ol>
+<li><strong>累积机制</strong>: 新的消息自动追加到现有消息列表</li>
+<li><strong>类型安全</strong>: 确保消息内容的一致性和完整性</li>
+<li><strong>历史可见性</strong>: 后续代理可以访问完整的交互历史</li>
+</ol>
+<h3 id="%E7%8A%B6%E6%80%81-schema-%E5%AE%9A%E4%B9%89">状态 Schema 定义 <a class="heading-anchor-permalink" href="#%E7%8A%B6%E6%80%81-schema-%E5%AE%9A%E4%B9%89">#</a></h3>
+<pre><code class="language-mermaid">graph TD
+A["MapSchema"] --&gt; B["注册 Reducer"]
+B --&gt; C["messages: AppendReducer"]
+A --&gt; D["设置 Schema"]
+D --&gt; E["StateGraph"]
+F["状态更新流程"] --&gt; G["检查现有值"]
+G --&gt; H["应用 Reducer"]
+H --&gt; I["合并新值"]
+I --&gt; J["返回更新后状态"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L61-L65)</li>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L44-L47)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L61-L65)</li>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L62-L99)</li>
+</ul>
+<h2 id="%E4%B8%8E-supervisor-%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AF%B9%E6%AF%94">与 Supervisor 模式的对比 <a class="heading-anchor-permalink" href="#%E4%B8%8E-supervisor-%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AF%B9%E6%AF%94">#</a></h2>
+<p>Swarm 模式与传统的 Supervisor 模式在架构设计上存在根本差异：</p>
+<h3 id="%E6%9E%B6%E6%9E%84%E5%AF%B9%E6%AF%94">架构对比 <a class="heading-anchor-permalink" href="#%E6%9E%B6%E6%9E%84%E5%AF%B9%E6%AF%94">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Swarm 模式</th>
+<th>Supervisor 模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>控制结构</strong></td>
+<td>去中心化，代理间直接协作</td>
+<td>中心化，通过监督者协调</td>
+</tr>
+<tr>
+<td><strong>路由机制</strong></td>
+<td>基于状态的动态路由</td>
+<td>基于工具调用的静态路由</td>
+</tr>
+<tr>
+<td><strong>状态共享</strong></td>
+<td>所有代理共享同一状态</td>
+<td>状态独立，通过监督者协调</td>
+</tr>
+<tr>
+<td><strong>灵活性</strong></td>
+<td>高度灵活，支持复杂协作模式</td>
+<td>结构固定，适合简单流水线</td>
+</tr>
+<tr>
+<td><strong>复杂度</strong></td>
+<td>较高，需要精心设计状态</td>
+<td>较低，框架提供标准化接口</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F%E5%B7%AE%E5%BC%82">协作模式差异 <a class="heading-anchor-permalink" href="#%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F%E5%B7%AE%E5%BC%82">#</a></h3>
+<pre><code class="language-mermaid">graph TB
+subgraph "Swarm 模式"
+A1["Researcher"] --&gt; B1["Handoff 工具"]
+B1 --&gt; C1["Writer"]
+C1 --&gt; D1["Handoff 工具"]
+D1 --&gt; A1
+A1 -.-&gt; E1["共享状态"]
+C1 -.-&gt; E1
+end
+subgraph "Supervisor 模式"
+A2["Supervisor"] --&gt; B2["Route 工具"]
+B2 --&gt; C2["Worker A"]
+B2 --&gt; D2["Worker B"]
+C2 --&gt; A2
+D2 --&gt; A2
+A2 -.-&gt; E2["共享状态"]
+C2 -.-&gt; E2
+D2 -.-&gt; E2
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L192-L200)</li>
+<li>[prebuilt/supervisor.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/supervisor.go#L130-L150)</li>
+</ul>
+<h3 id="%E4%BC%98%E5%8A%BF%E5%AF%B9%E6%AF%94">优势对比 <a class="heading-anchor-permalink" href="#%E4%BC%98%E5%8A%BF%E5%AF%B9%E6%AF%94">#</a></h3>
+<h4 id="swarm-%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E5%8A%BF%EF%BC%9A">Swarm 模式的优势： <a class="heading-anchor-permalink" href="#swarm-%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E5%8A%BF%EF%BC%9A">#</a></h4>
+<ol>
+<li><strong>真实模拟</strong>: 更接近真实专家团队的协作方式</li>
+<li><strong>灵活性</strong>: 支持复杂的双向协作模式</li>
+<li><strong>去中心化</strong>: 无需中央协调器，减少单点故障</li>
+<li><strong>动态适应</strong>: 能够根据上下文动态调整协作策略</li>
+</ol>
+<h4 id="supervisor-%E6%A8%A1%E5%BC%8F%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A">Supervisor 模式的适用场景： <a class="heading-anchor-permalink" href="#supervisor-%E6%A8%A1%E5%BC%8F%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A">#</a></h4>
+<ol>
+<li><strong>简单流水线</strong>: 适用于线性、可预测的工作流程</li>
+<li><strong>标准化任务</strong>: 适合需要严格控制的任务分配</li>
+<li><strong>监控友好</strong>: 中央控制便于监控和审计</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L1-L244)</li>
+<li>[prebuilt/supervisor.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/supervisor.go#L1-L153)</li>
+</ul>
+<h2 id="%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">#</a></h2>
+<p>Swarm 模式在性能方面具有以下特点：</p>
+<h3 id="%E5%B9%B6%E5%8F%91%E6%89%A7%E8%A1%8C%E4%BC%98%E5%8A%BF">并发执行优势 <a class="heading-anchor-permalink" href="#%E5%B9%B6%E5%8F%91%E6%89%A7%E8%A1%8C%E4%BC%98%E5%8A%BF">#</a></h3>
+<ul>
+<li><strong>并行处理</strong>: 多个代理可以同时处理不同的任务分支</li>
+<li><strong>状态隔离</strong>: 每个代理维护自己的状态副本，避免锁竞争</li>
+<li><strong>快速切换</strong>: 通过状态标记实现快速的代理间切换</li>
+</ul>
+<h3 id="%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">内存管理 <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">#</a></h3>
+<ul>
+<li><strong>增量更新</strong>: 只更新必要的状态部分，减少内存占用</li>
+<li><strong>垃圾回收</strong>: 及时清理不再需要的状态数据</li>
+<li><strong>缓存策略</strong>: 合理利用缓存提高重复查询的效率</li>
+</ul>
+<h3 id="%E6%89%A9%E5%B1%95%E6%80%A7%E8%AE%BE%E8%AE%A1">扩展性设计 <a class="heading-anchor-permalink" href="#%E6%89%A9%E5%B1%95%E6%80%A7%E8%AE%BE%E8%AE%A1">#</a></h3>
+<ul>
+<li><strong>水平扩展</strong>: 新增代理只需添加节点和条件边</li>
+<li><strong>插件化</strong>: 支持动态添加新的协作模式</li>
+<li><strong>配置驱动</strong>: 通过配置文件轻松调整协作策略</li>
+</ul>
+<h2 id="%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南 <a class="heading-anchor-permalink" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">#</a></h2>
+<h3 id="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见问题及解决方案 <a class="heading-anchor-permalink" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">#</a></h3>
+<h4 id="1.-%E7%A7%BB%E4%BA%A4%E5%A4%B1%E8%B4%A5">1. 移交失败 <a class="heading-anchor-permalink" href="#1.-%E7%A7%BB%E4%BA%A4%E5%A4%B1%E8%B4%A5">#</a></h4>
+<p><strong>症状</strong>: 代理无法正确移交控制权
+<strong>原因</strong>:</p>
+<ul>
+<li><code>next</code> 字段设置错误</li>
+<li>目标代理不存在</li>
+<li>状态更新不完整</li>
+</ul>
+<p><strong>解决方案</strong>:</p>
+<ul>
+<li>检查 <code>next</code> 字段的值是否正确</li>
+<li>验证目标代理已正确定义</li>
+<li>确保状态更新包含所有必要字段</li>
+</ul>
+<h4 id="2.-%E8%B7%AF%E7%94%B1%E5%BE%AA%E7%8E%AF">2. 路由循环 <a class="heading-anchor-permalink" href="#2.-%E8%B7%AF%E7%94%B1%E5%BE%AA%E7%8E%AF">#</a></h4>
+<p><strong>症状</strong>: 系统陷入无限循环
+<strong>原因</strong>:</p>
+<ul>
+<li>代理间相互移交导致循环</li>
+<li>路由条件设计不当</li>
+</ul>
+<p><strong>解决方案</strong>:</p>
+<ul>
+<li>添加循环检测机制</li>
+<li>设计明确的终止条件</li>
+<li>使用有限状态机模式</li>
+</ul>
+<h4 id="3.-%E7%8A%B6%E6%80%81%E4%B8%8D%E4%B8%80%E8%87%B4">3. 状态不一致 <a class="heading-anchor-permalink" href="#3.-%E7%8A%B6%E6%80%81%E4%B8%8D%E4%B8%80%E8%87%B4">#</a></h4>
+<p><strong>症状</strong>: 代理看到不一致的消息历史
+<strong>原因</strong>:</p>
+<ul>
+<li>并发更新冲突</li>
+<li>状态同步延迟</li>
+</ul>
+<p><strong>解决方案</strong>:</p>
+<ul>
+<li>实现状态版本控制</li>
+<li>使用乐观锁机制</li>
+<li>增加状态验证步骤</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/swarm/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/swarm/main.go#L192-L200)</li>
+<li>[graph/state_graph.go](https://github.com/smallnest/langgraphgo/blob/main/graph/state_graph.go#L240-L268)</li>
+</ul>
+<h2 id="%E7%BB%93%E8%AE%BA">结论 <a class="heading-anchor-permalink" href="#%E7%BB%93%E8%AE%BA">#</a></h2>
+<p>Swarm 去中心化协作模式代表了多代理系统设计的重要创新。通过 Handoff 机制实现的代理间直接控制权转移，以及 Router 函数基于状态的动态路由决策，使得 Swarm 能够模拟真实专家团队的灵活协作方式。</p>
+<p>与传统的 Supervisor 模式相比，Swarm 提供了更高的灵活性和更真实的协作体验，特别适合需要复杂交互和动态调整的场景。共享状态机制确保了代理间的信息同步，而去中心化的架构设计减少了系统复杂性和单点故障风险。</p>
+<p>这种模式在实际应用中展现了强大的潜力，特别是在需要多个专业领域协作的复杂任务处理场景中。随着多代理系统的不断发展，Swarm 模式有望成为构建智能协作系统的重要基础架构。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>

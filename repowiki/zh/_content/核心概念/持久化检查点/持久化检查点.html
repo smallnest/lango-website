@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../项目概述.html">项目概述</a></li><li><a class="" href="../../快速入门.html">快速入门</a></li><li><a class="" href="../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../架构与设计/架构与设计.html">架构与设计</a></li><li><a class="" href="../../架构与设计/架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../架构与设计/扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试执行流程.html">重试执行流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试策略配置.html">重试策略配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误判定机制.html">错误判定机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../架构与设计/状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../../教程与示例/LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../../教程与示例/MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../../教程与示例/人机协作.html">人机协作</a></li><li><a class="" href="../../教程与示例/基础示例教程.html">基础示例教程</a></li><li><a class="" href="../../教程与示例/多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../../教程与示例/多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../../教程与示例/并行执行.html">并行执行</a></li><li><a class="" href="../../教程与示例/技能集成.html">技能集成</a></li><li><a class="" href="../../教程与示例/教程与示例.html">教程与示例</a></li><li><a class="" href="../../教程与示例/条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../../教程与示例/流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/检索后重排序.html">检索后重排序</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../../教程与示例/子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../../教程与示例/工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../../教程与示例/工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="../../教程与示例/智能代理示例/ReAct代理.html">ReAct代理</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理协调器.html">代理协调器</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理群.html">代理群</a></li><li><a class="" href="../../教程与示例/智能代理示例/动态技能系统.html">动态技能系统</a></li><li><a class="" href="../../教程与示例/智能代理示例/基础代理创建.html">基础代理创建</a></li><li><a class="" href="../../教程与示例/智能代理示例/智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../../教程与示例/检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="" href="../../教程与示例/状态管理与模式/基础内存管理.html">基础内存管理</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态模式定义.html">状态模式定义</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="../../教程与示例/状态管理与模式/自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="../图结构工作流/入口点.html">入口点</a></li><li><a class="" href="../图结构工作流/图结构工作流.html">图结构工作流</a></li><li><a class="" href="../图结构工作流/子图.html">子图</a></li><li><a class="" href="../图结构工作流/并行执行.html">并行执行</a></li><li><a class="" href="../图结构工作流/条件边.html">条件边</a></li><li><a class="" href="../图结构工作流/节点.html">节点</a></li><li><a class="" href="../图结构工作流/边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="active" href="持久化检查点.html">持久化检查点</a></li><li><a class="" href="检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="检查点监听器.html">检查点监听器</a></li><li><a class="" href="检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="" href="../状态管理/状态归约器.html">状态归约器</a></li><li><a class="" href="../状态管理/状态模式.html">状态模式</a></li><li><a class="" href="../状态管理/状态管理.html">状态管理</a></li><li><a class="" href="../状态管理/瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../监听器/监听器.html">监听器</a></li><li><a class="" href="../监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../高级特性/子图.html">子图</a></li><li><a class="" href="../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E6%8C%81%E4%B9%85%E5%8C%96%E6%A3%80%E6%9F%A5%E7%82%B9">持久化检查点 <a class="heading-anchor-permalink" href="#%E6%8C%81%E4%B9%85%E5%8C%96%E6%A3%80%E6%9F%A5%E7%82%B9">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档中引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go">checkpointing.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/checkpoint/postgres/postgres.go">postgres.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/checkpoint/redis/redis.go">redis.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/checkpoint/sqlite/sqlite.go">sqlite.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/checkpointing/main.go">main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/checkpointing/postgres/main.go">postgres/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/checkpointing/redis/main.go">redis/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/checkpointing/sqlite/main.go">sqlite/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/checkpointing/README.md">README.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing_test.go">checkpointing_test.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/time_travel/README_CN.md">time_travel/README_CN.md</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E6%A3%80%E6%9F%A5%E7%82%B9%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">检查点核心概念</a></li>
+<li><a href="#checkpoint-%E7%BB%93%E6%9E%84%E4%BD%93%E8%AF%A6%E8%A7%A3">Checkpoint 结构体详解</a></li>
+<li><a href="#checkpointstore-%E6%8E%A5%E5%8F%A3%E5%A5%91%E7%BA%A6">CheckpointStore 接口契约</a></li>
+<li><a href="#%E6%A3%80%E6%9F%A5%E7%82%B9%E5%AD%98%E5%82%A8%E5%90%8E%E7%AB%AF">检查点存储后端</a></li>
+<li><a href="#checkpointablerunnable-%E5%92%8C-checkpointlistener">CheckpointableRunnable 和 CheckpointListener</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8">配置和使用</a></li>
+<li><a href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">应用场景</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>持久化检查点（Checkpointing）是 LangGraphGo 框架中的核心功能，为复杂、长时间运行的应用程序提供了强大的状态管理和容错能力。检查点系统允许应用程序在执行过程中自动保存状态快照，从而实现故障恢复、人机交互和时间旅行等高级功能。</p>
+<p>检查点系统解决了以下关键问题：</p>
+<ul>
+<li><strong>容错性</strong>：当应用程序崩溃时，可以从最近的检查点恢复</li>
+<li><strong>人机协作</strong>：支持暂停执行等待人工输入或决策</li>
+<li><strong>状态管理</strong>：提供完整的执行历史记录和状态回溯能力</li>
+<li><strong>分布式一致性</strong>：确保多实例环境下的状态同步</li>
+</ul>
+<h2 id="%E6%A3%80%E6%9F%A5%E7%82%B9%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">检查点核心概念 <a class="heading-anchor-permalink" href="#%E6%A3%80%E6%9F%A5%E7%82%B9%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">#</a></h2>
+<h3 id="%E6%89%A7%E8%A1%8C%E7%BA%BF%E7%A8%8B%EF%BC%88execution-thread%EF%BC%89">执行线程（Execution Thread） <a class="heading-anchor-permalink" href="#%E6%89%A7%E8%A1%8C%E7%BA%BF%E7%A8%8B%EF%BC%88execution-thread%EF%BC%89">#</a></h3>
+<p>每个检查点都与一个唯一的执行线程相关联，用于隔离不同的执行上下文。执行线程 ID 通常由框架自动生成，但也可以手动指定。</p>
+<h3 id="%E6%A3%80%E6%9F%A5%E7%82%B9%E6%A0%87%E8%AF%86%E7%AC%A6">检查点标识符 <a class="heading-anchor-permalink" href="#%E6%A3%80%E6%9F%A5%E7%82%B9%E6%A0%87%E8%AF%86%E7%AC%A6">#</a></h3>
+<p>每个检查点都有一个全局唯一的标识符，格式为 <code>checkpoint_&lt;timestamp&gt;</code>，其中 timestamp 是纳秒级的时间戳。</p>
+<h3 id="%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6">版本控制 <a class="heading-anchor-permalink" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6">#</a></h3>
+<p>检查点系统采用版本控制机制，每次状态更新都会递增版本号，支持状态历史追踪和并发控制。</p>
+<h2 id="checkpoint-%E7%BB%93%E6%9E%84%E4%BD%93%E8%AF%A6%E8%A7%A3">Checkpoint 结构体详解 <a class="heading-anchor-permalink" href="#checkpoint-%E7%BB%93%E6%9E%84%E4%BD%93%E8%AF%A6%E8%A7%A3">#</a></h2>
+<p>检查点结构体是整个检查点系统的核心数据结构，包含了执行过程中的完整状态信息。</p>
+<pre><code class="language-mermaid">classDiagram
+class Checkpoint {
++string ID
++string NodeName
++interface State
++map[string]interface Metadata
++time.Time Timestamp
++int Version
++MarshalJSON() []byte
++UnmarshalJSON([]byte) error
+}
+class CheckpointConfig {
++CheckpointStore Store
++bool AutoSave
++time.Duration SaveInterval
++int MaxCheckpoints
+}
+class CheckpointStore {
+&lt;&lt;interface&gt;&gt;
++Save(ctx, checkpoint) error
++Load(ctx, checkpointID) *Checkpoint
++List(ctx, executionID) []*Checkpoint
++Delete(ctx, checkpointID) error
++Clear(ctx, executionID) error
+}
+Checkpoint --&gt; CheckpointConfig : "配置"
+CheckpointConfig --&gt; CheckpointStore : "使用"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L12-L20)</li>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L188-L201)</li>
+</ul>
+<h3 id="%E5%AD%97%E6%AE%B5%E8%AF%A6%E8%A7%A3">字段详解 <a class="heading-anchor-permalink" href="#%E5%AD%97%E6%AE%B5%E8%AF%A6%E8%A7%A3">#</a></h3>
+<h4 id="id%EF%BC%88%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89">ID（字符串） <a class="heading-anchor-permalink" href="#id%EF%BC%88%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89">#</a></h4>
+<ul>
+<li><strong>类型</strong>：<code>string</code></li>
+<li><strong>含义</strong>：检查点的唯一标识符</li>
+<li><strong>生成方式</strong>：基于时间戳的自动生成</li>
+<li><strong>用途</strong>：作为检查点的主键，在存储后端中唯一标识每个检查点</li>
+</ul>
+<h4 id="nodename%EF%BC%88%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89">NodeName（字符串） <a class="heading-anchor-permalink" href="#nodename%EF%BC%88%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89">#</a></h4>
+<ul>
+<li><strong>类型</strong>：<code>string</code></li>
+<li><strong>含义</strong>：触发检查点保存的节点名称</li>
+<li><strong>用途</strong>：记录状态快照是在哪个处理节点创建的，有助于调试和状态追踪</li>
+</ul>
+<h4 id="state%EF%BC%88%E4%BB%BB%E6%84%8F%E7%B1%BB%E5%9E%8B%EF%BC%89">State（任意类型） <a class="heading-anchor-permalink" href="#state%EF%BC%88%E4%BB%BB%E6%84%8F%E7%B1%BB%E5%9E%8B%EF%BC%89">#</a></h4>
+<ul>
+<li><strong>类型</strong>：<code>interface{}</code></li>
+<li><strong>含义</strong>：当前的执行状态</li>
+<li><strong>序列化</strong>：通过 JSON 编码存储</li>
+<li><strong>用途</strong>：保存完整的状态信息，支持任意复杂的数据结构</li>
+</ul>
+<h4 id="metadata%EF%BC%88%E5%85%83%E6%95%B0%E6%8D%AE%E6%98%A0%E5%B0%84%EF%BC%89">Metadata（元数据映射） <a class="heading-anchor-permalink" href="#metadata%EF%BC%88%E5%85%83%E6%95%B0%E6%8D%AE%E6%98%A0%E5%B0%84%EF%BC%89">#</a></h4>
+<ul>
+<li><strong>类型</strong>：<code>map[string]interface{}</code></li>
+<li><strong>含义</strong>：附加的元数据信息</li>
+<li><strong>常用键</strong>：
+<ul>
+<li><code>"execution_id"</code>：执行线程标识符</li>
+<li><code>"event"</code>：事件类型标记</li>
+<li><code>"source"</code>：状态来源标识</li>
+<li><code>"updated_by"</code>：最后更新节点</li>
+</ul>
+</li>
+</ul>
+<h4 id="timestamp%EF%BC%88%E6%97%B6%E9%97%B4%E6%88%B3%EF%BC%89">Timestamp（时间戳） <a class="heading-anchor-permalink" href="#timestamp%EF%BC%88%E6%97%B6%E9%97%B4%E6%88%B3%EF%BC%89">#</a></h4>
+<ul>
+<li><strong>类型</strong>：<code>time.Time</code></li>
+<li><strong>含义</strong>：检查点创建的时间</li>
+<li><strong>精度</strong>：纳秒级</li>
+<li><strong>用途</strong>：排序和时间范围查询</li>
+</ul>
+<h4 id="version%EF%BC%88%E7%89%88%E6%9C%AC%E5%8F%B7%EF%BC%89">Version（版本号） <a class="heading-anchor-permalink" href="#version%EF%BC%88%E7%89%88%E6%9C%AC%E5%8F%B7%EF%BC%89">#</a></h4>
+<ul>
+<li><strong>类型</strong>：<code>int</code></li>
+<li><strong>含义</strong>：状态版本号</li>
+<li><strong>初始值</strong>：1</li>
+<li><strong>递增规则</strong>：每次状态更新时递增</li>
+<li><strong>用途</strong>：支持状态历史追踪和并发控制</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L12-L20)</li>
+</ul>
+<h2 id="checkpointstore-%E6%8E%A5%E5%8F%A3%E5%A5%91%E7%BA%A6">CheckpointStore 接口契约 <a class="heading-anchor-permalink" href="#checkpointstore-%E6%8E%A5%E5%8F%A3%E5%A5%91%E7%BA%A6">#</a></h2>
+<p>CheckpointStore 接口定义了检查点存储的标准契约，所有存储后端都必须实现这些方法。</p>
+<pre><code class="language-mermaid">classDiagram
+class CheckpointStore {
+&lt;&lt;interface&gt;&gt;
++Save(ctx, checkpoint) error
++Load(ctx, checkpointID) *Checkpoint
++List(ctx, executionID) []*Checkpoint
++Delete(ctx, checkpointID) error
++Clear(ctx, executionID) error
+}
+class MemoryCheckpointStore {
+-map[string]*Checkpoint checkpoints
+-sync.RWMutex mutex
++Save(ctx, checkpoint) error
++Load(ctx, checkpointID) *Checkpoint
++List(ctx, executionID) []*Checkpoint
++Delete(ctx, checkpointID) error
++Clear(ctx, executionID) error
+}
+class PostgresCheckpointStore {
+-DBPool pool
+-string tableName
++Save(ctx, checkpoint) error
++Load(ctx, checkpointID) *Checkpoint
++List(ctx, executionID) []*Checkpoint
++Delete(ctx, checkpointID) error
++Clear(ctx, executionID) error
++InitSchema(ctx) error
++Close()
+}
+class RedisCheckpointStore {
+-redis.Client client
+-string prefix
+-time.Duration ttl
++Save(ctx, checkpoint) error
++Load(ctx, checkpointID) *Checkpoint
++List(ctx, executionID) []*Checkpoint
++Delete(ctx, checkpointID) error
++Clear(ctx, executionID) error
+}
+class SqliteCheckpointStore {
+-sql.DB db
+-string tableName
++Save(ctx, checkpoint) error
++Load(ctx, checkpointID) *Checkpoint
++List(ctx, executionID) []*Checkpoint
++Delete(ctx, checkpointID) error
++Clear(ctx, executionID) error
++InitSchema(ctx) error
++Close() error
+}
+CheckpointStore &lt;|.. MemoryCheckpointStore
+CheckpointStore &lt;|.. PostgresCheckpointStore
+CheckpointStore &lt;|.. RedisCheckpointStore
+CheckpointStore &lt;|.. SqliteCheckpointStore
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L22-L38)</li>
+<li>[postgres.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/postgres/postgres.go#L22-L25)</li>
+<li>[redis.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/redis/redis.go#L13-L18)</li>
+<li>[sqlite.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/sqlite/sqlite.go#L13-L17)</li>
+</ul>
+<h3 id="%E6%A0%B8%E5%BF%83%E6%96%B9%E6%B3%95%E8%81%8C%E8%B4%A3">核心方法职责 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E6%96%B9%E6%B3%95%E8%81%8C%E8%B4%A3">#</a></h3>
+<h4 id="save-%E6%96%B9%E6%B3%95">Save 方法 <a class="heading-anchor-permalink" href="#save-%E6%96%B9%E6%B3%95">#</a></h4>
+<ul>
+<li><strong>职责</strong>：保存检查点到存储后端</li>
+<li><strong>参数</strong>：上下文和检查点对象</li>
+<li><strong>错误处理</strong>：返回保存失败的错误信息</li>
+<li><strong>幂等性</strong>：支持重复保存同一检查点</li>
+</ul>
+<h4 id="load-%E6%96%B9%E6%B3%95">Load 方法 <a class="heading-anchor-permalink" href="#load-%E6%96%B9%E6%B3%95">#</a></h4>
+<ul>
+<li><strong>职责</strong>：根据检查点 ID 加载特定的检查点</li>
+<li><strong>参数</strong>：上下文和检查点 ID</li>
+<li><strong>返回值</strong>：检查点对象或加载失败的错误</li>
+<li><strong>错误处理</strong>：当检查点不存在时返回特定错误</li>
+</ul>
+<h4 id="list-%E6%96%B9%E6%B3%95">List 方法 <a class="heading-anchor-permalink" href="#list-%E6%96%B9%E6%B3%95">#</a></h4>
+<ul>
+<li><strong>职责</strong>：列出指定执行线程的所有检查点</li>
+<li><strong>参数</strong>：上下文和执行线程 ID</li>
+<li><strong>返回值</strong>：检查点列表，按时间顺序排列</li>
+<li><strong>用途</strong>：支持状态历史查看和时间旅行</li>
+</ul>
+<h4 id="delete-%E6%96%B9%E6%B3%95">Delete 方法 <a class="heading-anchor-permalink" href="#delete-%E6%96%B9%E6%B3%95">#</a></h4>
+<ul>
+<li><strong>职责</strong>：删除指定的检查点</li>
+<li><strong>参数</strong>：上下文和检查点 ID</li>
+<li><strong>副作用</strong>：清理相关的索引和关联数据</li>
+<li><strong>错误处理</strong>：返回删除失败的错误</li>
+</ul>
+<h4 id="clear-%E6%96%B9%E6%B3%95">Clear 方法 <a class="heading-anchor-permalink" href="#clear-%E6%96%B9%E6%B3%95">#</a></h4>
+<ul>
+<li><strong>职责</strong>：删除指定执行线程的所有检查点</li>
+<li><strong>参数</strong>：上下文和执行线程 ID</li>
+<li><strong>批量操作</strong>：高效处理大量检查点</li>
+<li><strong>完整性</strong>：确保所有相关数据都被清理</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L22-L38)</li>
+</ul>
+<h2 id="%E6%A3%80%E6%9F%A5%E7%82%B9%E5%AD%98%E5%82%A8%E5%90%8E%E7%AB%AF">检查点存储后端 <a class="heading-anchor-permalink" href="#%E6%A3%80%E6%9F%A5%E7%82%B9%E5%AD%98%E5%82%A8%E5%90%8E%E7%AB%AF">#</a></h2>
+<p>LangGraphGo 提供了多种存储后端，满足不同场景的需求。</p>
+<h3 id="%E5%86%85%E5%AD%98%E5%AD%98%E5%82%A8%EF%BC%88memorycheckpointstore%EF%BC%89">内存存储（MemoryCheckpointStore） <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E5%AD%98%E5%82%A8%EF%BC%88memorycheckpointstore%EF%BC%89">#</a></h3>
+<p>内存存储是最简单的实现，适用于测试和开发环境。</p>
+<pre><code class="language-mermaid">flowchart TD
+A["Save 请求"] --&gt; B["序列化检查点"]
+B --&gt; C["加写锁"]
+C --&gt; D["存储到内存映射"]
+D --&gt; E["释放锁"]
+F["Load 请求"] --&gt; G["加读锁"]
+G --&gt; H["从内存映射查找"]
+H --&gt; I{"检查点存在?"}
+I --&gt; |是| J["返回检查点"]
+I --&gt; |否| K["返回错误"]
+J --&gt; L["释放锁"]
+K --&gt; L
+M["List 请求"] --&gt; N["加读锁"]
+N --&gt; O["遍历内存映射"]
+O --&gt; P["过滤执行线程"]
+P --&gt; Q["返回检查点列表"]
+Q --&gt; R["释放锁"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L40-L111)</li>
+</ul>
+<p><strong>特点</strong>：</p>
+<ul>
+<li><strong>性能</strong>：最快的访问速度</li>
+<li><strong>持久性</strong>：非持久化存储，重启丢失</li>
+<li><strong>适用场景</strong>：单元测试、快速原型开发</li>
+</ul>
+<h3 id="postgresql-%E5%AD%98%E5%82%A8%EF%BC%88postgrescheckpointstore%EF%BC%89">PostgreSQL 存储（PostgresCheckpointStore） <a class="heading-anchor-permalink" href="#postgresql-%E5%AD%98%E5%82%A8%EF%BC%88postgrescheckpointstore%EF%BC%89">#</a></h3>
+<p>关系型数据库存储，提供生产级别的可靠性和查询能力。</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant App as "应用程序"
+participant Store as "PostgresStore"
+participant DB as "PostgreSQL"
+App-&gt;&gt;Store : Save(checkpoint)
+Store-&gt;&gt;Store : 序列化 State 和 Metadata
+Store-&gt;&gt;DB : INSERT INTO checkpoints
+DB--&gt;&gt;Store : 确认插入
+Store--&gt;&gt;App : 返回成功
+App-&gt;&gt;Store : List(executionID)
+Store-&gt;&gt;DB : SELECT 查询
+DB--&gt;&gt;Store : 返回检查点列表
+Store-&gt;&gt;Store : 反序列化状态
+Store--&gt;&gt;App : 返回检查点数组
+App-&gt;&gt;Store : Load(checkpointID)
+Store-&gt;&gt;DB : SELECT 单个检查点
+DB--&gt;&gt;Store : 返回检查点数据
+Store-&gt;&gt;Store : 反序列化
+Store--&gt;&gt;App : 返回检查点
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[postgres.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/postgres/postgres.go#L91-L135)</li>
+<li>[postgres.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/postgres/postgres.go#L137-L176)</li>
+</ul>
+<p><strong>特点</strong>：</p>
+<ul>
+<li><strong>可靠性</strong>：ACID 事务保证</li>
+<li><strong>查询能力</strong>：支持复杂的查询和分析</li>
+<li><strong>扩展性</strong>：支持大规模部署</li>
+<li><strong>索引优化</strong>：执行线程 ID 索引加速查询</li>
+</ul>
+<h3 id="redis-%E5%AD%98%E5%82%A8%EF%BC%88redischeckpointstore%EF%BC%89">Redis 存储（RedisCheckpointStore） <a class="heading-anchor-permalink" href="#redis-%E5%AD%98%E5%82%A8%EF%BC%88redischeckpointstore%EF%BC%89">#</a></h3>
+<p>高性能缓存存储，适合需要快速访问的场景。</p>
+<p><strong>特点</strong>：</p>
+<ul>
+<li><strong>性能</strong>：极低延迟的键值访问</li>
+<li><strong>过期策略</strong>：可配置的 TTL 自动清理</li>
+<li><strong>内存效率</strong>：压缩存储减少内存占用</li>
+<li><strong>网络优化</strong>：管道操作批量处理</li>
+</ul>
+<h3 id="sqlite-%E5%AD%98%E5%82%A8%EF%BC%88sqlitecheckpointstore%EF%BC%89">SQLite 存储（SqliteCheckpointStore） <a class="heading-anchor-permalink" href="#sqlite-%E5%AD%98%E5%82%A8%EF%BC%88sqlitecheckpointstore%EF%BC%89">#</a></h3>
+<p>轻量级文件数据库，适合单机部署。</p>
+<p><strong>特点</strong>：</p>
+<ul>
+<li><strong>简单部署</strong>：无需独立数据库服务</li>
+<li><strong>文件存储</strong>：本地文件系统持久化</li>
+<li><strong>跨平台</strong>：支持所有主流操作系统</li>
+<li><strong>兼容性</strong>：标准 SQL 接口</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L40-L111)</li>
+<li>[postgres.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/postgres/postgres.go#L22-L25)</li>
+<li>[redis.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/redis/redis.go#L13-L18)</li>
+<li>[sqlite.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/sqlite/sqlite.go#L13-L17)</li>
+</ul>
+<h2 id="checkpointablerunnable-%E5%92%8C-checkpointlistener">CheckpointableRunnable 和 CheckpointListener <a class="heading-anchor-permalink" href="#checkpointablerunnable-%E5%92%8C-checkpointlistener">#</a></h2>
+<p>这两个组件协同工作，实现了自动化的检查点管理。</p>
+<h3 id="checkpointablerunnable">CheckpointableRunnable <a class="heading-anchor-permalink" href="#checkpointablerunnable">#</a></h3>
+<p>CheckpointableRunnable 是核心的执行器，包装了可监听的消息图并添加了检查点功能。</p>
+<pre><code class="language-mermaid">classDiagram
+class CheckpointableRunnable {
+-ListenableRunnable runnable
+-CheckpointConfig config
+-string executionID
++Invoke(ctx, initialState) interface
++InvokeWithConfig(ctx, initialState, config) interface
++SaveCheckpoint(ctx, nodeName, state) error
++LoadCheckpoint(ctx, checkpointID) *Checkpoint
++ListCheckpoints(ctx) []*Checkpoint
++ResumeFromCheckpoint(ctx, checkpointID) interface
++ClearCheckpoints(ctx) error
++GetState(ctx, config) *StateSnapshot
++UpdateState(ctx, config, values, asNode) *Config
+}
+class CheckpointListener {
+-CheckpointStore store
+-string executionID
+-bool autoSave
++OnGraphStep(ctx, stepNode, state)
+}
+class ListenableRunnable {
++Invoke(ctx, initialState) interface
++Compile() *CompiledRunnable
+}
+CheckpointableRunnable --&gt; ListenableRunnable : "包装"
+CheckpointableRunnable --&gt; CheckpointListener : "使用"
+CheckpointListener --&gt; CheckpointStore : "保存检查点"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L213-L228)</li>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L297-L304)</li>
+</ul>
+<h3 id="checkpointlistener">CheckpointListener <a class="heading-anchor-permalink" href="#checkpointlistener">#</a></h3>
+<p>CheckpointListener 是回调处理器，在执行过程中自动创建检查点。</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Graph as "消息图"
+participant Listener as "CheckpointListener"
+participant Store as "CheckpointStore"
+participant Async as "异步保存"
+Graph-&gt;&gt;Listener : OnGraphStep(node, state)
+Listener-&gt;&gt;Listener : 检查 autoSave 配置
+alt 自动保存启用
+Listener-&gt;&gt;Listener : 创建 Checkpoint 对象
+Listener-&gt;&gt;Async : 异步调用 store.Save()
+Async-&gt;&gt;Store : 异步保存检查点
+Note over Async,Store : 不阻塞主线程
+else 自动保存禁用
+Note over Listener : 跳过保存
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L297-L330)</li>
+</ul>
+<h3 id="%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6">协同工作机制 <a class="heading-anchor-permalink" href="#%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6">#</a></h3>
+<ol>
+<li><strong>初始化阶段</strong>：创建 CheckpointableRunnable 并设置配置</li>
+<li><strong>执行阶段</strong>：每执行一个节点，CheckpointListener 自动保存检查点</li>
+<li><strong>手动干预</strong>：支持手动保存、加载和恢复检查点</li>
+<li><strong>状态管理</strong>：提供状态查询和更新功能</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L213-L330)</li>
+</ul>
+<h2 id="%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8">配置和使用 <a class="heading-anchor-permalink" href="#%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8">#</a></h2>
+<h3 id="%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE">基础配置 <a class="heading-anchor-permalink" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+A["创建 CheckpointableMessageGraph"] --&gt; B["配置 CheckpointStore"]
+B --&gt; C["设置 CheckpointConfig"]
+C --&gt; D["编译为 CheckpointableRunnable"]
+D --&gt; E["开始执行"]
+B --&gt; B1["MemoryCheckpointStore&lt;br/&gt;测试"]
+B --&gt; B2["PostgresCheckpointStore&lt;br/&gt;生产"]
+B --&gt; B3["RedisCheckpointStore&lt;br/&gt;高速"]
+B --&gt; B4["SqliteCheckpointStore&lt;br/&gt;本地"]
+C --&gt; C1["AutoSave: true/false"]
+C --&gt; C2["SaveInterval: 时间间隔"]
+C --&gt; C3["MaxCheckpoints: 最大数量"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/checkpointing/main.go#L21-L27)</li>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L188-L201)</li>
+</ul>
+<h3 id="%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD">高级功能 <a class="heading-anchor-permalink" href="#%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD">#</a></h3>
+<h4 id="%E6%89%8B%E5%8A%A8%E6%A3%80%E6%9F%A5%E7%82%B9%E7%AE%A1%E7%90%86">手动检查点管理 <a class="heading-anchor-permalink" href="#%E6%89%8B%E5%8A%A8%E6%A3%80%E6%9F%A5%E7%82%B9%E7%AE%A1%E7%90%86">#</a></h4>
+<pre><code class="language-mermaid">flowchart LR
+A["SaveCheckpoint()"] --&gt; B["手动保存当前状态"]
+C["LoadCheckpoint()"] --&gt; D["加载特定检查点"]
+E["ListCheckpoints()"] --&gt; F["列出所有检查点"]
+G["ResumeFromCheckpoint()"] --&gt; H["从检查点恢复"]
+I["ClearCheckpoints()"] --&gt; J["清理所有检查点"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L253-L295)</li>
+</ul>
+<h4 id="%E7%8A%B6%E6%80%81%E5%BF%AB%E7%85%A7%E5%92%8C%E6%9B%B4%E6%96%B0">状态快照和更新 <a class="heading-anchor-permalink" href="#%E7%8A%B6%E6%80%81%E5%BF%AB%E7%85%A7%E5%92%8C%E6%9B%B4%E6%96%B0">#</a></h4>
+<pre><code class="language-mermaid">sequenceDiagram
+participant App as "应用程序"
+participant Runnable as "CheckpointableRunnable"
+participant Store as "CheckpointStore"
+App-&gt;&gt;Runnable : GetState(config)
+Runnable-&gt;&gt;Store : List(executionID)
+Store--&gt;&gt;Runnable : 返回最新检查点
+Runnable--&gt;&gt;App : StateSnapshot
+App-&gt;&gt;Runnable : UpdateState(config, values, node)
+Runnable-&gt;&gt;Store : List(executionID)
+Store--&gt;&gt;Runnable : 返回当前状态
+Runnable-&gt;&gt;Runnable : 合并新值
+Runnable-&gt;&gt;Store : Save(newCheckpoint)
+Store--&gt;&gt;Runnable : 确认保存
+Runnable--&gt;&gt;App : 新配置
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L397-L559)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/checkpointing/main.go#L21-L27)</li>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L188-L201)</li>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L253-L295)</li>
+</ul>
+<h2 id="%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">应用场景 <a class="heading-anchor-permalink" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">#</a></h2>
+<h3 id="%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8C%E7%9A%84%E4%BB%BB%E5%8A%A1">长时间运行的任务 <a class="heading-anchor-permalink" href="#%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8C%E7%9A%84%E4%BB%BB%E5%8A%A1">#</a></h3>
+<p>对于需要数小时甚至数天才能完成的任务，检查点系统提供了重要的容错能力。</p>
+<pre><code class="language-mermaid">flowchart TD
+A["启动长时间任务"] --&gt; B["定期保存检查点"]
+B --&gt; C["任务正常执行"]
+C --&gt; D{"任务完成?"}
+D --&gt; |是| E["清理检查点"]
+D --&gt; |否| F["任务被中断"]
+F --&gt; G["从最近检查点恢复"]
+G --&gt; H["继续执行剩余部分"]
+H --&gt; C
+</code></pre>
+<p><strong>优势</strong>：</p>
+<ul>
+<li><strong>断点续传</strong>：避免重新开始耗时任务</li>
+<li><strong>资源利用</strong>：最大化计算资源利用率</li>
+<li><strong>可靠性</strong>：减少因意外中断导致的损失</li>
+</ul>
+<h3 id="%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BD%9C%EF%BC%88hitl%EF%BC%89">人机协作（HITL） <a class="heading-anchor-permalink" href="#%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BD%9C%EF%BC%88hitl%EF%BC%89">#</a></h3>
+<p>检查点系统支持复杂的交互式工作流程。</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant User as "用户"
+participant Agent as "AI Agent"
+participant System as "检查点系统"
+Agent-&gt;&gt;System : 执行到检查点
+System-&gt;&gt;Agent : 触发中断
+Agent-&gt;&gt;User : 显示结果等待确认
+User-&gt;&gt;System : 提供反馈
+System-&gt;&gt;System : UpdateState(用户输入)
+System-&gt;&gt;Agent : 从新状态继续
+Agent-&gt;&gt;System : 完成执行
+</code></pre>
+<p><strong>应用场景</strong>：</p>
+<ul>
+<li><strong>内容审核</strong>：人工审核生成的内容</li>
+<li><strong>决策支持</strong>：专家参与关键决策过程</li>
+<li><strong>质量控制</strong>：人工验证自动化结果</li>
+</ul>
+<h3 id="%E6%97%B6%E9%97%B4%E6%97%85%E8%A1%8C%EF%BC%88time-travel%EF%BC%89">时间旅行（Time Travel） <a class="heading-anchor-permalink" href="#%E6%97%B6%E9%97%B4%E6%97%85%E8%A1%8C%EF%BC%88time-travel%EF%BC%89">#</a></h3>
+<p>检查点系统支持状态的历史追溯和修改。</p>
+<pre><code class="language-mermaid">flowchart TD
+A["执行历史"] --&gt; B["保存多个检查点"]
+B --&gt; C["选择目标检查点"]
+C --&gt; D["加载检查点状态"]
+D --&gt; E["修改状态"]
+E --&gt; F["保存新检查点"]
+F --&gt; G["从修改点继续执行"]
+H["分支执行"] --&gt; I["创建新历史分支"]
+I --&gt; J["并行执行"]
+J --&gt; K["比较不同路径结果"]
+</code></pre>
+<p><strong>用途</strong>：</p>
+<ul>
+<li><strong>调试</strong>：重现和分析执行问题</li>
+<li><strong>假设分析</strong>：探索"如果…会怎样？"的问题</li>
+<li><strong>实验设计</strong>：对比不同策略的效果</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[time_travel/README_CN.md](https://github.com/smallnest/langgraphgo/blob/main/examples/time_travel/README_CN.md#L1-L25)</li>
+</ul>
+<h2 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践 <a class="heading-anchor-permalink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">#</a></h2>
+<h3 id="%E5%AD%98%E5%82%A8%E5%90%8E%E7%AB%AF%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97">存储后端选择指南 <a class="heading-anchor-permalink" href="#%E5%AD%98%E5%82%A8%E5%90%8E%E7%AB%AF%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐存储</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发测试</td>
+<td>MemoryCheckpointStore</td>
+<td>快速、简单</td>
+</tr>
+<tr>
+<td>生产部署</td>
+<td>PostgresCheckpointStore</td>
+<td>可靠、可扩展</td>
+</tr>
+<tr>
+<td>高性能需求</td>
+<td>RedisCheckpointStore</td>
+<td>低延迟、高吞吐</td>
+</tr>
+<tr>
+<td>单机部署</td>
+<td>SqliteCheckpointStore</td>
+<td>无外部依赖</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE">性能优化建议 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE">#</a></h3>
+<ol>
+<li>
+<p><strong>合理配置自动保存</strong>：</p>
+<pre><code class="language-go">config := graph.CheckpointConfig{
+    AutoSave:       true,
+    SaveInterval:   30 * time.Second,  // 根据任务特性调整
+    MaxCheckpoints: 10,                // 控制存储空间
+}
+</code></pre>
+</li>
+<li>
+<p><strong>批量操作优化</strong>：</p>
+<ul>
+<li>使用 <code>List()</code> 获取多个检查点</li>
+<li>批量删除不需要的检查点</li>
+<li>定期清理过期的检查点</li>
+</ul>
+</li>
+<li>
+<p><strong>并发安全</strong>：</p>
+<ul>
+<li>所有存储后端都内置了并发保护</li>
+<li>异步保存避免阻塞主线程</li>
+<li>使用适当的锁策略</li>
+</ul>
+</li>
+</ol>
+<h3 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">错误处理策略 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+A["检查点操作"] --&gt; B{"操作成功?"}
+B --&gt; |是| C["继续执行"]
+B --&gt; |否| D["错误类型判断"]
+D --&gt; E["网络错误"]
+D --&gt; F["存储错误"]
+D --&gt; G["数据损坏"]
+E --&gt; H["重试机制"]
+F --&gt; I["降级处理"]
+G --&gt; J["重建检查点"]
+H --&gt; K["指数退避"]
+I --&gt; L["使用备用存储"]
+J --&gt; M["从备份恢复"]
+</code></pre>
+<h3 id="%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E5%92%8C%E5%A4%87%E4%BB%BD">数据迁移和备份 <a class="heading-anchor-permalink" href="#%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E5%92%8C%E5%A4%87%E4%BB%BD">#</a></h3>
+<ol>
+<li><strong>定期备份</strong>：将检查点数据导出到安全位置</li>
+<li><strong>版本兼容</strong>：确保检查点格式的向后兼容</li>
+<li><strong>增量同步</strong>：只传输变化的部分</li>
+<li><strong>验证机制</strong>：备份完成后验证数据完整性</li>
+</ol>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[checkpointing.go](https://github.com/smallnest/langgraphgo/blob/main/graph/checkpointing.go#L188-L201)</li>
+<li>[postgres.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/postgres/postgres.go#L28-L32)</li>
+<li>[redis.go](https://github.com/smallnest/langgraphgo/blob/main/checkpoint/redis/redis.go#L29-L47)</li>
+</ul>
+<h2 id="%E6%80%BB%E7%BB%93">总结 <a class="heading-anchor-permalink" href="#%E6%80%BB%E7%BB%93">#</a></h2>
+<p>持久化检查点系统是 LangGraphGo 框架的核心功能之一，为复杂应用提供了强大的状态管理和容错能力。通过本文档的详细介绍，我们可以看到：</p>
+<h3 id="%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC">核心价值 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC">#</a></h3>
+<ol>
+<li><strong>可靠性</strong>：通过自动保存和恢复机制，大大提高了应用程序的可靠性</li>
+<li><strong>灵活性</strong>：支持多种存储后端和配置选项，适应不同场景需求</li>
+<li><strong>可扩展性</strong>：良好的接口设计支持自定义存储后端</li>
+<li><strong>易用性</strong>：简洁的 API 设计降低了使用门槛</li>
+</ol>
+<h3 id="%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9">技术特点 <a class="heading-anchor-permalink" href="#%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9">#</a></h3>
+<ul>
+<li><strong>标准化接口</strong>：统一的 CheckpointStore 接口简化了存储后端的选择</li>
+<li><strong>自动管理</strong>：CheckpointListener 实现了透明的自动检查点保存</li>
+<li><strong>状态快照</strong>：完整的状态保存支持精确的恢复和调试</li>
+<li><strong>并发安全</strong>：所有操作都考虑了并发安全性</li>
+</ul>
+<h3 id="%E5%BA%94%E7%94%A8%E5%89%8D%E6%99%AF">应用前景 <a class="heading-anchor-permalink" href="#%E5%BA%94%E7%94%A8%E5%89%8D%E6%99%AF">#</a></h3>
+<p>检查点系统不仅解决了当前的技术挑战，还为未来的创新应用奠定了基础：</p>
+<ul>
+<li><strong>智能代理</strong>：支持复杂的交互式工作流程</li>
+<li><strong>分布式系统</strong>：为微服务架构提供状态管理能力</li>
+<li><strong>边缘计算</strong>：在资源受限环境中提供可靠的执行保障</li>
+<li><strong>AI 应用</strong>：为大型语言模型提供状态持久化支持</li>
+</ul>
+<p>通过合理使用检查点系统，开发者可以构建更加可靠、灵活和强大的应用程序，真正实现"永不丢失状态"的愿景。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>

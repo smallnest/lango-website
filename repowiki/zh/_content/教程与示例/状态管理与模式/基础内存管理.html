@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../项目概述.html">项目概述</a></li><li><a class="" href="../../快速入门.html">快速入门</a></li><li><a class="" href="../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../架构与设计/架构与设计.html">架构与设计</a></li><li><a class="" href="../../架构与设计/架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../架构与设计/扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试执行流程.html">重试执行流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试策略配置.html">重试策略配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误判定机制.html">错误判定机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../架构与设计/状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../人机协作.html">人机协作</a></li><li><a class="" href="../基础示例教程.html">基础示例教程</a></li><li><a class="" href="../多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../并行执行.html">并行执行</a></li><li><a class="" href="../技能集成.html">技能集成</a></li><li><a class="" href="../教程与示例.html">教程与示例</a></li><li><a class="" href="../条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../RAG 示例系列/RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../RAG 示例系列/基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../RAG 示例系列/向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../RAG 示例系列/向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../RAG 示例系列/向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../RAG 示例系列/向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="../RAG 示例系列/高级RAG模式/条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="" href="../RAG 示例系列/高级RAG模式/检索后重排序.html">检索后重排序</a></li><li><a class="" href="../RAG 示例系列/高级RAG模式/高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="../智能代理示例/ReAct代理.html">ReAct代理</a></li><li><a class="" href="../智能代理示例/代理协调器.html">代理协调器</a></li><li><a class="" href="../智能代理示例/代理群.html">代理群</a></li><li><a class="" href="../智能代理示例/动态技能系统.html">动态技能系统</a></li><li><a class="" href="../智能代理示例/基础代理创建.html">基础代理创建</a></li><li><a class="" href="../智能代理示例/智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="active" href="基础内存管理.html">基础内存管理</a></li><li><a class="" href="状态模式定义.html">状态模式定义</a></li><li><a class="" href="状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../../核心概念/核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="../../核心概念/图结构工作流/入口点.html">入口点</a></li><li><a class="" href="../../核心概念/图结构工作流/图结构工作流.html">图结构工作流</a></li><li><a class="" href="../../核心概念/图结构工作流/子图.html">子图</a></li><li><a class="" href="../../核心概念/图结构工作流/并行执行.html">并行执行</a></li><li><a class="" href="../../核心概念/图结构工作流/条件边.html">条件边</a></li><li><a class="" href="../../核心概念/图结构工作流/节点.html">节点</a></li><li><a class="" href="../../核心概念/图结构工作流/边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="" href="../../核心概念/持久化检查点/持久化检查点.html">持久化检查点</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点监听器.html">检查点监听器</a></li><li><a class="" href="../../核心概念/持久化检查点/检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="../../核心概念/持久化检查点/内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../../核心概念/流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../../核心概念/流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../../核心概念/流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../../核心概念/流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../../核心概念/流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../../核心概念/流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="" href="../../核心概念/状态管理/状态归约器.html">状态归约器</a></li><li><a class="" href="../../核心概念/状态管理/状态模式.html">状态模式</a></li><li><a class="" href="../../核心概念/状态管理/状态管理.html">状态管理</a></li><li><a class="" href="../../核心概念/状态管理/瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../核心概念/监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../../核心概念/监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../../核心概念/监听器/监听器.html">监听器</a></li><li><a class="" href="../../核心概念/监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../../核心概念/监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../../核心概念/监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../../核心概念/监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../../核心概念/监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../../核心概念/监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../../核心概念/监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../../核心概念/监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../../核心概念/监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../../核心概念/监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../高级特性/子图.html">子图</a></li><li><a class="" href="../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E5%9F%BA%E7%A1%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">基础内存管理 <a class="heading-anchor-permalink" href="#%E5%9F%BA%E7%A1%80%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档中引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go">examples/memory_basic/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go">examples/memory_chatbot/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go">prebuilt/langchain_memory_adapter.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/README_CN.md">examples/memory_basic/README_CN.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/README_CN.md">examples/memory_chatbot/README_CN.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/README.md">examples/memory_basic/README.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/README.md">examples/memory_chatbot/README.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter_test.go">prebuilt/langchain_memory_adapter_test.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L125-L186">examples/memory_chatbot/main.go</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88">项目结构概览</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E5%86%85%E5%AD%98%E7%B1%BB%E5%9E%8B">核心内存类型</a></li>
+<li><a href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览</a></li>
+<li><a href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9%E8%AF%A6%E8%A7%A3">配置选项详解</a></li>
+<li><a href="#%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">实际应用场景</a></li>
+<li><a href="#%E5%86%85%E5%AD%98%E6%8C%81%E4%B9%85%E5%8C%96%E7%AD%96%E7%95%A5">内存持久化策略</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97">最佳实践指南</a></li>
+<li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4">故障排除</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>LangGraphGo 的内存管理机制是构建智能对话系统的核心组件，它允许在多次交互中维护对话上下文，使聊天机器人能够记住用户信息、引用对话历史并提供连贯的响应。本文档全面介绍了基于 LangChain 的内存管理系统，包括多种内存类型、配置选项和实际应用模式。</p>
+<p>该系统通过 <code>Memory</code> 接口提供了统一的抽象层，支持与 LangChain 兼容的各种内存实现，包括 ConversationBuffer、ConversationWindowBuffer 和 ConversationTokenBuffer 等。</p>
+<h2 id="%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88">项目结构概览 <a class="heading-anchor-permalink" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88">#</a></h2>
+<p>LangGraphGo 的内存管理功能主要分布在以下几个关键模块中：</p>
+<pre><code class="language-mermaid">graph TB
+subgraph "内存管理核心"
+A[prebuilt/langchain_memory_adapter.go] --&gt; B[Memory 接口]
+A --&gt; C[LangChainMemory 结构体]
+A --&gt; D[ChatMessageHistory 结构体]
+end
+subgraph "示例应用"
+E[examples/memory_basic/] --&gt; F[基础内存示例]
+G[examples/memory_chatbot/] --&gt; H[聊天机器人示例]
+end
+subgraph "测试验证"
+I[prebuilt/langchain_memory_adapter_test.go] --&gt; J[单元测试]
+end
+B --&gt; E
+B --&gt; G
+C --&gt; G
+D --&gt; E
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L1-L145)</li>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L1-L266)</li>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L1-L186)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L1-L145)</li>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L1-L266)</li>
+</ul>
+<h2 id="%E6%A0%B8%E5%BF%83%E5%86%85%E5%AD%98%E7%B1%BB%E5%9E%8B">核心内存类型 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E5%86%85%E5%AD%98%E7%B1%BB%E5%9E%8B">#</a></h2>
+<p>LangGraphGo 提供了三种主要的内存类型，每种都针对不同的使用场景进行了优化：</p>
+<h3 id="conversationbuffermemory">ConversationBufferMemory <a class="heading-anchor-permalink" href="#conversationbuffermemory">#</a></h3>
+<p><strong>特点</strong>: 存储完整的对话历史，适用于需要完整上下文的短对话场景。</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant User as 用户
+participant Memory as ConversationBuffer
+participant LLM as LLM模型
+User-&gt;&gt;Memory : 第一次对话
+Memory-&gt;&gt;LLM : 保存完整历史
+LLM--&gt;&gt;Memory : 返回响应
+Memory-&gt;&gt;User : 提供上下文感知回答
+User-&gt;&gt;Memory : 第二次对话
+Memory-&gt;&gt;LLM : 包含之前所有历史
+LLM--&gt;&gt;Memory : 基于完整上下文回答
+Memory-&gt;&gt;User : 提供连贯响应
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L38-L78)</li>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L37-L47)</li>
+</ul>
+<h3 id="conversationwindowbuffermemory">ConversationWindowBufferMemory <a class="heading-anchor-permalink" href="#conversationwindowbuffermemory">#</a></h3>
+<p><strong>特点</strong>: 仅保留最后 N 轮对话，适用于长对话场景，有效控制内存使用。</p>
+<pre><code class="language-mermaid">flowchart TD
+A[新对话轮次] --&gt; B{检查窗口大小}
+B --&gt; |超出限制| C[移除最旧的消息]
+B --&gt; |未超出| D[直接添加新消息]
+C --&gt; D
+D --&gt; E[更新内存状态]
+E --&gt; F[返回当前窗口]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L81-L121)</li>
+</ul>
+<h3 id="chatmessagehistory">ChatMessageHistory <a class="heading-anchor-permalink" href="#chatmessagehistory">#</a></h3>
+<p><strong>特点</strong>: 直接的消息历史管理，提供灵活的消息操作能力。</p>
+<pre><code class="language-mermaid">classDiagram
+class ChatMessageHistory {
++history *memory.ChatMessageHistory
++AddMessage(message) error
++AddUserMessage(message) error
++AddAIMessage(message) error
++Messages() []ChatMessage
++Clear() error
++SetMessages(messages) error
++GetHistory() ChatMessageHistory
+}
+class MessageTypes {
+&lt;&lt;enumeration&gt;&gt;
+HumanChatMessage
+AIChatMessage
+SystemChatMessage
+}
+ChatMessageHistory --&gt; MessageTypes : manages
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L99-L144)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L38-L121)</li>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L37-L47)</li>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L37-L144)</li>
+</ul>
+<h2 id="%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览 <a class="heading-anchor-permalink" href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">#</a></h2>
+<p>LangGraphGo 的内存管理系统采用分层架构设计，提供了清晰的抽象和灵活的扩展能力：</p>
+<pre><code class="language-mermaid">graph TB
+subgraph "应用层"
+A[聊天机器人] --&gt; B[图节点]
+B --&gt; C[内存适配器]
+end
+subgraph "适配器层"
+C --&gt; D[LangChainMemory]
+C --&gt; E[ChatMessageHistory]
+end
+subgraph "LangChain兼容层"
+D --&gt; F[ConversationBuffer]
+D --&gt; G[ConversationWindowBuffer]
+D --&gt; H[ConversationTokenBuffer]
+E --&gt; I[ChatMessageHistory]
+end
+subgraph "存储层"
+F --&gt; J[内存存储]
+G --&gt; J
+H --&gt; K[Token计数器]
+I --&gt; J
+end
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L12-L145)</li>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L201-L256)</li>
+</ul>
+<h2 id="%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析 <a class="heading-anchor-permalink" href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">#</a></h2>
+<h3 id="memory-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1">Memory 接口设计 <a class="heading-anchor-permalink" href="#memory-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1">#</a></h3>
+<p>Memory 接口定义了内存管理的核心操作，确保了不同内存实现之间的一致性：</p>
+<pre><code class="language-mermaid">classDiagram
+class Memory {
+&lt;&lt;interface&gt;&gt;
++SaveContext(inputValues, outputValues) error
++LoadMemoryVariables(inputs) map[string]any
++Clear() error
++GetMessages() []ChatMessage
+}
+class LangChainMemory {
++buffer schema.Memory
++SaveContext(inputValues, outputValues) error
++LoadMemoryVariables(inputs) map[string]any
++Clear() error
++GetMessages() []ChatMessage
+}
+class ChatMessageHistory {
++history *memory.ChatMessageHistory
++AddMessage(message) error
++AddUserMessage(message) error
++AddAIMessage(message) error
++Messages() []ChatMessage
++Clear() error
++SetMessages(messages) error
++GetHistory() ChatMessageHistory
+}
+Memory &lt;|.. LangChainMemory
+Memory &lt;|.. ChatMessageHistory
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L11-L21)</li>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L24-L144)</li>
+</ul>
+<h3 id="langchainmemory-%E5%AE%9E%E7%8E%B0">LangChainMemory 实现 <a class="heading-anchor-permalink" href="#langchainmemory-%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p>LangChainMemory 是核心的内存适配器，负责将 LangChain 的内存实现桥接到 LangGraphGo 的接口：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant App as 应用程序
+participant Adapter as LangChainMemory
+participant Buffer as LangChain Buffer
+participant Storage as 存储后端
+App-&gt;&gt;Adapter : SaveContext(input, output)
+Adapter-&gt;&gt;Buffer : SaveContext(input, output)
+Buffer-&gt;&gt;Storage : 存储对话记录
+App-&gt;&gt;Adapter : LoadMemoryVariables(inputs)
+Adapter-&gt;&gt;Buffer : LoadMemoryVariables(inputs)
+Buffer--&gt;&gt;Adapter : 返回内存变量
+Adapter--&gt;&gt;App : 返回格式化数据
+App-&gt;&gt;Adapter : GetMessages()
+Adapter-&gt;&gt;Buffer : LoadMemoryVariables()
+Buffer--&gt;&gt;Adapter : 返回消息列表
+Adapter--&gt;&gt;App : 返回 ChatMessage 数组
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L59-L96)</li>
+</ul>
+<h3 id="%E5%9B%BE%E8%8A%82%E7%82%B9%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%BC%8F">图节点中的内存使用模式 <a class="heading-anchor-permalink" href="#%E5%9B%BE%E8%8A%82%E7%82%B9%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%BC%8F">#</a></h3>
+<p>在 LangGraphGo 的图节点中，内存的典型使用流程如下：</p>
+<pre><code class="language-mermaid">flowchart TD
+A[开始节点处理] --&gt; B[加载内存变量]
+B --&gt; C{检查历史消息}
+C --&gt; |有历史| D[提取历史消息]
+C --&gt; |无历史| E[初始化空历史]
+D --&gt; F[组合当前输入]
+E --&gt; F
+F --&gt; G[调用LLM]
+G --&gt; H[保存输入输出]
+H --&gt; I[结束节点处理]
+style B fill:#e1f5fe
+style F fill:#f3e5f5
+style H fill:#e8f5e8
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L223-L243)</li>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L76-L100)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/langchain_memory_adapter.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter.go#L11-L145)</li>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L201-L256)</li>
+</ul>
+<h2 id="%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9%E8%AF%A6%E8%A7%A3">配置选项详解 <a class="heading-anchor-permalink" href="#%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9%E8%AF%A6%E8%A7%A3">#</a></h2>
+<h3 id="memory.withreturnmessages">memory.WithReturnMessages <a class="heading-anchor-permalink" href="#memory.withreturnmessages">#</a></h3>
+<p><strong>作用</strong>: 控制内存是否返回消息对象而非字符串形式的历史记录。</p>
+<pre><code class="language-go">// 启用消息返回（推荐）
+mem := prebuilt.NewConversationBufferMemory(
+    memory.WithReturnMessages(true),
+)
+
+// 禁用消息返回（字符串形式）
+mem := prebuilt.NewConversationBufferMemory(
+    memory.WithReturnMessages(false),
+)
+</code></pre>
+<p>当启用 <code>WithReturnMessages(true)</code> 时，<code>LoadMemoryVariables()</code> 返回的是 <code>[]llms.ChatMessage</code> 类型的消息数组，便于直接用于 LLM 调用。</p>
+<h3 id="%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%AE%E9%85%8D%E7%BD%AE">自定义键配置 <a class="heading-anchor-permalink" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%AE%E9%85%8D%E7%BD%AE">#</a></h3>
+<p>LangGraphGo 支持完全自定义的内存键，适应不同的数据结构需求：</p>
+<table>
+<thead>
+<tr>
+<th>配置选项</th>
+<th>默认值</th>
+<th>作用</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WithInputKey</td>
+<td>“input”</td>
+<td>输入键名</td>
+<td>自定义输入字段</td>
+</tr>
+<tr>
+<td>WithOutputKey</td>
+<td>“output”</td>
+<td>输出键名</td>
+<td>自定义输出字段</td>
+</tr>
+<tr>
+<td>WithMemoryKey</td>
+<td>“history”</td>
+<td>内存键名</td>
+<td>自定义内存存储键</td>
+</tr>
+<tr>
+<td>WithHumanPrefix</td>
+<td>“Human”</td>
+<td>人类消息前缀</td>
+<td>自定义人类消息标识</td>
+</tr>
+<tr>
+<td>WithAIPrefix</td>
+<td>“AI”</td>
+<td>AI消息前缀</td>
+<td>自定义AI消息标识</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E4%B8%8E%E5%85%B6%E4%BB%96-langchain-%E9%80%89%E9%A1%B9%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7">与其他 LangChain 选项的兼容性 <a class="heading-anchor-permalink" href="#%E4%B8%8E%E5%85%B6%E4%BB%96-langchain-%E9%80%89%E9%A1%B9%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7">#</a></h3>
+<pre><code class="language-mermaid">graph LR
+A[LangChain Options] --&gt; B[WithReturnMessages]
+A --&gt; C[WithInputKey]
+A --&gt; D[WithOutputKey]
+A --&gt; E[WithMemoryKey]
+A --&gt; F[WithHumanPrefix]
+A --&gt; G[WithAIPrefix]
+A --&gt; H[WithChatHistory]
+B --&gt; I[Memory Adapter]
+C --&gt; I
+D --&gt; I
+E --&gt; I
+F --&gt; I
+G --&gt; I
+H --&gt; I
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L160-L169)</li>
+<li>[prebuilt/langchain_memory_adapter_test.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter_test.go#L171-L200)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L160-L169)</li>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L134-L136)</li>
+<li>[prebuilt/langchain_memory_adapter_test.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter_test.go#L171-L234)</li>
+</ul>
+<h2 id="%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">实际应用场景 <a class="heading-anchor-permalink" href="#%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">#</a></h2>
+<h3 id="%E7%9F%AD%E5%AF%B9%E8%AF%9D%E5%9C%BA%E6%99%AF---conversationbuffer">短对话场景 - ConversationBuffer <a class="heading-anchor-permalink" href="#%E7%9F%AD%E5%AF%B9%E8%AF%9D%E5%9C%BA%E6%99%AF---conversationbuffer">#</a></h3>
+<p>适用于需要完整上下文的短对话，如客服问答、信息查询等：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant U as 用户
+participant M as Memory
+participant L as LLM
+U-&gt;&gt;M : 1. 介绍自己
+M-&gt;&gt;L : 完整历史 + 当前输入
+L--&gt;&gt;M : 响应
+M-&gt;&gt;U : 回答
+U-&gt;&gt;M : 2. 询问个人信息
+M-&gt;&gt;L : 完整历史 + 新问题
+L--&gt;&gt;M : 基于上下文的回答
+M-&gt;&gt;U : 个性化响应
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L38-L78)</li>
+</ul>
+<h3 id="%E9%95%BF%E5%AF%B9%E8%AF%9D%E5%9C%BA%E6%99%AF---conversationwindowbuffer">长对话场景 - ConversationWindowBuffer <a class="heading-anchor-permalink" href="#%E9%95%BF%E5%AF%B9%E8%AF%9D%E5%9C%BA%E6%99%AF---conversationwindowbuffer">#</a></h3>
+<p>适用于长时间对话，如技术支持、教育辅导等：</p>
+<pre><code class="language-mermaid">flowchart TD
+A[新对话] --&gt; B[添加到窗口]
+B --&gt; C{检查窗口大小}
+C --&gt; |未满| D[继续添加]
+C --&gt; |已满| E[移除最旧消息]
+E --&gt; D
+D --&gt; F[保持最近N轮对话]
+style F fill:#e8f5e8
+style E fill:#ffebee
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L81-L121)</li>
+</ul>
+<h3 id="%E5%A4%9A%E8%BD%AE%E5%AF%B9%E8%AF%9D%E6%81%A2%E5%A4%8D---memory-persistence">多轮对话恢复 - Memory Persistence <a class="heading-anchor-permalink" href="#%E5%A4%9A%E8%BD%AE%E5%AF%B9%E8%AF%9D%E6%81%A2%E5%A4%8D---memory-persistence">#</a></h3>
+<p>支持从外部历史重建内存状态：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant App as 应用程序
+participant History as 外部历史
+participant Memory as 内存系统
+App-&gt;&gt;History : 加载现有对话
+History--&gt;&gt;App : 返回消息列表
+App-&gt;&gt;Memory : 初始化带历史的内存
+Memory-&gt;&gt;Memory : 设置初始状态
+App-&gt;&gt;Memory : 开始新对话
+Memory-&gt;&gt;Memory : 在历史基础上扩展
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L125-L186)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L38-L121)</li>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L31-L186)</li>
+</ul>
+<h2 id="%E5%86%85%E5%AD%98%E6%8C%81%E4%B9%85%E5%8C%96%E7%AD%96%E7%95%A5">内存持久化策略 <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E6%8C%81%E4%B9%85%E5%8C%96%E7%AD%96%E7%95%A5">#</a></h2>
+<h3 id="%E5%86%85%E5%AD%98%E5%AD%98%E5%82%A8-vs-%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8">内存存储 vs 持久化存储 <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E5%AD%98%E5%82%A8-vs-%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8">#</a></h3>
+<p>LangGraphGo 支持多种存储后端，满足不同场景的需求：</p>
+<table>
+<thead>
+<tr>
+<th>存储类型</th>
+<th>特点</th>
+<th>适用场景</th>
+<th>性能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内存存储</td>
+<td>临时、快速</td>
+<td>测试、开发</td>
+<td>最快</td>
+</tr>
+<tr>
+<td>文件存储</td>
+<td>基于文件</td>
+<td>桌面应用</td>
+<td>快</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>轻量级数据库</td>
+<td>简单部署</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>关系型数据库</td>
+<td>生产环境</td>
+<td>快</td>
+</tr>
+<tr>
+<td>Redis</td>
+<td>内存数据库</td>
+<td>高性能要求</td>
+<td>最快</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E8%B7%A8%E4%BC%9A%E8%AF%9D%E6%81%A2%E5%A4%8D%E6%A8%A1%E5%BC%8F">跨会话恢复模式 <a class="heading-anchor-permalink" href="#%E8%B7%A8%E4%BC%9A%E8%AF%9D%E6%81%A2%E5%A4%8D%E6%A8%A1%E5%BC%8F">#</a></h3>
+<pre><code class="language-mermaid">stateDiagram-v2
+[*] --&gt; SessionStart
+SessionStart --&gt; LoadHistory : 从存储加载
+LoadHistory --&gt; ProcessMessage : 处理新消息
+ProcessMessage --&gt; SaveState : 保存状态
+SaveState --&gt; ProcessMessage : 继续对话
+ProcessMessage --&gt; SessionEnd : 会话结束
+SessionEnd --&gt; [*]
+LoadHistory --&gt; Error : 加载失败
+Error --&gt; [*] : 重试或新建
+</code></pre>
+<h3 id="%E5%AE%9E%E7%8E%B0%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%BC%8F">实现持久化的代码模式 <a class="heading-anchor-permalink" href="#%E5%AE%9E%E7%8E%B0%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84%E4%BB%A3%E7%A0%81%E6%A8%A1%E5%BC%8F">#</a></h3>
+<pre><code class="language-go">// 基于文件的持久化示例
+type PersistentMemory struct {
+    filePath string
+    memory   *prebuilt.LangChainMemory
+}
+
+func (pm *PersistentMemory) SaveState() error {
+    messages, err := pm.memory.GetMessages(context.Background())
+    if err != nil {
+        return err
+    }
+    // 序列化并保存到文件
+    return saveToJSON(pm.filePath, messages)
+}
+
+func (pm *PersistentMemory) LoadState() error {
+    var messages []llms.ChatMessage
+    if err := loadFromJSON(pm.filePath, &amp;messages); err == nil {
+        // 从历史重建内存
+        history := prebuilt.NewChatMessageHistory()
+        for _, msg := range messages {
+            history.AddMessage(context.Background(), msg)
+        }
+        pm.memory = prebuilt.NewConversationBufferMemory(
+            memory.WithChatHistory(history.GetHistory()),
+        )
+    }
+    return nil
+}
+</code></pre>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/memory_chatbot/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_chatbot/main.go#L125-L186)</li>
+<li>[examples/durable_execution/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/durable_execution/main.go#L16-L59)</li>
+</ul>
+<h2 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97">最佳实践指南 <a class="heading-anchor-permalink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97">#</a></h2>
+<h3 id="%E5%86%85%E5%AD%98%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97">内存类型选择指南 <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97">#</a></h3>
+<p>根据具体需求选择合适的内存类型：</p>
+<pre><code class="language-mermaid">flowchart TD
+A[选择内存类型] --&gt; B{对话长度}
+B --&gt; |短对话&lt;br/&gt;&lt; 5轮| C[ConversationBuffer]
+B --&gt; |长对话&lt;br/&gt;&gt; 5轮| D{内存限制}
+D --&gt; |无限制| E[ConversationBuffer]
+D --&gt; |有限制| F[ConversationWindowBuffer]
+F --&gt; G{Token限制}
+G --&gt; |有| H[ConversationTokenBuffer]
+G --&gt; |无| I[ConversationWindowBuffer]
+C --&gt; J[完整上下文&lt;br/&gt;适合客服、问答]
+E --&gt; J
+F --&gt; K[最近上下文&lt;br/&gt;适合技术支持]
+H --&gt; L[Token优化&lt;br/&gt;适合成本敏感应用]
+</code></pre>
+<h3 id="%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE">性能优化建议 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE">#</a></h3>
+<ol>
+<li><strong>合理设置窗口大小</strong>: 根据对话复杂度调整 <code>ConversationWindowBuffer</code> 的大小</li>
+<li><strong>及时清理无用历史</strong>: 定期清理过期的对话历史</li>
+<li><strong>选择合适的存储后端</strong>: 根据并发需求选择内存或持久化存储</li>
+<li><strong>批量处理</strong>: 对于大量消息，考虑批量加载和保存</li>
+</ol>
+<h3 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F">错误处理模式 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%A8%A1%E5%BC%8F">#</a></h3>
+<pre><code class="language-go">func safeMemoryOperation(memory Memory, operation func() error) error {
+    ctx := context.Background()
+    
+    // 操作前备份
+    originalMessages, _ := memory.GetMessages(ctx)
+    
+    // 执行操作
+    err := operation()
+    if err != nil {
+        // 回滚到原始状态
+        memory.Clear(ctx)
+        for _, msg := range originalMessages {
+            memory.SaveContext(ctx, map[string]any{"input": msg.GetContent()}, 
+                              map[string]any{"output": ""})
+        }
+        return err
+    }
+    
+    return nil
+}
+</code></pre>
+<h3 id="%E5%AE%89%E5%85%A8%E8%80%83%E8%99%91">安全考虑 <a class="heading-anchor-permalink" href="#%E5%AE%89%E5%85%A8%E8%80%83%E8%99%91">#</a></h3>
+<ol>
+<li><strong>敏感信息过滤</strong>: 在保存到内存前过滤敏感信息</li>
+<li><strong>访问控制</strong>: 实现适当的内存访问权限控制</li>
+<li><strong>数据加密</strong>: 对持久化存储的数据进行加密</li>
+</ol>
+<h2 id="%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4">故障排除 <a class="heading-anchor-permalink" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4">#</a></h2>
+<h3 id="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见问题及解决方案 <a class="heading-anchor-permalink" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>可能原因</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内存丢失</td>
+<td>程序重启导致内存清空</td>
+<td>实现持久化存储</td>
+</tr>
+<tr>
+<td>上下文混乱</td>
+<td>多用户共享同一内存</td>
+<td>为每个用户分配独立内存</td>
+</tr>
+<tr>
+<td>性能下降</td>
+<td>历史记录过多</td>
+<td>使用窗口缓冲或定期清理</td>
+</tr>
+<tr>
+<td>消息格式错误</td>
+<td>键名不匹配</td>
+<td>检查 WithInputKey/WithOutputKey 配置</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7">调试技巧 <a class="heading-anchor-permalink" href="#%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7">#</a></h3>
+<pre><code class="language-go">// 内存状态调试
+func debugMemoryState(memory Memory) {
+    ctx := context.Background()
+    
+    // 检查内存变量
+    vars, err := memory.LoadMemoryVariables(ctx, map[string]any{})
+    if err != nil {
+        log.Printf("内存变量加载失败: %v", err)
+        return
+    }
+    
+    // 检查消息数量
+    messages, err := memory.GetMessages(ctx)
+    if err != nil {
+        log.Printf("消息获取失败: %v", err)
+        return
+    }
+    
+    log.Printf("内存状态: %d 个变量, %d 条消息", len(vars), len(messages))
+    
+    // 打印关键变量
+    for key, value := range vars {
+        log.Printf("变量 %s: %v", key, value)
+    }
+}
+</code></pre>
+<h3 id="%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7">性能监控 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7">#</a></h3>
+<pre><code class="language-go">type MemoryMetrics struct {
+    TotalMessages      int
+    AverageMessageSize float64
+    MemoryUsage        float64
+    OperationCount     int
+}
+
+func monitorMemoryPerformance(memory Memory) MemoryMetrics {
+    ctx := context.Background()
+    
+    messages, _ := memory.GetMessages(ctx)
+    totalSize := 0
+    
+    for _, msg := range messages {
+        totalSize += len(msg.GetContent())
+    }
+    
+    return MemoryMetrics{
+        TotalMessages:      len(messages),
+        AverageMessageSize: float64(totalSize) / float64(len(messages)),
+        MemoryUsage:        calculateMemoryUsage(messages),
+        OperationCount:     incrementOperationCounter(),
+    }
+}
+</code></pre>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/memory_basic/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/memory_basic/main.go#L258-L266)</li>
+<li>[prebuilt/langchain_memory_adapter_test.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/langchain_memory_adapter_test.go#L13-L49)</li>
+</ul>
+<h2 id="%E6%80%BB%E7%BB%93">总结 <a class="heading-anchor-permalink" href="#%E6%80%BB%E7%BB%93">#</a></h2>
+<p>LangGraphGo 的内存管理机制提供了强大而灵活的对话上下文管理能力。通过统一的 Memory 接口和丰富的配置选项，开发者可以根据具体需求选择合适的内存类型和配置策略。</p>
+<h3 id="%E6%A0%B8%E5%BF%83%E4%BC%98%E5%8A%BF">核心优势 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E4%BC%98%E5%8A%BF">#</a></h3>
+<ol>
+<li><strong>统一抽象</strong>: 通过 Memory 接口提供一致的使用体验</li>
+<li><strong>多样化选择</strong>: 支持多种内存类型以适应不同场景</li>
+<li><strong>LangChain兼容</strong>: 完全兼容 LangChain 的内存实现</li>
+<li><strong>灵活配置</strong>: 丰富的配置选项满足定制需求</li>
+<li><strong>可扩展性</strong>: 易于扩展和集成到现有系统</li>
+</ol>
+<h3 id="%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF">适用场景 <a class="heading-anchor-permalink" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF">#</a></h3>
+<ul>
+<li><strong>客服系统</strong>: 使用 ConversationBuffer 维护完整对话历史</li>
+<li><strong>技术支持</strong>: 使用 ConversationWindowBuffer 控制内存使用</li>
+<li><strong>教育应用</strong>: 使用 ConversationTokenBuffer 优化成本</li>
+<li><strong>多轮对话</strong>: 使用持久化存储支持跨会话恢复</li>
+</ul>
+<h3 id="%E5%8F%91%E5%B1%95%E6%96%B9%E5%90%91">发展方向 <a class="heading-anchor-permalink" href="#%E5%8F%91%E5%B1%95%E6%96%B9%E5%90%91">#</a></h3>
+<p>随着 AI 技术的发展，内存管理机制将继续演进，可能的方向包括：</p>
+<ul>
+<li>更智能的上下文压缩算法</li>
+<li>多模态对话支持</li>
+<li>分布式内存共享</li>
+<li>更高级的隐私保护机制</li>
+</ul>
+<p>通过深入理解和正确使用这些内存管理功能，开发者可以构建出更加智能和人性化的对话系统。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>

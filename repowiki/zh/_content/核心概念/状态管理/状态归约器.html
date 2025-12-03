@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../项目概述.html">项目概述</a></li><li><a class="" href="../../快速入门.html">快速入门</a></li><li><a class="" href="../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../架构与设计/架构与设计.html">架构与设计</a></li><li><a class="" href="../../架构与设计/架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../架构与设计/扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../架构与设计/扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../架构与设计/扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../../架构与设计/核心引擎设计/并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../../架构与设计/核心引擎设计/执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试执行流程.html">重试执行流程</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/重试策略配置.html">重试策略配置</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误判定机制.html">错误判定机制</a></li><li><a class="" href="../../架构与设计/核心引擎设计/错误处理与重试/错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../架构与设计/状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../架构与设计/状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../架构与设计/状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../架构与设计/状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../../教程与示例/LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../../教程与示例/MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../../教程与示例/人机协作.html">人机协作</a></li><li><a class="" href="../../教程与示例/基础示例教程.html">基础示例教程</a></li><li><a class="" href="../../教程与示例/多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../../教程与示例/多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../../教程与示例/并行执行.html">并行执行</a></li><li><a class="" href="../../教程与示例/技能集成.html">技能集成</a></li><li><a class="" href="../../教程与示例/教程与示例.html">教程与示例</a></li><li><a class="" href="../../教程与示例/条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../../教程与示例/流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/检索后重排序.html">检索后重排序</a></li><li><a class="" href="../../教程与示例/RAG 示例系列/高级RAG模式/高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../../教程与示例/子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../../教程与示例/子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../../教程与示例/工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../../教程与示例/工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../../教程与示例/工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="../../教程与示例/智能代理示例/ReAct代理.html">ReAct代理</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理协调器.html">代理协调器</a></li><li><a class="" href="../../教程与示例/智能代理示例/代理群.html">代理群</a></li><li><a class="" href="../../教程与示例/智能代理示例/动态技能系统.html">动态技能系统</a></li><li><a class="" href="../../教程与示例/智能代理示例/基础代理创建.html">基础代理创建</a></li><li><a class="" href="../../教程与示例/智能代理示例/智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../../教程与示例/检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../../教程与示例/检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="" href="../../教程与示例/状态管理与模式/基础内存管理.html">基础内存管理</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态模式定义.html">状态模式定义</a></li><li><a class="" href="../../教程与示例/状态管理与模式/状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="../../教程与示例/状态管理与模式/自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../../教程与示例/高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../../教程与示例/高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../../教程与示例/高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="../图结构工作流/入口点.html">入口点</a></li><li><a class="" href="../图结构工作流/图结构工作流.html">图结构工作流</a></li><li><a class="" href="../图结构工作流/子图.html">子图</a></li><li><a class="" href="../图结构工作流/并行执行.html">并行执行</a></li><li><a class="" href="../图结构工作流/条件边.html">条件边</a></li><li><a class="" href="../图结构工作流/节点.html">节点</a></li><li><a class="" href="../图结构工作流/边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="" href="../持久化检查点/持久化检查点.html">持久化检查点</a></li><li><a class="" href="../持久化检查点/检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="../持久化检查点/检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="../持久化检查点/检查点监听器.html">检查点监听器</a></li><li><a class="" href="../持久化检查点/检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="../持久化检查点/内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="../持久化检查点/内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="../持久化检查点/内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="active" href="状态归约器.html">状态归约器</a></li><li><a class="" href="状态模式.html">状态模式</a></li><li><a class="" href="状态管理.html">状态管理</a></li><li><a class="" href="瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../监听器/监听器.html">监听器</a></li><li><a class="" href="../监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../高级特性/子图.html">子图</a></li><li><a class="" href="../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E7%8A%B6%E6%80%81%E5%BD%92%E7%BA%A6%E5%99%A8">状态归约器 <a class="heading-anchor-permalink" href="#%E7%8A%B6%E6%80%81%E5%BD%92%E7%BA%A6%E5%99%A8">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档中引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go">graph/schema.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/state_schema/main.go">examples/state_schema/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/custom_reducer/main.go">examples/custom_reducer/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/schema_test.go">graph/schema_test.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/add_messages.go">graph/add_messages.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/graph/messages_graph.go">graph/messages_graph.go</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#reducer-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">Reducer 基础概念</a></li>
+<li><a href="#%E5%86%85%E7%BD%AE-reducer-%E7%B1%BB%E5%9E%8B">内置 Reducer 类型</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89-reducer-%E5%AE%9E%E7%8E%B0">自定义 Reducer 实现</a></li>
+<li><a href="#schema-%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%88%B6">Schema 注册机制</a></li>
+<li><a href="#%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B">实际应用示例</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97">最佳实践指南</a></li>
+<li><a href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE">性能优化建议</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF">常见使用场景</a></li>
+<li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>Reducer（归约器）是 LangGraphGo 中用于控制状态更新行为的核心机制。它定义了如何将新状态值合并到现有状态中，为不同的数据字段提供了精确的状态管理策略。通过 Reducer，开发者可以实现复杂的合并逻辑，如累加、追加、去重等操作。</p>
+<p>Reducer 的核心作用是：</p>
+<ul>
+<li><strong>精确控制状态更新</strong>：为不同类型的字段定义特定的合并策略</li>
+<li><strong>类型安全</strong>：确保状态更新过程中的类型一致性</li>
+<li><strong>灵活性</strong>：支持自定义合并逻辑以满足特定业务需求</li>
+<li><strong>可扩展性</strong>：允许动态注册新的合并规则</li>
+</ul>
+<h2 id="reducer-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">Reducer 基础概念 <a class="heading-anchor-permalink" href="#reducer-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">#</a></h2>
+<h3 id="reducer-%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89">Reducer 接口定义 <a class="heading-anchor-permalink" href="#reducer-%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89">#</a></h3>
+<p>Reducer 在 LangGraphGo 中被定义为一个函数类型，具有以下签名：</p>
+<pre><code class="language-mermaid">classDiagram
+class Reducer {
+&lt;&lt;function&gt;&gt;
++func(current, new interface) (interface, error)
+}
+class StateSchema {
+&lt;&lt;interface&gt;&gt;
++Init() interface
++Update(current, new interface) (interface, error)
+}
+class MapSchema {
++Reducers map[string]Reducer
++EphemeralKeys map[string]bool
++RegisterReducer(key string, reducer Reducer)
++Update(current, new interface) (interface, error)
+}
+StateSchema &lt;|-- MapSchema
+MapSchema --&gt; Reducer : "uses"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L8-L10)</li>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L12-L19)</li>
+</ul>
+<h3 id="reducer-%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D%E8%AF%A6%E8%A7%A3">Reducer 函数签名详解 <a class="heading-anchor-permalink" href="#reducer-%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D%E8%AF%A6%E8%A7%A3">#</a></h3>
+<p>Reducer 函数接收两个参数并返回合并后的结果：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current</td>
+<td>interface{}</td>
+<td>当前状态值，可能是 nil 或现有值</td>
+</tr>
+<tr>
+<td>new</td>
+<td>interface{}</td>
+<td>新的状态更新值</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>(interface{}, error)</td>
+<td>合并后的状态值和可能的错误</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B">状态更新流程 <a class="heading-anchor-permalink" href="#%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+A["节点返回部分状态"] --&gt; B["Schema 开始更新"]
+B --&gt; C{"检查是否注册 Reducer"}
+C --&gt; |是| D["调用指定 Reducer"]
+C --&gt; |否| E["使用默认覆盖逻辑"]
+D --&gt; F["Reducer 处理合并逻辑"]
+F --&gt; G{"Reducer 是否成功"}
+G --&gt; |成功| H["返回合并结果"]
+G --&gt; |失败| I["返回错误"]
+E --&gt; H
+H --&gt; J["更新全局状态"]
+I --&gt; K["终止执行"]
+</code></pre>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L62-L99)</li>
+</ul>
+<h2 id="%E5%86%85%E7%BD%AE-reducer-%E7%B1%BB%E5%9E%8B">内置 Reducer 类型 <a class="heading-anchor-permalink" href="#%E5%86%85%E7%BD%AE-reducer-%E7%B1%BB%E5%9E%8B">#</a></h2>
+<p>LangGraphGo 提供了两种主要的内置 Reducer 类型，满足常见的状态更新需求。</p>
+<h3 id="overwritereducer%EF%BC%88%E8%A6%86%E7%9B%96%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">OverwriteReducer（覆盖归约器） <a class="heading-anchor-permalink" href="#overwritereducer%EF%BC%88%E8%A6%86%E7%9B%96%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">#</a></h3>
+<p>OverwriteReducer 是默认的归约器，当没有为特定字段注册自定义 Reducer 时自动使用。</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Current as "当前值"
+participant New as "新值"
+participant Overwrite as "OverwriteReducer"
+participant Result as "结果"
+Current-&gt;&gt;Overwrite : current, new
+Overwrite-&gt;&gt;Overwrite : 直接返回 new
+Overwrite-&gt;&gt;Result : new
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L141-L144)</li>
+</ul>
+<p><strong>特点：</strong></p>
+<ul>
+<li><strong>简单直接</strong>：新值完全替换旧值</li>
+<li><strong>无条件覆盖</strong>：不进行任何合并逻辑</li>
+<li><strong>默认行为</strong>：未注册 Reducer 的字段使用此逻辑</li>
+</ul>
+<h3 id="appendreducer%EF%BC%88%E8%BF%BD%E5%8A%A0%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">AppendReducer（追加归约器） <a class="heading-anchor-permalink" href="#appendreducer%EF%BC%88%E8%BF%BD%E5%8A%A0%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">#</a></h3>
+<p>AppendReducer 专门用于处理列表类型的字段，支持将新元素追加到现有列表中。</p>
+<pre><code class="language-mermaid">flowchart TD
+A["AppendReducer 输入"] --&gt; B{"current 是否为 nil?"}
+B --&gt; |是| C{"new 是否为切片?"}
+C --&gt; |是| D["直接返回 new"]
+C --&gt; |否| E["创建新切片包含 new"]
+B --&gt; |否| F{"current 是否为切片?"}
+F --&gt; |否| G["返回错误：current 不是切片"]
+F --&gt; |是| H{"new 是否为切片?"}
+H --&gt; |是| I["合并两个切片"]
+H --&gt; |否| J["向切片添加单个元素"]
+I --&gt; K["返回合并后切片"]
+J --&gt; K
+E --&gt; K
+D --&gt; K
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L146-L185)</li>
+</ul>
+<p><strong>功能特性：</strong></p>
+<ul>
+<li><strong>智能类型推导</strong>：根据新值类型自动创建相应切片</li>
+<li><strong>灵活追加</strong>：支持切片到切片和元素到切片的追加</li>
+<li><strong>类型安全</strong>：使用反射确保类型兼容性</li>
+<li><strong>错误处理</strong>：对类型不匹配的情况提供明确错误</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L146-L185)</li>
+</ul>
+<h2 id="%E8%87%AA%E5%AE%9A%E4%B9%89-reducer-%E5%AE%9E%E7%8E%B0">自定义 Reducer 实现 <a class="heading-anchor-permalink" href="#%E8%87%AA%E5%AE%9A%E4%B9%89-reducer-%E5%AE%9E%E7%8E%B0">#</a></h2>
+<p>自定义 Reducer 允许开发者实现特定的合并逻辑，以满足复杂的业务需求。</p>
+<h3 id="sumreducer%EF%BC%88%E6%B1%82%E5%92%8C%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">SumReducer（求和归约器） <a class="heading-anchor-permalink" href="#sumreducer%EF%BC%88%E6%B1%82%E5%92%8C%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">#</a></h3>
+<p>SumReducer 展示了如何为数值字段实现累加逻辑：</p>
+<pre><code class="language-mermaid">classDiagram
+class SumReducer {
++func(current, new interface) (interface, error)
+-checkTypes(current, new) bool
+-performAddition(c, n int) int
+}
+note for SumReducer "实现计数器字段的累加逻辑&lt;br/&gt;支持 nil 值初始化和类型验证"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/state_schema/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/state_schema/main.go#L11-L22)</li>
+</ul>
+<p><strong>实现要点：</strong></p>
+<ul>
+<li><strong>空值处理</strong>：当 current 为 nil 时直接返回 new</li>
+<li><strong>类型断言</strong>：确保当前值和新值都是 int 类型</li>
+<li><strong>错误处理</strong>：提供详细的类型错误信息</li>
+<li><strong>数学运算</strong>：执行简单的加法操作</li>
+</ul>
+<h3 id="setreducer%EF%BC%88%E9%9B%86%E5%90%88%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">SetReducer（集合归约器） <a class="heading-anchor-permalink" href="#setreducer%EF%BC%88%E9%9B%86%E5%90%88%E5%BD%92%E7%BA%A6%E5%99%A8%EF%BC%89">#</a></h3>
+<p>SetReducer 展示了如何实现去重集合的合并策略：</p>
+<pre><code class="language-mermaid">flowchart TD
+A["SetReducer 输入"] --&gt; B["初始化空集合"]
+B --&gt; C{"current 是否存在?"}
+C --&gt; |是| D["遍历 current 列表"]
+C --&gt; |否| E["跳过 current 处理"]
+D --&gt; F["将元素添加到集合"]
+F --&gt; G{"new 是切片还是单个元素?"}
+E --&gt; G
+G --&gt; |切片| H["遍历 new 切片"]
+G --&gt; |单个元素| I["直接添加到集合"]
+H --&gt; J["添加每个元素到集合"]
+I --&gt; J
+J --&gt; K["转换集合为切片"]
+K --&gt; L["返回去重后的列表"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/custom_reducer/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/custom_reducer/main.go#L11-L42)</li>
+</ul>
+<p><strong>实现特点：</strong></p>
+<ul>
+<li><strong>去重机制</strong>：使用 map[string]bool 确保元素唯一性</li>
+<li><strong>灵活输入</strong>：支持切片和单个元素的合并</li>
+<li><strong>类型安全</strong>：严格处理字符串类型的数据</li>
+<li><strong>内存效率</strong>：使用预分配容量优化切片增长</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[examples/state_schema/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/state_schema/main.go#L11-L22)</li>
+<li>[examples/custom_reducer/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/custom_reducer/main.go#L11-L42)</li>
+</ul>
+<h2 id="schema-%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%88%B6">Schema 注册机制 <a class="heading-anchor-permalink" href="#schema-%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%88%B6">#</a></h2>
+<p>MapSchema 提供了灵活的 Reducer 注册机制，允许为不同字段配置特定的合并逻辑。</p>
+<h3 id="registerreducer-%E6%96%B9%E6%B3%95">RegisterReducer 方法 <a class="heading-anchor-permalink" href="#registerreducer-%E6%96%B9%E6%B3%95">#</a></h3>
+<pre><code class="language-mermaid">classDiagram
+class MapSchema {
++Reducers map[string]Reducer
++EphemeralKeys map[string]bool
++RegisterReducer(key string, reducer Reducer)
++RegisterChannel(key string, reducer Reducer, isEphemeral bool)
++Update(current, new interface) (interface, error)
+}
+note for MapSchema "支持通道定义和瞬态键管理&lt;br/&gt;提供灵活的状态管理模式"
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L30-L47)</li>
+</ul>
+<h3 id="%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3">注册流程详解 <a class="heading-anchor-permalink" href="#%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3">#</a></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+participant User as "用户代码"
+participant Schema as "MapSchema"
+participant Registry as "Reducer 注册表"
+User-&gt;&gt;Schema : RegisterReducer(key, reducer)
+Schema-&gt;&gt;Registry : 存储 key -&gt; reducer 映射
+Registry--&gt;&gt;Schema : 确认注册
+Schema--&gt;&gt;User : 注册完成
+Note over User,Registry : 后续状态更新时查找对应 Reducer
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L44-L47)</li>
+</ul>
+<h3 id="registerchannel-%E6%96%B9%E6%B3%95">RegisterChannel 方法 <a class="heading-anchor-permalink" href="#registerchannel-%E6%96%B9%E6%B3%95">#</a></h3>
+<p>RegisterChannel 提供了更高级的功能，除了注册 Reducer 外还支持瞬态键标记：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>字段名称</td>
+</tr>
+<tr>
+<td>reducer</td>
+<td>Reducer</td>
+<td>归约器函数</td>
+</tr>
+<tr>
+<td>isEphemeral</td>
+<td>bool</td>
+<td>是否为瞬态键</td>
+</tr>
+</tbody>
+</table>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[graph/schema.go](https://github.com/smallnest/langgraphgo/blob/main/graph/schema.go#L44-L55)</li>
+</ul>
+<h2 id="%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B">实际应用示例 <a class="heading-anchor-permalink" href="#%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B">#</a></h2>
+<h3 id="state-schema-%E7%A4%BA%E4%BE%8B">State Schema 示例 <a class="heading-anchor-permalink" href="#state-schema-%E7%A4%BA%E4%BE%8B">#</a></h3>
+<p>State Schema 示例展示了如何组合多种 Reducer 实现复杂的状态管理：</p>
+<pre><code class="language-mermaid">graph TD
+A["StateGraph"] --&gt; B["MapSchema"]
+B --&gt; C["count: SumReducer"]
+B --&gt; D["logs: AppendReducer"]
+B --&gt; E["status: 默认覆盖"]
+F["节点 A"] --&gt; G["count: 1, logs: ['A'], status: 'A'"]
+H["节点 B"] --&gt; I["count: 2, logs: ['B'], status: 'B'"]
+J["节点 C"] --&gt; K["count: 3, logs: ['C'], status: 'C'"]
+G --&gt; L["状态合并"]
+I --&gt; L
+K --&gt; L
+L --&gt; M["最终状态"]
+M --&gt; N["count: 6"]
+M --&gt; O["logs: ['Start', 'A', 'B', 'C']"]
+M --&gt; P["status: 'C'"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/state_schema/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/state_schema/main.go#L24-L104)</li>
+</ul>
+<h3 id="custom-reducer-%E7%A4%BA%E4%BE%8B">Custom Reducer 示例 <a class="heading-anchor-permalink" href="#custom-reducer-%E7%A4%BA%E4%BE%8B">#</a></h3>
+<p>Custom Reducer 示例展示了去重集合的实现：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Graph as "图执行"
+participant Schema as "Schema"
+participant SetReducer as "SetReducer"
+participant Result as "最终结果"
+Graph-&gt;&gt;Schema : 初始 tags : []
+Schema-&gt;&gt;SetReducer : 处理 tags 更新
+SetReducer-&gt;&gt;SetReducer : 添加 "initial"
+SetReducer--&gt;&gt;Schema : 返回 ["initial"]
+Graph-&gt;&gt;Schema : 并行节点 A 更新
+Schema-&gt;&gt;SetReducer : 处理 ["go", "langgraph"]
+SetReducer-&gt;&gt;SetReducer : 合并到现有集合
+SetReducer--&gt;&gt;Schema : 返回 ["initial", "go", "langgraph"]
+Graph-&gt;&gt;Schema : 并行节点 B 更新
+Schema-&gt;&gt;SetReducer : 处理 ["ai", "agent", "go"]
+SetReducer-&gt;&gt;SetReducer : 合并并去重 "go"
+SetReducer--&gt;&gt;Schema : 返回 ["initial", "go", "langgraph", "ai", "agent"]
+Schema-&gt;&gt;Result : 最终 tags : ["initial", "go", "langgraph", "ai", "agent"]
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/custom_reducer/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/custom_reducer/main.go#L44-L92)</li>
+</ul>
+<p><strong>节来源</strong></p>
+<ul>
+<li>[examples/state_schema/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/state_schema/main.go#L24-L104)</li>
+<li>[examples/custom_reducer/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/custom_reducer/main.go#L44-L92)</li>
+</ul>
+<h2 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97">最佳实践指南 <a class="heading-anchor-permalink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97">#</a></h2>
+<h3 id="reducer-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99">Reducer 设计原则 <a class="heading-anchor-permalink" href="#reducer-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99">#</a></h3>
+<ol>
+<li><strong>单一职责</strong>：每个 Reducer 只负责一种特定的合并逻辑</li>
+<li><strong>幂等性</strong>：相同的输入总是产生相同的结果</li>
+<li><strong>可预测性</strong>：合并逻辑应该是直观和可预测的</li>
+<li><strong>错误处理</strong>：提供清晰的错误信息和适当的错误类型</li>
+</ol>
+<h3 id="%E7%B1%BB%E5%9E%8B%E5%AE%89%E5%85%A8%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">类型安全最佳实践 <a class="heading-anchor-permalink" href="#%E7%B1%BB%E5%9E%8B%E5%AE%89%E5%85%A8%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+A["类型检查"] --&gt; B{"current 类型正确?"}
+B --&gt; |否| C["返回类型错误"]
+B --&gt; |是| D{"new 类型正确?"}
+D --&gt; |否| E["返回类型错误"]
+D --&gt; |是| F["执行合并逻辑"]
+F --&gt; G{"合并成功?"}
+G --&gt; |否| H["返回合并错误"]
+G --&gt; |是| I["返回合并结果"]
+</code></pre>
+<h3 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">错误处理策略 <a class="heading-anchor-permalink" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>错误类型</th>
+<th>处理方式</th>
+<th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类型不匹配</td>
+<td>返回格式化的错误信息</td>
+<td>current 不是期望的类型</td>
+</tr>
+<tr>
+<td>空值处理</td>
+<td>提供合理的默认行为</td>
+<td>nil 值的初始化逻辑</td>
+</tr>
+<tr>
+<td>合并失败</td>
+<td>返回详细的错误描述</td>
+<td>数学运算溢出或无效操作</td>
+</tr>
+<tr>
+<td>状态不一致</td>
+<td>记录警告并继续</td>
+<td>非关键字段的合并问题</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91%E5%9B%A0%E7%B4%A0">性能考虑因素 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91%E5%9B%A0%E7%B4%A0">#</a></h3>
+<ul>
+<li><strong>避免不必要的类型断言</strong>：缓存类型信息减少重复检查</li>
+<li><strong>最小化内存分配</strong>：预分配切片容量，重用对象</li>
+<li><strong>早期退出</strong>：在检测到错误时立即返回</li>
+<li><strong>批量处理</strong>：对于大量数据，考虑批量合并策略</li>
+</ul>
+<h2 id="%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE">性能优化建议 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE">#</a></h2>
+<h3 id="%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96">内存优化 <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96">#</a></h3>
+<pre><code class="language-mermaid">graph LR
+A["内存优化策略"] --&gt; B["预分配容量"]
+A --&gt; C["对象池化"]
+A --&gt; D["延迟初始化"]
+A --&gt; E["避免深拷贝"]
+B --&gt; F["减少内存重新分配"]
+C --&gt; G["复用临时对象"]
+D --&gt; H["按需创建资源"]
+E --&gt; I["使用指针传递"]
+</code></pre>
+<h3 id="%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96">算法优化 <a class="heading-anchor-permalink" href="#%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96">#</a></h3>
+<ul>
+<li><strong>哈希表优化</strong>：使用合适的初始容量避免扩容</li>
+<li><strong>切片操作优化</strong>：利用切片的 append 特性</li>
+<li><strong>反射优化</strong>：缓存反射类型信息</li>
+<li><strong>并发安全</strong>：在必要时使用同步原语</li>
+</ul>
+<h3 id="%E6%B5%8B%E8%AF%95%E5%92%8C%E7%9B%91%E6%8E%A7">测试和监控 <a class="heading-anchor-permalink" href="#%E6%B5%8B%E8%AF%95%E5%92%8C%E7%9B%91%E6%8E%A7">#</a></h3>
+<ul>
+<li><strong>基准测试</strong>：为关键 Reducer 编写性能测试</li>
+<li><strong>内存分析</strong>：监控内存使用模式</li>
+<li><strong>吞吐量测量</strong>：评估高负载下的表现</li>
+<li><strong>错误率跟踪</strong>：监控 Reducer 执行成功率</li>
+</ul>
+<h2 id="%E5%B8%B8%E8%A7%81%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF">常见使用场景 <a class="heading-anchor-permalink" href="#%E5%B8%B8%E8%A7%81%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF">#</a></h2>
+<h3 id="%E6%B6%88%E6%81%AF%E8%BF%BD%E5%8A%A0%E5%9C%BA%E6%99%AF">消息追加场景 <a class="heading-anchor-permalink" href="#%E6%B6%88%E6%81%AF%E8%BF%BD%E5%8A%A0%E5%9C%BA%E6%99%AF">#</a></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Node as "处理节点"
+participant Schema as "Schema"
+participant Messages as "消息列表"
+Node-&gt;&gt;Schema : 返回新消息
+Schema-&gt;&gt;Messages : 使用 AppendReducer
+Messages-&gt;&gt;Messages : 追加到现有列表
+Messages--&gt;&gt;Schema : 返回更新后的消息列表
+</code></pre>
+<p><strong>适用字段：</strong></p>
+<ul>
+<li>对话历史记录</li>
+<li>操作日志</li>
+<li>事件流</li>
+<li>审计跟踪</li>
+</ul>
+<h3 id="%E6%95%B0%E5%80%BC%E7%BB%9F%E8%AE%A1%E5%9C%BA%E6%99%AF">数值统计场景 <a class="heading-anchor-permalink" href="#%E6%95%B0%E5%80%BC%E7%BB%9F%E8%AE%A1%E5%9C%BA%E6%99%AF">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+A["数值统计场景"] --&gt; B["计数器累加"]
+A --&gt; C["总和计算"]
+A --&gt; D["平均值更新"]
+A --&gt; E["最大/最小值"]
+B --&gt; F["SumReducer 实现"]
+C --&gt; G["累加所有值"]
+D --&gt; H["维护计数和总和"]
+E --&gt; I["比较并更新边界值"]
+</code></pre>
+<p><strong>适用字段：</strong></p>
+<ul>
+<li>用户访问次数</li>
+<li>错误发生频率</li>
+<li>数据处理总量</li>
+<li>性能指标统计</li>
+</ul>
+<h3 id="%E6%A0%87%E7%AD%BE%E5%90%88%E5%B9%B6%E5%9C%BA%E6%99%AF">标签合并场景 <a class="heading-anchor-permalink" href="#%E6%A0%87%E7%AD%BE%E5%90%88%E5%B9%B6%E5%9C%BA%E6%99%AF">#</a></h3>
+<pre><code class="language-mermaid">graph TD
+A["标签合并场景"] --&gt; B["去重集合"]
+A --&gt; C["权重合并"]
+A --&gt; D["层级合并"]
+B --&gt; E["SetReducer 实现"]
+C --&gt; F["带权重的标签聚合"]
+D --&gt; G["分类标签的层次合并"]
+E --&gt; H["确保标签唯一性"]
+F --&gt; I["保留最高权重值"]
+G --&gt; J["维护标签层次结构"]
+</code></pre>
+<p><strong>适用字段：</strong></p>
+<ul>
+<li>文档标签系统</li>
+<li>用户兴趣标签</li>
+<li>分类标签树</li>
+<li>权重标签聚合</li>
+</ul>
+<h3 id="%E7%8A%B6%E6%80%81%E6%A0%87%E5%BF%97%E5%9C%BA%E6%99%AF">状态标志场景 <a class="heading-anchor-permalink" href="#%E7%8A%B6%E6%80%81%E6%A0%87%E5%BF%97%E5%9C%BA%E6%99%AF">#</a></h3>
+<pre><code class="language-mermaid">flowchart LR
+A["状态标志场景"] --&gt; B["优先级覆盖"]
+A --&gt; C["条件状态"]
+A --&gt; D["状态机转换"]
+B --&gt; E["使用 OverwriteReducer"]
+C --&gt; F["基于条件的覆盖"]
+D --&gt; G["状态转换逻辑"]
+E --&gt; H["最后更新胜出"]
+F --&gt; I["满足条件才覆盖"]
+G --&gt; J["状态验证和转换"]
+</code></pre>
+<p><strong>适用字段：</strong></p>
+<ul>
+<li>处理状态标识</li>
+<li>错误级别标记</li>
+<li>完成进度指示</li>
+<li>权限级别设置</li>
+</ul>
+<h2 id="%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南 <a class="heading-anchor-permalink" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">#</a></h2>
+<h3 id="%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见错误及解决方案 <a class="heading-anchor-permalink" href="#%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>错误类型</th>
+<th>症状</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类型断言失败</td>
+<td>运行时 panic</td>
+<td>添加类型检查和错误处理</td>
+</tr>
+<tr>
+<td>空指针异常</td>
+<td>nil 值导致错误</td>
+<td>实现 nil 值的安全处理</td>
+</tr>
+<tr>
+<td>内存泄漏</td>
+<td>内存使用持续增长</td>
+<td>检查对象生命周期和引用关系</td>
+</tr>
+<tr>
+<td>性能瓶颈</td>
+<td>执行时间过长</td>
+<td>优化算法复杂度和内存使用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7">调试技巧 <a class="heading-anchor-permalink" href="#%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7">#</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+A["调试 Reducer"] --&gt; B["添加日志记录"]
+A --&gt; C["单元测试覆盖"]
+A --&gt; D["性能分析"]
+A --&gt; E["边界情况测试"]
+B --&gt; F["记录输入输出"]
+C --&gt; G["测试各种输入组合"]
+D --&gt; H["识别性能热点"]
+E --&gt; I["测试极端情况"]
+</code></pre>
+<h3 id="%E7%9B%91%E6%8E%A7%E5%92%8C%E8%AF%8A%E6%96%AD">监控和诊断 <a class="heading-anchor-permalink" href="#%E7%9B%91%E6%8E%A7%E5%92%8C%E8%AF%8A%E6%96%AD">#</a></h3>
+<ul>
+<li><strong>执行时间监控</strong>：跟踪 Reducer 的执行耗时</li>
+<li><strong>错误率统计</strong>：监控 Reducer 失败率</li>
+<li><strong>内存使用分析</strong>：观察内存分配模式</li>
+<li><strong>并发冲突检测</strong>：识别潜在的竞态条件</li>
+</ul>
+<h3 id="%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95">最佳实践检查清单 <a class="heading-anchor-permalink" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95">#</a></h3>
+<ul>
+<li>[ ] 实现适当的类型检查</li>
+<li>[ ] 提供清晰的错误信息</li>
+<li>[ ] 处理边界情况</li>
+<li>[ ] 编写充分的单元测试</li>
+<li>[ ] 考虑并发安全性</li>
+<li>[ ] 优化内存使用</li>
+<li>[ ] 添加必要的日志记录</li>
+<li>[ ] 进行性能基准测试</li>
+</ul>
+<p>通过遵循这些指导原则和最佳实践，开发者可以有效地使用 LangGraphGo 的 Reducer 机制来构建健壮、高效的分布式状态管理系统。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>

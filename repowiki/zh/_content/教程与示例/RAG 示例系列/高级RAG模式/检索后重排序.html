@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<style>
+        .mermaid-diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+<style>
+        /* Collapsible Menu Styles */
+        #menu .heading {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        #menu .heading::after {
+            content: "+";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        #menu .heading.expanded::after {
+            content: "-";
+        }
+
+        #menu ul ul {
+            display: none; /* Default hidden */
+        }
+
+        #menu ul ul.expanded {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent is expanded */
+        #menu ul ul:has(.active) {
+            display: block;
+        }
+        
+        /* Ensure the active item's parent heading has the minus sign */
+        /* This is tricky with CSS only, we will handle it with JS */
+    </style>
+</head>
+<body>
+<div id="layout">
+<!-- Menu toggle -->
+<a class="menu-link" href="#menu" id="menuLink">
+<!-- Hamburger icon -->
+<span></span>
+</a>
+<nav id="menu">
+<ul><li><a class="" href="../../../项目概述.html">项目概述</a></li><li><a class="" href="../../../快速入门.html">快速入门</a></li><li><a class="" href="../../../贡献指南.html">贡献指南</a></li><li class="heading"><span>架构与设计</span></li><ul><li><a class="" href="../../../架构与设计/架构与设计.html">架构与设计</a></li><li><a class="" href="../../../架构与设计/架构权衡与决策.html">架构权衡与决策</a></li><li class="heading"><span>扩展机制</span></li><ul><li><a class="" href="../../../架构与设计/扩展机制/命令API.html">命令API</a></li><li><a class="" href="../../../架构与设计/扩展机制/扩展机制.html">扩展机制</a></li><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../../架构与设计/扩展机制/监听器/可监听图.html">可监听图</a></li><li><a class="" href="../../../架构与设计/扩展机制/监听器/可监听节点.html">可监听节点</a></li><li><a class="" href="../../../架构与设计/扩展机制/监听器/监听器.html">监听器</a></li><li><a class="" href="../../../架构与设计/扩展机制/监听器/监听器使用模式.html">监听器使用模式</a></li><li><a class="" href="../../../架构与设计/扩展机制/监听器/节点事件类型.html">节点事件类型</a></li><li><a class="" href="../../../架构与设计/扩展机制/监听器/节点监听器接口.html">节点监听器接口</a></li></ul><li class="heading"><span>追踪</span></li><ul><li><a class="" href="../../../架构与设计/扩展机制/追踪/被追踪的可运行对象.html">被追踪的可运行对象</a></li><li><a class="" href="../../../架构与设计/扩展机制/追踪/追踪.html">追踪</a></li><li><a class="" href="../../../架构与设计/扩展机制/追踪/追踪事件类型.html">追踪事件类型</a></li><li><a class="" href="../../../架构与设计/扩展机制/追踪/追踪器组件.html">追踪器组件</a></li><li><a class="" href="../../../架构与设计/扩展机制/追踪/追踪跨度模型.html">追踪跨度模型</a></li></ul></ul><li class="heading"><span>核心引擎设计</span></li><ul><li><a class="" href="../../../架构与设计/核心引擎设计/核心引擎设计.html">核心引擎设计</a></li><li class="heading"><span>并发执行</span></li><ul><li><a class="" href="../../../架构与设计/核心引擎设计/并发执行/协程管理.html">协程管理</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/并发执行/同步机制.html">同步机制</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/并发执行/并发执行.html">并发执行</a></li><li class="heading"><span>状态合并策略</span></li><ul><li><a class="" href="../../../架构与设计/核心引擎设计/并发执行/状态合并策略/基于 StateSchema 的状态合并.html">基于 StateSchema 的状态合并</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/并发执行/状态合并策略/状态合并策略.html">状态合并策略</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/并发执行/状态合并策略/自定义 StateMerger 函数.html">自定义 StateMerger 函数</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/并发执行/状态合并策略/默认最后写入获胜策略.html">默认最后写入获胜策略</a></li></ul></ul><li class="heading"><span>执行中断</span></li><ul><li><a class="" href="../../../架构与设计/核心引擎设计/执行中断/中断配置.html">中断配置</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/执行中断/动态中断.html">动态中断</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/执行中断/执行中断.html">执行中断</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/执行中断/状态恢复.html">状态恢复</a></li></ul><li class="heading"><span>执行循环</span></li><ul><li><a class="" href="../../../架构与设计/核心引擎设计/执行循环/执行循环.html">执行循环</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/执行循环/状态更新流程.html">状态更新流程</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/执行循环/节点调度.html">节点调度</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/执行循环/边触发机制.html">边触发机制</a></li></ul><li class="heading"><span>状态更新机制</span></li><ul><li><a class="" href="../../../架构与设计/核心引擎设计/状态更新机制/临时状态管理.html">临时状态管理</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/状态更新机制/归约器类型.html">归约器类型</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/状态更新机制/状态更新机制.html">状态更新机制</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/状态更新机制/状态模式.html">状态模式</a></li></ul><li class="heading"><span>错误处理与重试</span></li><ul><li><a class="" href="../../../架构与设计/核心引擎设计/错误处理与重试/重试执行流程.html">重试执行流程</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/错误处理与重试/重试策略配置.html">重试策略配置</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/错误处理与重试/错误判定机制.html">错误判定机制</a></li><li><a class="" href="../../../架构与设计/核心引擎设计/错误处理与重试/错误处理与重试.html">错误处理与重试</a></li></ul></ul><li class="heading"><span>状态管理架构</span></li><ul><li><a class="" href="../../../架构与设计/状态管理架构/临时通道.html">临时通道</a></li><li><a class="" href="../../../架构与设计/状态管理架构/归约器.html">归约器</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态管理架构.html">状态管理架构</a></li><li class="heading"><span>状态模式</span></li><ul><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/StateSchema 接口.html">StateSchema 接口</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/归约器（Reducer）函数.html">归约器（Reducer）函数</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/状态模式.html">状态模式</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/瞬态通道（Ephemeral Channels）.html">瞬态通道（Ephemeral Channels）</a></li><li class="heading"><span>MapSchema 实现</span></li><ul><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/MapSchema 实现/MapSchema 实现.html">MapSchema 实现</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Reducers 管理机制.html">Reducers 管理机制</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/MapSchema 实现/Update 方法执行流程.html">Update 方法执行流程</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/MapSchema 实现/内置归约器实现.html">内置归约器实现</a></li><li><a class="" href="../../../架构与设计/状态管理架构/状态模式/MapSchema 实现/瞬态键（Ephemeral Keys）处理.html">瞬态键（Ephemeral Keys）处理</a></li></ul></ul><li class="heading"><span>通道架构</span></li><ul><li><a class="" href="../../../架构与设计/状态管理架构/通道架构/BinaryOperatorChannel.html">BinaryOperatorChannel</a></li><li><a class="" href="../../../架构与设计/状态管理架构/通道架构/LastValueChannel.html">LastValueChannel</a></li><li><a class="" href="../../../架构与设计/状态管理架构/通道架构/TopicChannel.html">TopicChannel</a></li><li><a class="" href="../../../架构与设计/状态管理架构/通道架构/通道架构.html">通道架构</a></li></ul></ul></ul><li class="heading"><span>教程与示例</span></li><ul><li><a class="" href="../../LLM提供者灵活性.html">LLM提供者灵活性</a></li><li><a class="" href="../../MCP Agent 示例.html">MCP Agent 示例</a></li><li><a class="" href="../../人机协作.html">人机协作</a></li><li><a class="" href="../../基础示例教程.html">基础示例教程</a></li><li><a class="" href="../../多 Agent 系统指南.html">多 Agent 系统指南</a></li><li><a class="" href="../../多智能体系统展示.html">多智能体系统展示</a></li><li><a class="" href="../../并行执行.html">并行执行</a></li><li><a class="" href="../../技能集成.html">技能集成</a></li><li><a class="" href="../../教程与示例.html">教程与示例</a></li><li><a class="" href="../../条件路由与边控制.html">条件路由与边控制</a></li><li><a class="" href="../../流式输出.html">流式输出</a></li><li class="heading"><span>RAG 示例系列</span></li><ul><li><a class="" href="../RAG 示例系列.html">RAG 示例系列</a></li><li><a class="" href="../基础RAG实现.html">基础RAG实现</a></li><li class="heading"><span>向量存储集成</span></li><ul><li><a class="" href="../向量存储集成/Chroma向量库对接.html">Chroma向量库对接</a></li><li><a class="" href="../向量存储集成/LangChain生态集成.html">LangChain生态集成</a></li><li><a class="" href="../向量存储集成/向量存储集成.html">向量存储集成</a></li><li><a class="" href="../向量存储集成/嵌入模型集成.html">嵌入模型集成</a></li></ul><li class="heading"><span>高级RAG模式</span></li><ul><li><a class="" href="条件路由与回退机制.html">条件路由与回退机制</a></li><li><a class="active" href="检索后重排序.html">检索后重排序</a></li><li><a class="" href="高级RAG模式.html">高级RAG模式</a></li></ul></ul><li class="heading"><span>子图与嵌套工作流</span></li><ul><li><a class="" href="../../子图与嵌套工作流/单层子图实现.html">单层子图实现</a></li><li><a class="" href="../../子图与嵌套工作流/多层嵌套工作流.html">多层嵌套工作流</a></li><li><a class="" href="../../子图与嵌套工作流/子图与嵌套工作流.html">子图与嵌套工作流</a></li></ul><li class="heading"><span>工具集成示例</span></li><ul><li><a class="" href="../../工具集成示例/MCP 适配器.html">MCP 适配器</a></li><li><a class="" href="../../工具集成示例/Web搜索工具.html">Web搜索工具</a></li><li><a class="" href="../../工具集成示例/goskills 适配器.html">goskills 适配器</a></li><li><a class="" href="../../工具集成示例/工具集成示例.html">工具集成示例</a></li></ul><li class="heading"><span>智能代理示例</span></li><ul><li><a class="" href="../../智能代理示例/ReAct代理.html">ReAct代理</a></li><li><a class="" href="../../智能代理示例/代理协调器.html">代理协调器</a></li><li><a class="" href="../../智能代理示例/代理群.html">代理群</a></li><li><a class="" href="../../智能代理示例/动态技能系统.html">动态技能系统</a></li><li><a class="" href="../../智能代理示例/基础代理创建.html">基础代理创建</a></li><li><a class="" href="../../智能代理示例/智能代理示例.html">智能代理示例</a></li></ul><li class="heading"><span>检查点持久化示例</span></li><ul><li><a class="" href="../../检查点持久化示例/PostgreSQL 检查点.html">PostgreSQL 检查点</a></li><li><a class="" href="../../检查点持久化示例/Redis 检查点.html">Redis 检查点</a></li><li><a class="" href="../../检查点持久化示例/SQLite 检查点.html">SQLite 检查点</a></li><li><a class="" href="../../检查点持久化示例/检查点持久化示例.html">检查点持久化示例</a></li></ul><li class="heading"><span>状态管理与模式</span></li><ul><li><a class="" href="../../状态管理与模式/基础内存管理.html">基础内存管理</a></li><li><a class="" href="../../状态管理与模式/状态模式定义.html">状态模式定义</a></li><li><a class="" href="../../状态管理与模式/状态管理与模式.html">状态管理与模式</a></li><li><a class="" href="../../状态管理与模式/自定义Reducer.html">自定义Reducer</a></li></ul><li class="heading"><span>高级特性示例</span></li><ul><li><a class="" href="../../高级特性示例/高级特性示例.html">高级特性示例</a></li><li class="heading"><span>可视化与调试工具</span></li><ul><li><a class="" href="../../高级特性示例/可视化与调试工具/可视化与调试工具.html">可视化与调试工具</a></li><li><a class="" href="../../高级特性示例/可视化与调试工具/图结构可视化.html">图结构可视化</a></li><li><a class="" href="../../高级特性示例/可视化与调试工具/智能消息与调试支持.html">智能消息与调试支持</a></li></ul><li class="heading"><span>持久化执行与时间旅行</span></li><ul><li><a class="" href="../../高级特性示例/持久化执行与时间旅行/持久化执行与时间旅行.html">持久化执行与时间旅行</a></li><li><a class="" href="../../高级特性示例/持久化执行与时间旅行/持久化执行保障.html">持久化执行保障</a></li><li><a class="" href="../../高级特性示例/持久化执行与时间旅行/时间旅行状态回溯.html">时间旅行状态回溯</a></li></ul><li class="heading"><span>监听器与事件系统</span></li><ul><li><a class="" href="../../高级特性示例/监听器与事件系统/临时通道管理.html">临时通道管理</a></li><li><a class="" href="../../高级特性示例/监听器与事件系统/事件监听器机制.html">事件监听器机制</a></li><li><a class="" href="../../高级特性示例/监听器与事件系统/命令API与运行时控制.html">命令API与运行时控制</a></li><li><a class="" href="../../高级特性示例/监听器与事件系统/监听器与事件系统.html">监听器与事件系统</a></li></ul></ul></ul><li class="heading"><span>核心概念</span></li><ul><li><a class="" href="../../../核心概念/核心概念.html">核心概念</a></li><li class="heading"><span>图结构工作流</span></li><ul><li><a class="" href="../../../核心概念/图结构工作流/入口点.html">入口点</a></li><li><a class="" href="../../../核心概念/图结构工作流/图结构工作流.html">图结构工作流</a></li><li><a class="" href="../../../核心概念/图结构工作流/子图.html">子图</a></li><li><a class="" href="../../../核心概念/图结构工作流/并行执行.html">并行执行</a></li><li><a class="" href="../../../核心概念/图结构工作流/条件边.html">条件边</a></li><li><a class="" href="../../../核心概念/图结构工作流/节点.html">节点</a></li><li><a class="" href="../../../核心概念/图结构工作流/边.html">边</a></li></ul><li class="heading"><span>持久化检查点</span></li><ul><li><a class="" href="../../../核心概念/持久化检查点/持久化检查点.html">持久化检查点</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点存储接口.html">检查点存储接口</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点数据模型.html">检查点数据模型</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点监听器.html">检查点监听器</a></li><li><a class="" href="../../../核心概念/持久化检查点/检查点配置.html">检查点配置</a></li><li class="heading"><span>内置存储实现</span></li><ul><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/PostgreSQL 存储 (PostgresCheckpointStore).html">PostgreSQL 存储 (PostgresCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/Redis 存储 (RedisCheckpointStore).html">Redis 存储 (RedisCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/SQLite 存储 (SqliteCheckpointStore).html">SQLite 存储 (SqliteCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/内存存储 (MemoryCheckpointStore).html">内存存储 (MemoryCheckpointStore)</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/内置存储实现.html">内置存储实现</a></li><li><a class="" href="../../../核心概念/持久化检查点/内置存储实现/文件存储 (FileCheckpointStore).html">文件存储 (FileCheckpointStore)</a></li></ul></ul><li class="heading"><span>流式输出</span></li><ul><li><a class="" href="../../../核心概念/流式输出/事件通道与结果处理.html">事件通道与结果处理</a></li><li><a class="" href="../../../核心概念/流式输出/流式执行器.html">流式执行器</a></li><li><a class="" href="../../../核心概念/流式输出/流式模式.html">流式模式</a></li><li><a class="" href="../../../核心概念/流式输出/流式监听器.html">流式监听器</a></li><li><a class="" href="../../../核心概念/流式输出/流式输出.html">流式输出</a></li><li><a class="" href="../../../核心概念/流式输出/流式配置.html">流式配置</a></li></ul><li class="heading"><span>状态管理</span></li><ul><li><a class="" href="../../../核心概念/状态管理/状态归约器.html">状态归约器</a></li><li><a class="" href="../../../核心概念/状态管理/状态模式.html">状态模式</a></li><li><a class="" href="../../../核心概念/状态管理/状态管理.html">状态管理</a></li><li><a class="" href="../../../核心概念/状态管理/瞬态通道.html">瞬态通道</a></li></ul><li class="heading"><span>监听器</span></li><ul><li><a class="" href="../../../核心概念/监听器/可监听可运行实例.html">可监听可运行实例</a></li><li><a class="" href="../../../核心概念/监听器/图回调处理器.html">图回调处理器</a></li><li><a class="" href="../../../核心概念/监听器/监听器.html">监听器</a></li><li><a class="" href="../../../核心概念/监听器/监听器接口.html">监听器接口</a></li><li><a class="" href="../../../核心概念/监听器/节点事件类型.html">节点事件类型</a></li><li class="heading"><span>可监听图</span></li><ul><li><a class="" href="../../../核心概念/监听器/可监听图/全局监听器.html">全局监听器</a></li><li><a class="" href="../../../核心概念/监听器/可监听图/可监听图.html">可监听图</a></li><li><a class="" href="../../../核心概念/监听器/可监听图/可监听图构建.html">可监听图构建</a></li><li><a class="" href="../../../核心概念/监听器/可监听图/可监听节点管理.html">可监听节点管理</a></li></ul><li class="heading"><span>可监听节点</span></li><ul><li><a class="" href="../../../核心概念/监听器/可监听节点/事件通知机制.html">事件通知机制</a></li><li><a class="" href="../../../核心概念/监听器/可监听节点/可监听节点.html">可监听节点</a></li><li><a class="" href="../../../核心概念/监听器/可监听节点/可监听节点构造器.html">可监听节点构造器</a></li><li><a class="" href="../../../核心概念/监听器/可监听节点/监听器管理机制.html">监听器管理机制</a></li></ul></ul></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../../预构建组件/Create Agent.html">Create Agent</a></li><li><a class="" href="../../../预构建组件/ReAct Agent.html">ReAct Agent</a></li><li><a class="" href="../../../预构建组件/Supervisor.html">Supervisor</a></li><li><a class="" href="../../../预构建组件/预构建组件.html">预构建组件</a></li><li class="heading"><span>RAG 组件</span></li><ul><li><a class="" href="../../../预构建组件/RAG 组件/RAG 组件.html">RAG 组件</a></li><li><a class="" href="../../../预构建组件/RAG 组件/基础 RAG.html">基础 RAG</a></li><li><a class="" href="../../../预构建组件/RAG 组件/条件 RAG.html">条件 RAG</a></li><li class="heading"><span>高级 RAG</span></li><ul><li><a class="" href="../../../预构建组件/RAG 组件/高级 RAG/引用格式化.html">引用格式化</a></li><li><a class="" href="../../../预构建组件/RAG 组件/高级 RAG/重排序机制.html">重排序机制</a></li><li><a class="" href="../../../预构建组件/RAG 组件/高级 RAG/高级 RAG.html">高级 RAG</a></li></ul></ul></ul><li class="heading"><span>检查点存储</span></li><ul><li><a class="" href="../../../检查点存储/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../../检查点存储/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../../检查点存储/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../../检查点存储/检查点存储.html">检查点存储</a></li></ul><li class="heading"><span>工具集成</span></li><ul><li><a class="" href="../../../工具集成/具体工具集成.html">具体工具集成</a></li><li><a class="" href="../../../工具集成/工具执行框架.html">工具执行框架</a></li><li><a class="" href="../../../工具集成/工具集成.html">工具集成</a></li></ul><li class="heading"><span>高级特性</span></li><ul><li><a class="" href="../../../高级特性/人机协作.html">人机协作</a></li><li><a class="" href="../../../高级特性/可视化.html">可视化</a></li><li><a class="" href="../../../高级特性/子图.html">子图</a></li><li><a class="" href="../../../高级特性/并行执行.html">并行执行</a></li><li><a class="" href="../../../高级特性/高级特性.html">高级特性</a></li></ul><li class="heading"><span>API 参考</span></li><ul><li><a class="" href="../../../API 参考/API 参考.html">API 参考</a></li><li><a class="" href="../../../API 参考/工具集成.html">工具集成</a></li><li><a class="" href="../../../API 参考/流式处理模块.html">流式处理模块</a></li><li class="heading"><span>图引擎</span></li><ul><li><a class="" href="../../../API 参考/图引擎/图定义.html">图定义</a></li><li><a class="" href="../../../API 参考/图引擎/图引擎.html">图引擎</a></li><li><a class="" href="../../../API 参考/图引擎/状态图.html">状态图</a></li><li class="heading"><span>图执行</span></li><ul><li><a class="" href="../../../API 参考/图引擎/图执行/图执行.html">图执行</a></li><li><a class="" href="../../../API 参考/图引擎/图执行/并行执行.html">并行执行</a></li><li><a class="" href="../../../API 参考/图引擎/图执行/执行中断.html">执行中断</a></li><li><a class="" href="../../../API 参考/图引擎/图执行/错误重试策略.html">错误重试策略</a></li></ul></ul><li class="heading"><span>检查点模块</span></li><ul><li><a class="" href="../../../API 参考/检查点模块/CheckpointStore 接口.html">CheckpointStore 接口</a></li><li><a class="" href="../../../API 参考/检查点模块/PostgreSQL 检查点存储.html">PostgreSQL 检查点存储</a></li><li><a class="" href="../../../API 参考/检查点模块/Redis 检查点存储.html">Redis 检查点存储</a></li><li><a class="" href="../../../API 参考/检查点模块/SQLite 检查点存储.html">SQLite 检查点存储</a></li><li><a class="" href="../../../API 参考/检查点模块/检查点模块.html">检查点模块</a></li></ul><li class="heading"><span>预构建组件</span></li><ul><li><a class="" href="../../../API 参考/预构建组件/协调器 (Supervisor).html">协调器 (Supervisor)</a></li><li><a class="" href="../../../API 参考/预构建组件/智能代理 (CreateAgent).html">智能代理 (CreateAgent)</a></li><li><a class="" href="../../../API 参考/预构建组件/检索增强生成 (RAG).html">检索增强生成 (RAG)</a></li><li><a class="" href="../../../API 参考/预构建组件/预构建组件.html">预构建组件</a></li></ul></ul></ul>
+</nav>
+<article class="content" id="main">
+<h1 id="%E6%A3%80%E7%B4%A2%E5%90%8E%E9%87%8D%E6%8E%92%E5%BA%8F">检索后重排序 <a class="heading-anchor-permalink" href="#%E6%A3%80%E7%B4%A2%E5%90%8E%E9%87%8D%E6%8E%92%E5%BA%8F">#</a></h1>
+<div class="cite-content">
+<p><strong>本文档引用的文件</strong></p>
+<ul>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/rag_advanced/main.go">examples/rag_advanced/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go">prebuilt/rag.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_components.go">prebuilt/rag_components.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/rag_advanced/README.md">examples/rag_advanced/README.md</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/rag_basic/main.go">examples/rag_basic/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/examples/rag_conditional/main.go">examples/rag_conditional/main.go</a></li>
+<li><a href="https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_test.go">prebuilt/rag_test.go</a></li>
+</ul>
+</div>
+<h2 id="%E7%9B%AE%E5%BD%95">目录 <a class="heading-anchor-permalink" href="#%E7%9B%AE%E5%BD%95">#</a></h2>
+<ol>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88">项目结构概览</a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">核心组件分析</a></li>
+<li><a href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览</a></li>
+<li><a href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析</a></li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90">依赖关系分析</a></li>
+<li><a href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑</a></li>
+<li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南</a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+</ol>
+<h2 id="%E7%AE%80%E4%BB%8B">简介 <a class="heading-anchor-permalink" href="#%E7%AE%80%E4%BB%8B">#</a></h2>
+<p>检索后重排序（Reranking）是现代RAG（检索增强生成）系统中的关键优化技术，它通过重新评估检索到的文档的相关性来显著提升最终答案的质量。本文档深入分析LangGraphGo框架中实现的检索后重排序机制，重点关注<code>BuildAdvancedRAG</code>方法如何构建包含rerank节点的图结构，以及<code>RAGConfig</code>中相关配置参数的作用。</p>
+<h2 id="%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88">项目结构概览 <a class="heading-anchor-permalink" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88">#</a></h2>
+<p>LangGraphGo项目采用模块化设计，将RAG功能分为多个核心模块：</p>
+<pre><code class="language-mermaid">graph TB
+subgraph "示例应用"
+A[rag_advanced/main.go]
+B[rag_basic/main.go]
+C[rag_conditional/main.go]
+end
+subgraph "核心库"
+D[prebuilt/rag.go]
+E[prebuilt/rag_components.go]
+F[prebuilt/rag_test.go]
+end
+subgraph "支持组件"
+G[graph/]
+H[tool/]
+I[checkpoint/]
+end
+A --&gt; D
+A --&gt; E
+B --&gt; D
+C --&gt; D
+D --&gt; G
+E --&gt; G
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/rag_advanced/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/rag_advanced/main.go#L1-L223)</li>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L1-L392)</li>
+<li>[prebuilt/rag_components.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_components.go#L1-L333)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/rag_advanced/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/rag_advanced/main.go#L1-L223)</li>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L1-L392)</li>
+</ul>
+<h2 id="%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">核心组件分析 <a class="heading-anchor-permalink" href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">#</a></h2>
+<h3 id="ragconfig%E9%85%8D%E7%BD%AE%E7%BB%93%E6%9E%84">RAGConfig配置结构 <a class="heading-anchor-permalink" href="#ragconfig%E9%85%8D%E7%BD%AE%E7%BB%93%E6%9E%84">#</a></h3>
+<p><code>RAGConfig</code>结构体定义了RAG管道的所有配置参数，其中与重排序直接相关的有两个关键字段：</p>
+<table>
+<thead>
+<tr>
+<th>配置参数</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UseReranking</code></td>
+<td><code>bool</code></td>
+<td><code>false</code></td>
+<td>是否启用重排序功能</td>
+</tr>
+<tr>
+<td><code>IncludeCitations</code></td>
+<td><code>bool</code></td>
+<td><code>true</code></td>
+<td>是否包含源文档引用</td>
+</tr>
+</tbody>
+</table>
+<p>这些配置参数控制着RAG管道的行为模式，特别是在高级RAG管道中发挥重要作用。</p>
+<h3 id="reranker%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1">Reranker接口设计 <a class="heading-anchor-permalink" href="#reranker%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1">#</a></h3>
+<p><code>Reranker</code>接口定义了重排序的核心功能：</p>
+<pre><code class="language-mermaid">classDiagram
+class Reranker {
+&lt;&lt;interface&gt;&gt;
++Rerank(ctx Context, query string, documents []Document) ([]DocumentWithScore, error)
+}
+class SimpleReranker {
++Rerank(ctx Context, query string, documents []Document) ([]DocumentWithScore, error)
+}
+class DocumentWithScore {
++Document Document
++Score float64
+}
+Reranker &lt;|.. SimpleReranker : 实现
+SimpleReranker --&gt; DocumentWithScore : 创建
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L52-L55)</li>
+<li>[prebuilt/rag_components.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_components.go#L206-L261)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L69-L91)</li>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L52-L55)</li>
+</ul>
+<h2 id="%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">架构概览 <a class="heading-anchor-permalink" href="#%E6%9E%B6%E6%9E%84%E6%A6%82%E8%A7%88">#</a></h2>
+<h3 id="advanced-rag%E7%AE%A1%E9%81%93%E6%9E%B6%E6%9E%84">Advanced RAG管道架构 <a class="heading-anchor-permalink" href="#advanced-rag%E7%AE%A1%E9%81%93%E6%9E%B6%E6%9E%84">#</a></h3>
+<p>Advanced RAG管道通过<code>BuildAdvancedRAG</code>方法构建，包含检索、重排序和生成三个主要阶段：</p>
+<pre><code class="language-mermaid">graph LR
+A[查询] --&gt; B[检索节点]
+B --&gt; C{启用重排序?}
+C --&gt; |是| D[重排序节点]
+C --&gt; |否| E[生成节点]
+D --&gt; E
+E --&gt; F{包含引用?}
+F --&gt; |是| G[格式化引用节点]
+F --&gt; |否| H[结束]
+G --&gt; H
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L148-L191)</li>
+</ul>
+<h3 id="%E6%9D%A1%E4%BB%B6rag%E7%AE%A1%E9%81%93%E6%9E%B6%E6%9E%84">条件RAG管道架构 <a class="heading-anchor-permalink" href="#%E6%9D%A1%E4%BB%B6rag%E7%AE%A1%E9%81%93%E6%9E%B6%E6%9E%84">#</a></h3>
+<p>条件RAG管道增加了基于相关性阈值的智能路由：</p>
+<pre><code class="language-mermaid">graph TD
+A[查询] --&gt; B[检索节点]
+B --&gt; C[重排序节点]
+C --&gt; D{相关性得分 ≥ 阈值?}
+D --&gt; |是| E[生成节点]
+D --&gt; |否| F{启用回退?}
+F --&gt; |是| G[回退搜索节点]
+F --&gt; |否| E
+G --&gt; E
+E --&gt; H{包含引用?}
+H --&gt; |是| I[格式化引用节点]
+H --&gt; |否| J[结束]
+I --&gt; J
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L193-L249)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L148-L191)</li>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L193-L249)</li>
+</ul>
+<h2 id="%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">详细组件分析 <a class="heading-anchor-permalink" href="#%E8%AF%A6%E7%BB%86%E7%BB%84%E4%BB%B6%E5%88%86%E6%9E%90">#</a></h2>
+<h3 id="buildadvancedrag%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0">BuildAdvancedRAG方法实现 <a class="heading-anchor-permalink" href="#buildadvancedrag%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p><code>BuildAdvancedRAG</code>方法是构建包含重排序功能的RAG管道的核心逻辑：</p>
+<pre><code class="language-mermaid">flowchart TD
+Start([开始构建]) --&gt; CheckRetriever{检查检索器}
+CheckRetriever --&gt; |无效| Error1[返回错误]
+CheckRetriever --&gt; |有效| CheckLLM{检查LLM}
+CheckLLM --&gt; |无效| Error2[返回错误]
+CheckLLM --&gt; |有效| AddRetrieve[添加检索节点]
+AddRetrieve --&gt; CheckReranking{启用重排序?}
+CheckReranking --&gt; |是且有重排序器| AddRerank[添加重排序节点]
+CheckReranking --&gt; |否或无重排序器| SkipRerank[跳过重排序]
+AddRerank --&gt; AddGenerate[添加生成节点]
+SkipRerank --&gt; AddGenerate
+AddGenerate --&gt; CheckCitations{包含引用?}
+CheckCitations --&gt; |是| AddCitations[添加引用格式化节点]
+CheckCitations --&gt; |否| Finalize[完成构建]
+AddCitations --&gt; Finalize
+Finalize --&gt; Success([构建成功])
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L148-L191)</li>
+</ul>
+<h3 id="reranknode%E8%8A%82%E7%82%B9%E5%AE%9E%E7%8E%B0">rerankNode节点实现 <a class="heading-anchor-permalink" href="#reranknode%E8%8A%82%E7%82%B9%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p><code>rerankNode</code>是RAG管道中的关键节点，负责处理重排序逻辑：</p>
+<pre><code class="language-mermaid">sequenceDiagram
+participant Pipeline as RAG管道
+participant RerankNode as rerankNode
+participant Reranker as 重排序器
+participant State as RAG状态
+Pipeline-&gt;&gt;RerankNode : 传递查询和检索到的文档
+RerankNode-&gt;&gt;RerankNode : 检查重排序器是否存在
+alt 重排序器存在
+RerankNode-&gt;&gt;Reranker : 调用Rerank方法
+Reranker--&gt;&gt;RerankNode : 返回重排序后的文档列表
+RerankNode-&gt;&gt;State : 更新RankedDocuments
+RerankNode-&gt;&gt;State : 更新Documents为重排序后的顺序
+else 重排序器不存在
+RerankNode-&gt;&gt;RerankNode : 使用简单递减分数分配
+RerankNode-&gt;&gt;State : 更新RankedDocuments
+end
+RerankNode--&gt;&gt;Pipeline : 返回更新的状态
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L277-L308)</li>
+</ul>
+<h3 id="newsimplereranker%E5%AE%9E%E7%8E%B0">NewSimpleReranker实现 <a class="heading-anchor-permalink" href="#newsimplereranker%E5%AE%9E%E7%8E%B0">#</a></h3>
+<p><code>NewSimpleReranker</code>提供了基础的关键词匹配重排序算法：</p>
+<pre><code class="language-mermaid">flowchart TD
+Start([开始重排序]) --&gt; ParseQuery[解析查询词]
+ParseQuery --&gt; InitScores[初始化分数数组]
+InitScores --&gt; LoopDocs[遍历所有文档]
+LoopDocs --&gt; ExtractContent[提取文档内容]
+ExtractContent --&gt; CountTerms[统计查询词出现次数]
+CountTerms --&gt; NormalizeScore[归一化分数]
+NormalizeScore --&gt; StoreScore[存储分数]
+StoreScore --&gt; MoreDocs{还有更多文档?}
+MoreDocs --&gt; |是| LoopDocs
+MoreDocs --&gt; |否| SortScores[按分数降序排序]
+SortScores --&gt; CreateResults[创建DocumentWithScore列表]
+CreateResults --&gt; End([返回结果])
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/rag_components.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_components.go#L216-L261)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L148-L191)</li>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L277-L308)</li>
+<li>[prebuilt/rag_components.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_components.go#L216-L261)</li>
+</ul>
+<h3 id="%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3">配置参数详解 <a class="heading-anchor-permalink" href="#%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3">#</a></h3>
+<h4 id="usereranking%E5%8F%82%E6%95%B0">UseReranking参数 <a class="heading-anchor-permalink" href="#usereranking%E5%8F%82%E6%95%B0">#</a></h4>
+<p><code>UseReranking</code>参数控制是否在RAG管道中启用重排序功能：</p>
+<table>
+<thead>
+<tr>
+<th>配置值</th>
+<th>行为描述</th>
+<th>影响范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td>启用重排序节点，使用配置的Reranker</td>
+<td>所有检索到的文档都会被重新评分</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>跳过重排序节点，保持原始检索顺序</td>
+<td>文档顺序完全由向量相似度决定</td>
+</tr>
+</tbody>
+</table>
+<h4 id="includecitations%E5%8F%82%E6%95%B0">IncludeCitations参数 <a class="heading-anchor-permalink" href="#includecitations%E5%8F%82%E6%95%B0">#</a></h4>
+<p><code>IncludeCitations</code>参数控制是否在最终答案中包含源文档引用：</p>
+<table>
+<thead>
+<tr>
+<th>配置值</th>
+<th>行为描述</th>
+<th>输出影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td>在生成的答案末尾添加源文档引用列表</td>
+<td>提供透明性和可追溯性</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>不添加任何引用信息</td>
+<td>答案更加简洁但缺乏来源信息</td>
+</tr>
+</tbody>
+</table>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L73-L74)</li>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L78-L79)</li>
+</ul>
+<h3 id="%E9%87%8D%E6%8E%92%E5%BA%8F%E5%89%8D%E5%90%8E%E7%9A%84%E6%96%87%E6%A1%A3%E9%A1%BA%E5%BA%8F%E5%8F%98%E5%8C%96">重排序前后的文档顺序变化 <a class="heading-anchor-permalink" href="#%E9%87%8D%E6%8E%92%E5%BA%8F%E5%89%8D%E5%90%8E%E7%9A%84%E6%96%87%E6%A1%A3%E9%A1%BA%E5%BA%8F%E5%8F%98%E5%8C%96">#</a></h3>
+<p>在<code>rag_advanced</code>示例中，重排序的效果可以通过以下方式观察：</p>
+<pre><code class="language-mermaid">graph LR
+subgraph "检索阶段"
+A[文档1: 向量数据库介绍]
+B[文档2: LangGraph概述]
+C[文档3: RAG技术原理]
+D[文档4: 重排序技术]
+end
+subgraph "重排序阶段"
+E[文档4: 重排序技术&lt;br/&gt;高相关性分数]
+F[文档1: 向量数据库介绍&lt;br/&gt;中等分数]
+G[文档3: RAG技术原理&lt;br/&gt;中等分数]
+H[文档2: LangGraph概述&lt;br/&gt;低分数]
+end
+A --&gt; E
+B --&gt; F
+C --&gt; G
+D --&gt; H
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[examples/rag_advanced/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/rag_advanced/main.go#L180-L210)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[examples/rag_advanced/main.go](https://github.com/smallnest/langgraphgo/blob/main/examples/rag_advanced/main.go#L180-L210)</li>
+</ul>
+<h2 id="%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90">依赖关系分析 <a class="heading-anchor-permalink" href="#%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90">#</a></h2>
+<h3 id="%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB">组件间依赖关系 <a class="heading-anchor-permalink" href="#%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB">#</a></h3>
+<pre><code class="language-mermaid">graph TD
+subgraph "配置层"
+Config[RAGConfig]
+end
+subgraph "管道层"
+Pipeline[RAGPipeline]
+Graph[MessageGraph]
+end
+subgraph "组件层"
+Retriever[Retriever接口]
+Reranker[Reranker接口]
+LLM[LLM模型]
+end
+subgraph "实现层"
+VectorRetriever[VectorStoreRetriever]
+SimpleReranker[SimpleReranker]
+InMemoryVectorStore[InMemoryVectorStore]
+end
+Config --&gt; Pipeline
+Pipeline --&gt; Graph
+Pipeline --&gt; Retriever
+Pipeline --&gt; Reranker
+Pipeline --&gt; LLM
+Retriever --&gt; VectorRetriever
+Reranker --&gt; SimpleReranker
+Retriever --&gt; InMemoryVectorStore
+</code></pre>
+<p><strong>图表来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L108-L123)</li>
+<li>[prebuilt/rag_components.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_components.go#L206-L261)</li>
+</ul>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L108-L123)</li>
+<li>[prebuilt/rag_components.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag_components.go#L206-L261)</li>
+</ul>
+<h2 id="%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">性能考虑 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E8%80%83%E8%99%91">#</a></h2>
+<h3 id="%E9%87%8D%E6%8E%92%E5%BA%8F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">重排序性能优化 <a class="heading-anchor-permalink" href="#%E9%87%8D%E6%8E%92%E5%BA%8F%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">#</a></h3>
+<ol>
+<li><strong>批处理优化</strong>: 重排序器可以一次性处理多个文档，减少调用开销</li>
+<li><strong>内存管理</strong>: <code>DocumentWithScore</code>结构体优化了内存使用，避免不必要的数据复制</li>
+<li><strong>算法复杂度</strong>: 当前的简单重排序算法时间复杂度为O(n*m)，其中n是文档数量，m是查询词数量</li>
+</ol>
+<h3 id="%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E4%BC%98%E5%8C%96">内存使用优化 <a class="heading-anchor-permalink" href="#%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E4%BC%98%E5%8C%96">#</a></h3>
+<ul>
+<li>使用切片而非数组提高内存效率</li>
+<li>及时释放不需要的中间状态</li>
+<li>通过接口抽象减少具体类型依赖</li>
+</ul>
+<h2 id="%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">故障排除指南 <a class="heading-anchor-permalink" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4%E6%8C%87%E5%8D%97">#</a></h2>
+<h3 id="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">常见问题及解决方案 <a class="heading-anchor-permalink" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">#</a></h3>
+<h4 id="%E9%87%8D%E6%8E%92%E5%BA%8F%E6%9C%AA%E7%94%9F%E6%95%88">重排序未生效 <a class="heading-anchor-permalink" href="#%E9%87%8D%E6%8E%92%E5%BA%8F%E6%9C%AA%E7%94%9F%E6%95%88">#</a></h4>
+<p><strong>症状</strong>: 检索到的文档顺序没有变化
+<strong>原因</strong>: <code>UseReranking</code>设置为<code>false</code>或<code>Reranker</code>未正确配置
+<strong>解决方案</strong>: 确保在配置中启用重排序功能</p>
+<h4 id="%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E4%B8%8D%E6%AD%A3%E7%A1%AE">引用格式不正确 <a class="heading-anchor-permalink" href="#%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E4%B8%8D%E6%AD%A3%E7%A1%AE">#</a></h4>
+<p><strong>症状</strong>: 答案中缺少源文档引用
+<strong>原因</strong>: <code>IncludeCitations</code>设置为<code>false</code>
+<strong>解决方案</strong>: 启用引用生成功能</p>
+<h4 id="%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98">性能问题 <a class="heading-anchor-permalink" href="#%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98">#</a></h4>
+<p><strong>症状</strong>: 重排序过程耗时较长
+<strong>原因</strong>: 大量文档需要重排序或重排序算法复杂度高
+<strong>解决方案</strong>: 调整<code>TopK</code>参数或实现更高效的重排序算法</p>
+<p><strong>章节来源</strong></p>
+<ul>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L280-L291)</li>
+<li>[prebuilt/rag.go](https://github.com/smallnest/langgraphgo/blob/main/prebuilt/rag.go#L168-L171)</li>
+</ul>
+<h2 id="%E7%BB%93%E8%AE%BA">结论 <a class="heading-anchor-permalink" href="#%E7%BB%93%E8%AE%BA">#</a></h2>
+<p>LangGraphGo框架中的检索后重排序机制提供了一个灵活且强大的RAG系统基础。通过<code>BuildAdvancedRAG</code>方法，开发者可以轻松构建包含重排序功能的RAG管道，而<code>RAGConfig</code>中的<code>UseReranking</code>和<code>IncludeCitations</code>参数则提供了细粒度的控制能力。</p>
+<p><code>NewSimpleReranker</code>实现展示了重排序的基本原理，通过关键词匹配和归一化分数实现了有效的文档重排序。这种设计既保证了系统的可扩展性，又为后续集成更复杂的重排序算法（如交叉编码器）预留了空间。</p>
+<p>通过合理配置这些参数和选择合适的重排序策略，开发者可以在保持系统性能的同时显著提升RAG系统的输出质量，为用户提供更加准确和可信的答案。</p>
+</article>
+</div>
+<script>
+      // Load contents.json if you need it
+    </script>
+<script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+<script src="https://s4.zstatic.net/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    // 初始化 Mermaid - 在加载 app.js 之前
+    console.log('初始化 Mermaid');
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        pie: {
+            textPosition: 0.75
+        }
+    });
+
+    // 全局函数，用于处理 Mermaid 代码块
+    window.processMermaidBlocks = async function () {
+        console.log('开始处理 Mermaid 代码块...');
+
+        const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+        console.log('找到代码块数量:', mermaidBlocks.length);
+
+        if (mermaidBlocks.length === 0) {
+            console.log('没有找到 Mermaid 代码块');
+            return;
+        }
+
+        for (let i = 0; i < mermaidBlocks.length; i++) {
+            const block = mermaidBlocks[i];
+
+            // 检查是否已经处理过
+            if (block.dataset.mermaidProcessed) {
+                continue;
+            }
+
+            const mermaidCode = block.textContent || block.innerText;
+            console.log(`处理第 ${i + 1} 个代码块:`, mermaidCode);
+
+            // 创建图表容器
+            const diagramId = `mermaid-diagram-${Date.now()}-${i}`;
+            const diagramContainer = document.createElement('div');
+            diagramContainer.id = diagramId;
+            diagramContainer.className = 'mermaid-diagram';
+            diagramContainer.innerHTML = '<p>正在渲染图表...</p>';
+
+            // 插入到代码块后面
+            block.parentElement.insertAdjacentElement('afterend', diagramContainer);
+
+            try {
+                console.log('开始渲染图表...');
+
+                // 生成唯一的 SVG ID
+                const svgId = `diagram-svg-${Date.now()}-${i}`;
+
+                const result = await mermaid.render(svgId, mermaidCode);
+                console.log('渲染成功');
+
+                diagramContainer.innerHTML = result.svg;
+
+                // 隐藏原始代码块
+                block.parentElement.style.display = 'none';
+
+                // 标记为已处理
+                block.dataset.mermaidProcessed = 'true';
+
+            } catch (error) {
+                console.error('渲染失败:', error);
+                diagramContainer.innerHTML = `
+                    <div style="color: red; padding: 10px; border: 1px solid red; border-radius: 4px;">
+                        <strong>图表渲染失败:</strong><br>
+                        ${error.message}<br>
+                        <details>
+                            <summary>原始代码</summary>
+                            <pre>${mermaidCode}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // 在脚本末尾添加
+    window.addEventListener('load', function() {
+        console.log('所有资源加载完成，开始处理 Mermaid');
+        window.processMermaidBlocks();
+    });
+    hljs.highlightAll();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all headings
+        const headings = document.querySelectorAll('#menu .heading');
+        
+        headings.forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Toggle the expanded class on the heading
+                this.classList.toggle('expanded');
+                
+                // Find the next sibling which should be the ul
+                let nextSibling = this.nextElementSibling;
+                while (nextSibling) {
+                    if (nextSibling.tagName === 'UL') {
+                        nextSibling.classList.toggle('expanded');
+                        break;
+                    }
+                    nextSibling = nextSibling.nextElementSibling;
+                }
+            });
+        });
+
+        // Expand the menu to show the active link
+        const activeLink = document.querySelector('#menu a.active');
+        if (activeLink) {
+            let parent = activeLink.parentElement;
+            while (parent && parent.id !== 'menu') {
+                if (parent.tagName === 'UL') {
+                    parent.classList.add('expanded');
+                    // Find the previous sibling heading and expand it
+                    let previousSibling = parent.previousElementSibling;
+                    while (previousSibling) {
+                        if (previousSibling.classList.contains('heading')) {
+                            previousSibling.classList.add('expanded');
+                            break;
+                        }
+                        previousSibling = previousSibling.previousElementSibling;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+        }
+    });
+</script>
+</body>
+</html>
