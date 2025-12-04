@@ -203,6 +203,23 @@ res, err := agent.Invoke(ctx, input)</code></pre>
     prebuilt.WithCheckpointer(checkpointer),
 )</code></pre>
 
+            <h3>Skills Integration <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.4.0</span></h3>
+            <p>Starting from v0.4.0, <code>CreateAgent</code> supports dynamic skill loading. Skills are functional modules that can be loaded and executed on demand, supporting Claude Skills and other skill systems.</p>
+
+            <pre><code class="language-go">// Create an agent with skills support
+agent := prebuilt.CreateAgent(
+    model,
+    tools,
+    prebuilt.WithSkills(skillsConfig), // Enable skills support
+)
+
+// The agent can automatically discover and load appropriate skills based on user requests
+res, err := agent.Invoke(ctx, map[string]any{
+    "messages": []string{"Use the calculator skill to help me calculate 123 * 456"},
+})</code></pre>
+
+            <p>See the <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/dynamic_skill_agent" target="_blank">dynamic_skill_agent example</a> for detailed usage.</p>
+
             <h2>3. Supervisor</h2>
 
             <h3>Background & Functionality</h3>

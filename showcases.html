@@ -212,6 +212,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Trading Agents -->
+                <div class="showcase-card">
+                    <div class="showcase-content">
+                        <div class="badge">金融 AI</div>
+                        <h3 class="showcase-title"><i class="fas fa-chart-line"></i> Trading Agents</h3>
+                        <p class="showcase-desc">
+                            一个基于多代理 LLM 的金融交易框架，模拟专业交易公司的协作模式。通过基本面分析师、情绪分析师、新闻分析师、技术分析师、研究团队、交易员和风险管理团队的协作，对股票进行全方位分析并做出交易决策。
+                            <br><br>
+                            <strong>特性：</strong> 实时市场数据集成、后端 API 服务器、命令行界面、Web 仪表板、完善的日志追踪。
+                        </p>
+                        <div class="code-block">
+                            cd showcases/trading_agents
+                            export OPENAI_API_KEY="..."
+                            export ALPHA_VANTAGE_API_KEY="..."
+                            go build -o bin/trading-cli ./cli
+                            ./bin/trading-cli -cmd analyze -symbol AAPL</div>
+                        <div class="showcase-actions">
+                            <a href="https://github.com/smallnest/langgraphgo/tree/main/showcases/trading_agents"
+                                target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-github"></i> 源码
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

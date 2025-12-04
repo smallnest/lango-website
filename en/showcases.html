@@ -214,6 +214,35 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Trading Agents -->
+                <div class="showcase-card">
+                    <div class="showcase-content">
+                        <div class="badge">Financial AI</div>
+                        <h3 class="showcase-title"><i class="fas fa-chart-line"></i> Trading Agents</h3>
+                        <p class="showcase-desc">
+                            A multi-agent LLM-driven financial trading framework that simulates a professional trading firm.
+                            Features specialized agents including fundamental analysts, sentiment analysts, news analysts,
+                            technical analysts, research teams, traders, and risk management teams collaborating to analyze
+                            stocks and make informed trading decisions.
+                            <br><br>
+                            <strong>Features:</strong> Real-time market data integration, Backend API server, CLI interface,
+                            Web dashboard, Comprehensive logging and tracing.
+                        </p>
+                        <div class="code-block">
+                            cd showcases/trading_agents
+                            export OPENAI_API_KEY="..."
+                            export ALPHA_VANTAGE_API_KEY="..."
+                            go build -o bin/trading-cli ./cli
+                            ./bin/trading-cli -cmd analyze -symbol AAPL</div>
+                        <div class="showcase-actions">
+                            <a href="https://github.com/smallnest/langgraphgo/tree/main/showcases/trading_agents"
+                                target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

@@ -198,6 +198,23 @@ res, err := agent.Invoke(ctx, input)</code></pre>
     prebuilt.WithCheckpointer(checkpointer),
 )</code></pre>
 
+            <h3>技能集成 (Skills Integration) <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.4.0</span></h3>
+            <p>从 v0.4.0 开始，<code>CreateAgent</code> 支持动态技能加载。技能是可以按需加载和执行的功能模块，支持 Claude Skills 和其他技能系统。</p>
+
+            <pre><code class="language-go">// 创建支持技能的代理
+agent := prebuilt.CreateAgent(
+    model,
+    tools,
+    prebuilt.WithSkills(skillsConfig), // 启用技能支持
+)
+
+// 代理可以根据用户请求自动发现和加载相应技能
+res, err := agent.Invoke(ctx, map[string]any{
+    "messages": []string{"使用计算器技能帮我计算 123 * 456"},
+})</code></pre>
+
+            <p>查看 <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/dynamic_skill_agent" target="_blank">dynamic_skill_agent 示例</a> 了解详细用法。</p>
+
             <h2>3. Supervisor (监督者)</h2>
 
             <h3>背景与功能</h3>
