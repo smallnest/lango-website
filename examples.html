@@ -80,7 +80,7 @@
         <section class="features">
             <div class="section-title">
                 <h2>示例</h2>
-                <p style="color: var(--text-secondary);">探索 40+ 个代码示例，涵盖从基础到高级的各种场景。</p>
+                <p style="color: var(--text-secondary);">探索 70+ 个代码示例，涵盖从基础到高级的各种场景。</p>
             </div>
 
             <!-- 基本概念 -->
@@ -108,6 +108,12 @@
                     target="_blank" class="card">
                     <h3>条件边</h3>
                     <p>使用条件边实现更复杂的控制流逻辑。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/langchain_example" target="_blank"
+                    class="card">
+                    <h3>LangChain 集成</h3>
+                    <p>展示如何使用 LangChain 的工具和模型。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
             </div>
@@ -139,10 +145,16 @@
                     <p>使用结构化 Schema 和 Reducer 管理复杂的状态更新。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/subgraphs" target="_blank"
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/subgraph" target="_blank"
                     class="card">
                     <h3>子图</h3>
                     <p>在图中嵌套其他图，实现模块化和复用。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/subgraphs" target="_blank"
+                    class="card">
+                    <h3>多子图</h3>
+                    <p>管理多个子图的组合和嵌套。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
                 <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/streaming_modes" target="_blank"
@@ -175,33 +187,45 @@
                     <p>向图添加事件监听器以进行监控或日志记录。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/streaming_pipeline" target="_blank"
+                    class="card">
+                    <h3>流式管道</h3>
+                    <p>构建实时流式数据处理管道。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/logger" target="_blank"
+                    class="card">
+                    <h3>日志记录</h3>
+                    <p>记录图执行事件和状态变化。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/context_store" target="_blank"
+                    class="card">
+                    <h3>上下文存储</h3>
+                    <p>使用外部存储管理上下文。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
             </div>
 
             <!-- 持久化 -->
             <h3 class="category-title">持久化 (Checkpointing)</h3>
             <div class="grid">
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing" target="_blank"
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_basic" target="_blank"
                     class="card">
                     <h3>内存 Checkpoint</h3>
                     <p>基础的内存状态保存。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing/postgres"
-                    target="_blank" class="card">
-                    <h3>PostgreSQL</h3>
-                    <p>使用 PostgreSQL 数据库持久化图状态。</p>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/file_checkpointing" target="_blank"
+                    class="card">
+                    <h3>文件检查点</h3>
+                    <p>使用文件系统进行轻量级状态持久化。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing/sqlite"
-                    target="_blank" class="card">
-                    <h3>SQLite</h3>
-                    <p>使用 SQLite 数据库持久化图状态。</p>
-                    <div class="card-link">查看代码 &rarr;</div>
-                </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing/redis"
-                    target="_blank" class="card">
-                    <h3>Redis</h3>
-                    <p>使用 Redis 数据库持久化图状态。</p>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/file_checkpointing_resume" target="_blank"
+                    class="card">
+                    <h3>文件检查点恢复</h3>
+                    <p>演示从文件检查点恢复执行。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
                 <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/durable_execution" target="_blank"
@@ -231,6 +255,12 @@
                     class="card">
                     <h3>动态中断</h3>
                     <p>使用 <code>graph.Interrupt</code> 在节点内部暂停执行。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/payment_interrupt" target="_blank"
+                    class="card">
+                    <h3>支付审批</h3>
+                    <p>支付场景的人工审批工作流示例。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
             </div>
@@ -268,6 +298,30 @@
                     <p>使用切换 (handoffs) 机制的多代理协作模式。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/planning_agent" target="_blank"
+                    class="card">
+                    <h3>规划代理</h3>
+                    <p>根据用户请求动态创建工作流计划的智能代理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/reflection_agent" target="_blank"
+                    class="card">
+                    <h3>反思代理</h3>
+                    <p>通过自我反思迭代改进响应的代理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/mental_loop" target="_blank"
+                    class="card">
+                    <h3>思维循环</h3>
+                    <p>在沙箱中测试行动后再执行的模拟器在回路代理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/reflexive_metacognitive" target="_blank"
+                    class="card">
+                    <h3>反思元认知代理</h3>
+                    <p>具有显式能力模型和自我认知的代理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
             </div>
 
             <!-- Memory -->
@@ -283,6 +337,30 @@
                     class="card">
                     <h3>记忆聊天机器人</h3>
                     <p>集成 Memory 的聊天机器人，支持长对话。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_strategies" target="_blank"
+                    class="card">
+                    <h3>记忆策略</h3>
+                    <p>全面的 9 种记忆管理策略指南。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_agent" target="_blank"
+                    class="card">
+                    <h3>记忆代理</h3>
+                    <p>使用不同记忆策略的实际代理示例。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_graph_integration" target="_blank"
+                    class="card">
+                    <h3>记忆图集成</h3>
+                    <p>LangGraph 工作流中基于状态的内存集成。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory" target="_blank"
+                    class="card">
+                    <h3>Memory</h3>
+                    <p>其他内存示例和用法。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
             </div>
@@ -338,6 +416,122 @@
                     <p>集成 Chroma 向量数据库的 RAG 示例。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_query_rewrite" target="_blank"
+                    class="card">
+                    <h3>RAG 查询重写</h3>
+                    <p>通过查询重写优化检索效果的 RAG。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+            </div>
+
+            <!-- GraphRAG (知识图谱) -->
+            <h3 class="category-title">GraphRAG (知识图谱)</h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_graph" target="_blank" class="card">
+                    <h3>FalkorDB 图谱</h3>
+                    <p>使用 FalkorDB 知识图谱自动提取实体的 RAG。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_simple" target="_blank" class="card">
+                    <h3>FalkorDB 简单版</h3>
+                    <p>使用手动实体/关系创建的简单 FalkorDB RAG。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_fast" target="_blank" class="card">
+                    <h3>FalkorDB 快速版</h3>
+                    <p>优化查询性能的 FalkorDB RAG。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_debug" target="_blank" class="card">
+                    <h3>FalkorDB 调试版</h3>
+                    <p>带详细日志的 FalkorDB RAG 调试版本。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_debug_query" target="_blank" class="card">
+                    <h3>FalkorDB 查询调试</h3>
+                    <p>FalkorDB RAG 查询调试示例。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+            </div>
+
+            <!-- 程序化工具调用 (PTC) -->
+            <h3 class="category-title">程序化工具调用 (PTC) <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.5.0+</span></h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_basic" target="_blank" class="card">
+                    <h3>PTC 基础</h3>
+                    <p>展示 PTC 的基本用法，包含计算器、天气和数据处理工具。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_simple" target="_blank" class="card">
+                    <h3>PTC 简单计算器</h3>
+                    <p>最简单的 PTC 示例，演示基本工具调用。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_expense_analysis" target="_blank" class="card">
+                    <h3>PTC 费用分析</h3>
+                    <p>使用 PTC 进行复杂的费用数据分析示例。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_goskills" target="_blank" class="card">
+                    <h3>PTC + GoSkills</h3>
+                    <p>PTC 与 GoSkills 本地工具执行集成。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+            </div>
+
+            <!-- 高级推理模式 -->
+            <h3 class="category-title">高级推理模式</h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/tree_of_thoughts" target="_blank" class="card">
+                    <h3>思维树 (Tree of Thoughts) <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+                    <p>使用搜索树进行高级推理，探索多种解题路径。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/pev_agent" target="_blank" class="card">
+                    <h3>PEV Agent <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+                    <p>问题-证据-验证代理，结构化问题求解与证据收集。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+            </div>
+
+            <!-- 聊天代理 -->
+            <h3 class="category-title">聊天代理 <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/chat_agent" target="_blank" class="card">
+                    <h3>多轮对话代理</h3>
+                    <p>支持会话历史跟踪和内存管理的聊天机器人。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/chat_agent_async" target="_blank" class="card">
+                    <h3>异步流式聊天</h3>
+                    <p>实时流式响应的异步聊天代理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/chat_agent_dynamic_tools" target="_blank" class="card">
+                    <h3>动态工具聊天</h3>
+                    <p>支持运行时动态添加/删除工具的聊天代理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+            </div>
+
+            <!-- 泛型支持 -->
+            <h3 class="category-title">泛型支持 <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/generic_state_graph" target="_blank" class="card">
+                    <h3>泛型状态图</h3>
+                    <p>使用泛型实现类型安全的状态管理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/generic_state_graph_listenable" target="_blank" class="card">
+                    <h3>可监听泛型状态图</h3>
+                    <p>支持事件监听的泛型状态图实现。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/generic_state_graph_react_agent" target="_blank" class="card">
+                    <h3>泛型 ReAct 代理</h3>
+                    <p>使用泛型实现的类型安全 ReAct 代理。</p>
+                    <div class="card-link">查看代码 &rarr;</div>
+                </a>
             </div>
 
             <!-- 其他 -->
@@ -347,12 +541,6 @@
                     class="card">
                     <h3>可视化</h3>
                     <p>生成图的 Mermaid、DOT 和 ASCII 图表。</p>
-                    <div class="card-link">查看代码 &rarr;</div>
-                </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/langchain_example" target="_blank"
-                    class="card">
-                    <h3>LangChain 集成</h3>
-                    <p>展示如何使用 LangChain 的工具和模型。</p>
                     <div class="card-link">查看代码 &rarr;</div>
                 </a>
                 <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/mcp_agent" target="_blank"

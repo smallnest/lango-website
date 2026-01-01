@@ -77,7 +77,7 @@
         <section class="features">
             <div class="section-title">
                 <h2>Examples</h2>
-                <p style="color: var(--text-secondary);">Explore 40+ code examples covering various scenarios from basic
+                <p style="color: var(--text-secondary);">Explore 70+ code examples covering various scenarios from basic
                     to advanced.</p>
             </div>
 
@@ -106,6 +106,12 @@
                     target="_blank" class="card">
                     <h3>Conditional Edges</h3>
                     <p>Use conditional edges to implement more complex control flow logic.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/langchain_example" target="_blank"
+                    class="card">
+                    <h3>LangChain Integration</h3>
+                    <p>Demonstrates how to use LangChain tools and models.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
             </div>
@@ -137,10 +143,16 @@
                     <p>Manage complex state updates using structured Schema and Reducers.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/subgraphs" target="_blank"
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/subgraph" target="_blank"
                     class="card">
                     <h3>Subgraphs</h3>
                     <p>Nest other graphs within a graph for modularity and reuse.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/subgraphs" target="_blank"
+                    class="card">
+                    <h3>Multiple Subgraphs</h3>
+                    <p>Managing multiple subgraph compositions.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
                 <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/streaming_modes" target="_blank"
@@ -173,33 +185,45 @@
                     <p>Add event listeners to the graph for monitoring or logging.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/streaming_pipeline" target="_blank"
+                    class="card">
+                    <h3>Streaming Pipeline</h3>
+                    <p>Build real-time streaming data processing pipelines.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/logger" target="_blank"
+                    class="card">
+                    <h3>Logger</h3>
+                    <p>Log graph execution events and state changes.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/context_store" target="_blank"
+                    class="card">
+                    <h3>Context Store</h3>
+                    <p>Manage context with external stores.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
             </div>
 
             <!-- Checkpointing -->
             <h3 class="category-title">Checkpointing</h3>
             <div class="grid">
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing" target="_blank"
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_basic" target="_blank"
                     class="card">
                     <h3>Memory Checkpoint</h3>
                     <p>Basic in-memory state preservation.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing/postgres"
-                    target="_blank" class="card">
-                    <h3>PostgreSQL</h3>
-                    <p>Persist graph state using PostgreSQL database.</p>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/file_checkpointing" target="_blank"
+                    class="card">
+                    <h3>File Checkpointing</h3>
+                    <p>Lightweight state persistence using file system.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing/sqlite"
-                    target="_blank" class="card">
-                    <h3>SQLite</h3>
-                    <p>Persist graph state using SQLite database.</p>
-                    <div class="card-link">View Code &rarr;</div>
-                </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/checkpointing/redis"
-                    target="_blank" class="card">
-                    <h3>Redis</h3>
-                    <p>Persist graph state using Redis database.</p>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/file_checkpointing_resume" target="_blank"
+                    class="card">
+                    <h3>File Checkpoint Resume</h3>
+                    <p>Demonstrates resuming execution from file checkpoints.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
                 <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/durable_execution" target="_blank"
@@ -229,6 +253,12 @@
                     class="card">
                     <h3>Dynamic Interrupt</h3>
                     <p>Pause execution within a node using <code>graph.Interrupt</code>.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/payment_interrupt" target="_blank"
+                    class="card">
+                    <h3>Payment Interrupt</h3>
+                    <p>Human approval workflow example for payment scenarios.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
             </div>
@@ -267,6 +297,30 @@
                     <p>Multi-agent collaboration pattern using handoffs.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/planning_agent" target="_blank"
+                    class="card">
+                    <h3>Planning Agent</h3>
+                    <p>Intelligent agent that creates workflow plans based on user requests.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/reflection_agent" target="_blank"
+                    class="card">
+                    <h3>Reflection Agent</h3>
+                    <p>Iterative improvement agent that refines responses through self-reflection.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/mental_loop" target="_blank"
+                    class="card">
+                    <h3>Mental Loop</h3>
+                    <p>Simulator-in-the-loop agent that tests actions in a sandbox before execution.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/reflexive_metacognitive" target="_blank"
+                    class="card">
+                    <h3>Reflexive Metacognitive Agent</h3>
+                    <p>Self-aware agent with explicit self-model of capabilities.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
             </div>
 
             <!-- Memory -->
@@ -282,6 +336,30 @@
                     class="card">
                     <h3>Memory Chatbot</h3>
                     <p>Chatbot integrated with Memory, supporting long conversations.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_strategies" target="_blank"
+                    class="card">
+                    <h3>Memory Strategies</h3>
+                    <p>Comprehensive guide to all 9 memory management strategies.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_agent" target="_blank"
+                    class="card">
+                    <h3>Memory Agent</h3>
+                    <p>Real-world agents using different memory strategies.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory_graph_integration" target="_blank"
+                    class="card">
+                    <h3>Memory Graph Integration</h3>
+                    <p>State-based memory integration in LangGraph workflows.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/memory" target="_blank"
+                    class="card">
+                    <h3>Memory</h3>
+                    <p>Additional memory examples and usage.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
             </div>
@@ -337,6 +415,122 @@
                     <p>RAG example integrating Chroma vector database.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_query_rewrite" target="_blank"
+                    class="card">
+                    <h3>RAG Query Rewrite</h3>
+                    <p>RAG with query rewriting for better retrieval.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+            </div>
+
+            <!-- GraphRAG (Knowledge Graph) -->
+            <h3 class="category-title">GraphRAG (Knowledge Graph)</h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_graph" target="_blank" class="card">
+                    <h3>FalkorDB Graph</h3>
+                    <p>RAG using FalkorDB knowledge graph with automatic entity extraction.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_simple" target="_blank" class="card">
+                    <h3>FalkorDB Simple</h3>
+                    <p>Simple RAG with FalkorDB using manual entity/relationship creation.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_fast" target="_blank" class="card">
+                    <h3>FalkorDB Fast</h3>
+                    <p>Optimized RAG with FalkorDB for fast queries.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_debug" target="_blank" class="card">
+                    <h3>FalkorDB Debug</h3>
+                    <p>Debug version of FalkorDB RAG with detailed logging.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/rag_falkordb_debug_query" target="_blank" class="card">
+                    <h3>FalkorDB Debug Query</h3>
+                    <p>Query debugging for FalkorDB RAG.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+            </div>
+
+            <!-- Programmatic Tool Calling (PTC) -->
+            <h3 class="category-title">Programmatic Tool Calling (PTC) <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.5.0+</span></h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_basic" target="_blank" class="card">
+                    <h3>PTC Basic</h3>
+                    <p>Demonstrates basic PTC usage with calculator, weather, and data processing tools.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_simple" target="_blank" class="card">
+                    <h3>PTC Simple Calculator</h3>
+                    <p>Simplest PTC example demonstrating basic tool calling.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_expense_analysis" target="_blank" class="card">
+                    <h3>PTC Expense Analysis</h3>
+                    <p>Complex expense data analysis example using PTC.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/ptc_goskills" target="_blank" class="card">
+                    <h3>PTC + GoSkills</h3>
+                    <p>Integration of PTC with GoSkills for local tool execution.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+            </div>
+
+            <!-- Advanced Reasoning Patterns -->
+            <h3 class="category-title">Advanced Reasoning Patterns</h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/tree_of_thoughts" target="_blank" class="card">
+                    <h3>Tree of Thoughts <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+                    <p>Advanced reasoning using search trees to explore multiple problem-solving paths.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/pev_agent" target="_blank" class="card">
+                    <h3>PEV Agent <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+                    <p>Problem-Evidence-Validation agent for structured problem-solving and evidence collection.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+            </div>
+
+            <!-- Chat Agents -->
+            <h3 class="category-title">Chat Agents <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/chat_agent" target="_blank" class="card">
+                    <h3>Multi-turn Chat Agent</h3>
+                    <p>Chatbot with conversation history tracking and memory management.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/chat_agent_async" target="_blank" class="card">
+                    <h3>Async Streaming Chat</h3>
+                    <p>Async chat agent with real-time streaming responses.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/chat_agent_dynamic_tools" target="_blank" class="card">
+                    <h3>Dynamic Tools Chat</h3>
+                    <p>Chat agent supporting runtime dynamic tool addition/removal.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+            </div>
+
+            <!-- Generics Support -->
+            <h3 class="category-title">Generics Support <span style="background: #10b981; color: white; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">v0.6.0</span></h3>
+            <div class="grid">
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/generic_state_graph" target="_blank" class="card">
+                    <h3>Generic StateGraph</h3>
+                    <p>Type-safe state management using generics.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/generic_state_graph_listenable" target="_blank" class="card">
+                    <h3>Listenable Generic StateGraph</h3>
+                    <p>Generic state graph implementation with event listening support.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
+                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/generic_state_graph_react_agent" target="_blank" class="card">
+                    <h3>Generic ReAct Agent</h3>
+                    <p>Type-safe ReAct agent implementation using generics.</p>
+                    <div class="card-link">View Code &rarr;</div>
+                </a>
             </div>
 
             <!-- Others -->
@@ -346,12 +540,6 @@
                     class="card">
                     <h3>Visualization</h3>
                     <p>Generate Mermaid, DOT, and ASCII charts for graphs.</p>
-                    <div class="card-link">View Code &rarr;</div>
-                </a>
-                <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/langchain_example" target="_blank"
-                    class="card">
-                    <h3>LangChain Integration</h3>
-                    <p>Demonstrates how to use LangChain tools and models.</p>
                     <div class="card-link">View Code &rarr;</div>
                 </a>
                 <a href="https://github.com/smallnest/langgraphgo/tree/main/examples/mcp_agent" target="_blank"

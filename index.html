@@ -45,11 +45,57 @@
             <p>基于 LangChainGo 构建，用于开发有状态、多代理 LLM 应用的 Go 语言库。<br>与 LangGraph Python 完全兼容。</p>
             <div class="hero-cta">
                 <a href="docs.html" class="btn btn-primary">开始使用</a>
-                <a href="examples.html" class="btn btn-secondary">查看示例</a>
+                <a href="examples.html" class="btn btn-secondary">查看 70+ 示例</a>
             </div>
         </section>
 
-        <section class="features">
+        <!-- Code Example Section -->
+        <section style="background: #f8fafc; padding: 4rem 1rem;">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="section-title">
+                    <h2>简洁而强大</h2>
+                    <p style="color: var(--text-secondary);">只需几行代码，即可构建强大的 AI Agent</p>
+                </div>
+                <div style="background: var(--bg-primary); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden;">
+                    <div style="background: #2d2d2d; padding: 12px 20px; display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+                        <span style="color: #999; font-size: 0.85rem; margin-left: 12px;">main.go</span>
+                    </div>
+                    <pre style="margin: 0; padding: 24px; overflow-x: auto; background: #1e1e1e;"><code style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 0.9rem; line-height: 1.6; color: #d4d4d4;"><span style="color: #569cd6;">package</span> main
+
+<span style="color: #569cd6;">import</span> (
+    <span style="color: #ce9178;">"context"</span>
+    <span style="color: #ce9178;">"fmt"</span>
+    <span style="color: #ce9178;">"github.com/smallnest/langgraphgo/graph"</span>
+)
+
+<span style="color: #569cd6;">func</span> <span style="color: #dcdcaa;">main</span>() {
+    <span style="color: #608b4e;">// 创建状态图</span>
+    g := graph.<span style="color: #dcdcaa;">NewStateGraph</span>[<span style="color: #4ec9b0;">string</span>]()
+
+    <span style="color: #608b4e;">// 添加处理节点</span>
+    g.<span style="color: #dcdcaa;">AddNode</span>(<span style="color: #ce9178;">"process"</span>, <span style="color: #ce9178;">"process"</span>, <span style="color: #569cd6;">func</span>(ctx context.<span style="color: #4ec9b0;">Context</span>, input <span style="color: #4ec9b0;">string</span>) (<span style="color: #4ec9b0;">string</span>, <span style="color: #4ec9b0;">error</span>) {
+        <span style="color: #569cd6;">return</span> fmt.<span style="color: #dcdcaa;">Sprintf</span>(<span style="color: #ce9178;">"processed_%s"</span>, input), <span style="color: #569cd6;">nil</span>
+    })
+
+    <span style="color: #608b4e;">// 添加边和结束点</span>
+    g.<span style="color: #dcdcaa;">AddEdge</span>(<span style="color: #ce9178;">"process"</span>, graph.<span style="color: #4ec9b0;">END</span>)
+    g.<span style="color: #dcdcaa;">SetEntryPoint</span>(<span style="color: #ce9178;">"process"</span>)
+
+    <span style="color: #608b4e;">// 编译并执行</span>
+    runnable, _ := g.<span style="color: #dcdcaa;">Compile</span>()
+    result, _ := runnable.<span style="color: #dcdcaa;">Invoke</span>(context.<span style="color: #dcdcaa;">Background</span>(), <span style="color: #ce9178;">"input"</span>)
+
+    fmt.<span style="color: #dcdcaa;">Printf</span>(<span style="color: #ce9178;">"Result: %s\n"</span>, result)
+    <span style="color: #608b4e;">// Output: Result: processed_input</span>
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" style="background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);">
             <div class="section-title">
                 <h2>为什么选择 LangGraphGo?</h2>
                 <p style="color: var(--text-secondary);">构建生产级 Agent 所需的一切。</p>
@@ -96,6 +142,34 @@
                     </div>
                     <h3>流式支持</h3>
                     <p>实时流式传输 Agent 输出，实现响应式用户界面。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>泛型类型支持</h3>
+                    <p>类型安全的状态管理，编译时捕获类型错误。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>程序化工具调用 (PTC)</h3>
+                    <p>LLM 直接生成代码调用工具，降低延迟和 token 使用 10 倍。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>MCP 协议支持</h3>
+                    <p>支持模型上下文协议，与 Claude Skills 等生态集成。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>文件检查点</h3>
+                    <p>轻量级文件持久化，无需外部依赖。</p>
                 </div>
             </div>
         </section>
