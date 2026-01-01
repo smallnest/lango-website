@@ -13,6 +13,7 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
     </style>
 </head>
 
@@ -37,10 +38,8 @@
 
     <main>
         <section class="hero">
-
             <h1>Build Stateful, Multi-Agent<br>LLM Applications</h1>
-            <p>Built on LangChainGo, a Go library for developing stateful, multi-actor LLM applications.<br>Fully
-                compatible with LangGraph Python.</p>
+            <p>Built on LangChainGo, a Go library for developing stateful, multi-actor LLM applications.</p>
             <div class="hero-cta">
                 <a href="docs.html" class="btn btn-primary">Get Started</a>
                 <a href="examples.html" class="btn btn-secondary">View 70+ Examples</a>
@@ -100,77 +99,151 @@
             </div>
             <div class="grid">
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-project-diagram"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Graph Workflows</h3>
                     </div>
-                    <h3>Graph Workflows</h3>
                     <p>Define your application flow as a graph of nodes and edges, supporting cycles and complex
                         interactions.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-memory"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <h3>State Management</h3>
                     </div>
-                    <h3>State Management</h3>
                     <p>Built-in persistence layer for saving and restoring state, enabling long conversations and
                         memory.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-users-cog"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Multi-Agent Support</h3>
                     </div>
-                    <h3>Multi-Agent Support</h3>
                     <p>Easily orchestrate multiple agents working together to solve complex tasks.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fab fa-golang"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fab fa-golang"></i>
+                        </div>
+                        <h3>Go Native</h3>
                     </div>
-                    <h3>Go Native</h3>
                     <p>Idiomatic Go implementation leveraging goroutines and channels for high-performance concurrent
                         execution.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-undo"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h3>Time Travel</h3>
                     </div>
-                    <h3>Time Travel</h3>
                     <p>Inspect, modify, and replay agent actions with advanced checkpointing capabilities.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-stream"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-stream"></i>
+                        </div>
+                        <h3>Streaming Support</h3>
                     </div>
-                    <h3>Streaming Support</h3>
                     <p>Stream agent outputs in real-time for responsive user interfaces.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-code"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Generic Types</h3>
                     </div>
-                    <h3>Generic Types</h3>
                     <p>Type-safe state management with compile-time error checking.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-rocket"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Programmatic Tool Calling (PTC)</h3>
                     </div>
-                    <h3>Programmatic Tool Calling (PTC)</h3>
                     <p>LLM generates code to call tools directly, reducing latency and token usage by 10x.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-plug"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>MCP Protocol Support</h3>
                     </div>
-                    <h3>MCP Protocol Support</h3>
                     <p>Supports Model Context Protocol, integrates with Claude Skills ecosystem.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-file-alt"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>File Checkpointing</h3>
                     </div>
-                    <h3>File Checkpointing</h3>
                     <p>Lightweight file-based persistence without external dependencies.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>RAG Support</h3>
+                    </div>
+                    <p>Built-in Retrieval Augmented Generation with vector stores and knowledge graphs (GraphRAG).</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>17+ Agent Architectures</h3>
+                    </div>
+                    <p>ReAct, Supervisor, Planning, Reflection, Tree of Thoughts, and more prebuilt patterns.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>9 Memory Strategies</h3>
+                    </div>
+                    <p>Buffer, sliding window, summarization, hierarchical, graph-based, and more.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Search Tool Integration</h3>
+                    </div>
+                    <p>Built-in support for Tavily, Exa, Brave, and other major search engines.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <h3>Human-in-the-Loop</h3>
+                    </div>
+                    <p>Supports interrupts, approvals, time travel, and other human-in-the-loop workflows.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Subgraph Orchestration</h3>
+                    </div>
+                    <p>Supports graph nesting for modular, multi-level workflow composition.</p>
                 </div>
             </div>
         </section>

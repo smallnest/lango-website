@@ -15,6 +15,7 @@
         body {
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
         }
+
     </style>
 </head>
 
@@ -39,13 +40,14 @@
     </header>
 
     <main>
-        <section class="hero">
-
+        <section class="hero" style="position: relative;">
+            <div style="position: relative; z-index: 1;">
             <h1>构建有状态、多角色的<br>LLM 应用程序</h1>
-            <p>基于 LangChainGo 构建，用于开发有状态、多代理 LLM 应用的 Go 语言库。<br>与 LangGraph Python 完全兼容。</p>
+            <p>基于 LangChainGo 构建，用于开发有状态、多代理 LLM 应用的 Go 语言库。</p>
             <div class="hero-cta">
                 <a href="docs.html" class="btn btn-primary">开始使用</a>
                 <a href="examples.html" class="btn btn-secondary">查看 70+ 示例</a>
+            </div>
             </div>
         </section>
 
@@ -102,74 +104,148 @@
             </div>
             <div class="grid">
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-project-diagram"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>图工作流</h3>
                     </div>
-                    <h3>图工作流</h3>
                     <p>将应用流程定义为节点和边的图，支持循环和复杂交互。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-memory"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <h3>状态管理</h3>
                     </div>
-                    <h3>状态管理</h3>
                     <p>内置持久层用于保存和恢复状态，支持长对话和记忆功能。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-users-cog"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>多 Agent 支持</h3>
                     </div>
-                    <h3>多 Agent 支持</h3>
                     <p>轻松编排多个 Agent 协同工作以解决复杂任务。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fab fa-golang"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fab fa-golang"></i>
+                        </div>
+                        <h3>Go 原生</h3>
                     </div>
-                    <h3>Go 原生</h3>
                     <p>地道的 Go 实现，利用 goroutine 和 channel 实现高性能并发执行。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-undo"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h3>时间旅行</h3>
                     </div>
-                    <h3>时间旅行</h3>
                     <p>通过高级检查点功能检查、修改和重放 Agent 动作。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-stream"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-stream"></i>
+                        </div>
+                        <h3>流式支持</h3>
                     </div>
-                    <h3>流式支持</h3>
                     <p>实时流式传输 Agent 输出，实现响应式用户界面。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-code"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>泛型类型支持</h3>
                     </div>
-                    <h3>泛型类型支持</h3>
                     <p>类型安全的状态管理，编译时捕获类型错误。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-rocket"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>程序化工具调用 (PTC)</h3>
                     </div>
-                    <h3>程序化工具调用 (PTC)</h3>
                     <p>LLM 直接生成代码调用工具，降低延迟和 token 使用 10 倍。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-plug"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>MCP 协议支持</h3>
                     </div>
-                    <h3>MCP 协议支持</h3>
                     <p>支持模型上下文协议，与 Claude Skills 等生态集成。</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-file-alt"></i>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>文件检查点</h3>
                     </div>
-                    <h3>文件检查点</h3>
                     <p>轻量级文件持久化，无需外部依赖。</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>RAG 支持</h3>
+                    </div>
+                    <p>内置检索增强生成，支持向量数据库和知识图谱（GraphRAG）。</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>17+ Agent 架构</h3>
+                    </div>
+                    <p>ReAct、Supervisor、Planning、Reflection、Tree of Thoughts 等多种预构建模式。</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>9 种记忆策略</h3>
+                    </div>
+                    <p>Buffer、滑动窗口、摘要、分层、图结构等多种记忆管理方案。</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>搜索工具集成</h3>
+                    </div>
+                    <p>内置 Tavily、Exa、Brave 等主流搜索引擎工具支持。</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <h3>人机交互</h3>
+                    </div>
+                    <p>支持中断、审批、时间旅行等人在回路的工作模式。</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>子图编排</h3>
+                    </div>
+                    <p>支持图嵌套，构建模块化的多层次工作流。</p>
                 </div>
             </div>
         </section>

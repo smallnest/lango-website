@@ -244,21 +244,28 @@ header {
 }
 
 .card-icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     background: rgba(37, 99, 235, 0.1);
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+    margin: 0;
     font-weight: 600;
 }
 
