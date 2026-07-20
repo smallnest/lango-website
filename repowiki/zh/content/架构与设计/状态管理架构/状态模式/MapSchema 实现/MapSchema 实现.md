@@ -34,12 +34,12 @@
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new) (interface, error)
++Init() interface{}
++Update(current, new) (interface{}, error)
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state) interface
++Cleanup(state) interface{}
 }
 class MapSchema {
 +Reducers map[string]Reducer
@@ -47,13 +47,13 @@ class MapSchema {
 +NewMapSchema() *MapSchema
 +RegisterReducer(key, reducer)
 +RegisterChannel(key, reducer, isEphemeral)
-+Init() interface
-+Update(current, new) (interface, error)
-+Cleanup(state) interface
++Init() interface{}
++Update(current, new) (interface{}, error)
++Cleanup(state) interface{}
 }
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 StateSchema <|-- MapSchema
 CleaningStateSchema <|-- MapSchema
@@ -80,8 +80,8 @@ class MapSchema {
 +map[string]bool EphemeralKeys
 +RegisterReducer(key string, reducer Reducer)
 +RegisterChannel(key string, reducer Reducer, isEphemeral bool)
-+Update(current, new interface) (interface, error)
-+Cleanup(state interface) interface
++Update(current, new interface{}) (interface{}, error)
++Cleanup(state interface{}) interface{}
 }
 note for MapSchema "Reducers : 为每个状态键配置特定的更新逻辑\nEphemeralKeys : 标记需要临时处理的键"
 ```
@@ -200,7 +200,7 @@ MergeResult --> Complete
 classDiagram
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 note for Reducer "current : 当前状态值\nnew : 新状态值\n返回 : 合并后的值\n错误 : 执行失败时返回"
 ```
@@ -272,7 +272,7 @@ HandleErrors --> ReturnResult["返回合并结果"]
 classDiagram
 class EphemeralChannels {
 +EphemeralKeys map[string]bool
-+Cleanup(state) interface
++Cleanup(state) interface{}
 +RegisterChannel(key, reducer, isEphemeral)
 }
 note for EphemeralChannels "isEphemeral=true 时：<br/>1. 添加到 EphemeralKeys<br/>2. 在 Cleanup 时移除<br/>isEphemeral=false 时：<br/>1. 不添加到 EphemeralKeys<br/>2. 保持持久状态"

@@ -43,25 +43,25 @@ StateSchema 架构采用接口驱动的设计模式，提供了灵活而强大�
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state interface) interface
++Cleanup(state interface{}) interface{}
 }
 class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
 +RegisterReducer(key string, reducer Reducer)
 +RegisterChannel(key string, reducer Reducer, isEphemeral bool)
-+Init() interface
-+Update(current, new interface) (interface, error)
-+Cleanup(state interface) interface
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
++Cleanup(state interface{}) interface{}
 }
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 StateSchema <|-- CleaningStateSchema
 StateSchema <|.. MapSchema
@@ -320,7 +320,7 @@ class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
 +RegisterReducer(key, reducer)
-+Update(current, new) interface
++Update(current, new) interface{}
 }
 ProgressListener --> sync.RWMutex : uses
 LoggingListener --> sync.RWMutex : uses

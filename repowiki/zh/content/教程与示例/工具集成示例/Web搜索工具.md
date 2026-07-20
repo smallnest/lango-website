@@ -266,12 +266,12 @@ class ToolExecutor {
 +NewToolExecutor(inputTools []tools.Tool) *ToolExecutor
 +Execute(ctx context.Context, invocation ToolInvocation) (string, error)
 +ExecuteMany(ctx context.Context, invocations []ToolInvocation) ([]string, error)
-+ToolNode(ctx context.Context, state interface) (interface, error)
++ToolNode(ctx context.Context, state interface{}) (interface{}, error)
 }
 class ToolNode {
 +*ToolExecutor Executor
 +NewToolNode(inputTools []tools.Tool) *ToolNode
-+Invoke(ctx context.Context, state interface) (interface, error)
++Invoke(ctx context.Context, state interface{}) (interface{}, error)
 }
 class ToolInvocation {
 +string Tool

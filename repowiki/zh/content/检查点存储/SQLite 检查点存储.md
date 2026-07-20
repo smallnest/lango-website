@@ -258,7 +258,7 @@ participant JSON as "JSON 解析器"
 participant TypeConv as "类型转换器"
 App->>Store : Load(checkpointID)
 Store->>JSON : 反序列化 stateJSON
-JSON-->>Store : map[string]interface
+JSON-->>Store : map[string]interface{}
 Store->>TypeConv : 转换为目标类型
 TypeConv-->>Store : ProcessState
 Store-->>App : 恢复的状态

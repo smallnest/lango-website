@@ -36,17 +36,17 @@
 classDiagram
 class StateMerger {
 <<interface>>
-+func(ctx Context, currentState interface, newStates []interface) (interface, error)
++func(ctx Context, currentState interface{}, newStates []interface{}) (interface{}, error)
 }
 class StateGraph {
 +stateMerger StateMerger
 +SetStateMerger(merger StateMerger)
-+InvokeWithConfig(ctx Context, initialState interface, config *Config) (interface, error)
++InvokeWithConfig(ctx Context, initialState interface{}, config *Config) (interface{}, error)
 }
 class MessageGraph {
 +stateMerger StateMerger
 +SetStateMerger(merger StateMerger)
-+InvokeWithConfig(ctx Context, initialState interface, config *Config) (interface, error)
++InvokeWithConfig(ctx Context, initialState interface{}, config *Config) (interface{}, error)
 }
 StateGraph --> StateMerger : "使用"
 MessageGraph --> StateMerger : "使用"
@@ -274,18 +274,18 @@ conditionalMerger := func(ctx context.Context, current interface{}, newStates []
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 }
 class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
 +RegisterReducer(key string, reducer Reducer)
-+Update(current, new interface) (interface, error)
++Update(current, new interface{}) (interface{}, error)
 }
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 StateSchema <|-- MapSchema
 MapSchema --> Reducer : "使用"

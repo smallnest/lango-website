@@ -76,8 +76,8 @@ class SqliteOptions {
 class Checkpoint {
 +ID string
 +NodeName string
-+State interface
-+Metadata map[string]interface
++State interface{}
++Metadata map[string]interface{}
 +Timestamp time.Time
 +Version int
 }

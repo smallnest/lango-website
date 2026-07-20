@@ -88,10 +88,10 @@ class RedisOptions {
 class Checkpoint {
 +ID string
 +NodeName string
-+State map[string]interface
++State map[string]interface{}
 +Timestamp time.Time
 +Version int
-+Metadata map[string]interface
++Metadata map[string]interface{}
 }
 RedisCheckpointStore --> RedisOptions : "使用"
 RedisCheckpointStore --> Checkpoint : "管理"

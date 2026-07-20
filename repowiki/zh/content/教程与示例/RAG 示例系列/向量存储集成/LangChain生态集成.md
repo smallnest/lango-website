@@ -182,7 +182,7 @@ class Embedder {
 }
 class Document {
 +PageContent string
-+Metadata map[string]interface
++Metadata map[string]interface{}
 }
 class DocumentWithScore {
 +Document Document

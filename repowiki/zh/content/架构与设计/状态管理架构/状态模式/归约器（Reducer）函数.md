@@ -34,20 +34,20 @@
 classDiagram
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 }
 class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
 +RegisterReducer(key string, reducer Reducer)
 +RegisterChannel(key string, reducer Reducer, isEphemeral bool)
-+Update(current, new interface) (interface, error)
-+Cleanup(state interface) interface
++Update(current, new interface{}) (interface{}, error)
++Cleanup(state interface{}) interface{}
 }
 StateSchema <|-- MapSchema : implements
 MapSchema --> Reducer : uses
@@ -139,12 +139,12 @@ SumReducer-->>Client : 返回合并后的值
 ```mermaid
 classDiagram
 class AppendReducerLogic {
-+current interface
-+new interface
-+handleNilCurrent() interface
-+handleExistingCurrent() interface
-+appendSingleElement() interface
-+appendSlice() interface
++current interface{}
++new interface{}
++handleNilCurrent() interface{}
++handleExistingCurrent() interface{}
++appendSingleElement() interface{}
++appendSlice() interface{}
 }
 class ReflectionHandling {
 +reflect.ValueOf(value) reflect.Value
@@ -189,8 +189,8 @@ langgraphgo 支持创建完全自定义的归约器以满足特定业务需求�
 ```mermaid
 classDiagram
 class SetReducer {
-+current interface
-+new interface
++current interface{}
++new interface{}
 +mergeSets() []string
 +removeDuplicates() []string
 }

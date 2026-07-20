@@ -105,7 +105,7 @@ class RAGState {
 +Context string
 +Answer string
 +Citations []string
-+Metadata map[string]interface
++Metadata map[string]interface{}
 }
 RAGPipeline --> RAGConfig : "配置"
 RAGPipeline --> RAGState : "状态管理"

@@ -283,7 +283,7 @@ class ToolExecutor {
 +map[string]tools.Tool tools
 +Execute(ctx, invocation) string, error
 +ExecuteMany(ctx, invocations) []string, error
-+ToolNode(ctx, state) interface, error
++ToolNode(ctx, state) interface{}, error
 }
 class ToolInvocation {
 +string Tool

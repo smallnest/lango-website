@@ -189,7 +189,7 @@ class ToolExecutor {
 +NewToolExecutor(tools) ToolExecutor
 +Execute(ctx, invocation) string,error
 +ExecuteMany(ctx, invocations) []string,error
-+ToolNode(ctx, state) interface,error
++ToolNode(ctx, state) interface{},error
 }
 class ToolInvocation {
 +string Tool

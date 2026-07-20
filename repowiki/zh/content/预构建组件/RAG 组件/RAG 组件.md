@@ -35,7 +35,7 @@ RAG 系统的核心由七个主要接口组成，每个接口都承担特定的�
 classDiagram
 class Document {
 +string PageContent
-+map[string]interface Metadata
++map[string]interface{} Metadata
 }
 class DocumentLoader {
 <<interface>>
@@ -133,7 +133,7 @@ class RAGState {
 +string Context
 +string Answer
 +[]string Citations
-+map[string]interface Metadata
++map[string]interface{} Metadata
 }
 class DocumentWithScore {
 +Document Document

@@ -396,7 +396,7 @@ classDiagram
 class ToolExecutor {
 +Execute(ctx, invocation) string
 +ExecuteMany(ctx, invocations) []string
-+ToolNode(ctx, state) interface
++ToolNode(ctx, state) interface{}
 }
 class ToolInvocation {
 +Tool string

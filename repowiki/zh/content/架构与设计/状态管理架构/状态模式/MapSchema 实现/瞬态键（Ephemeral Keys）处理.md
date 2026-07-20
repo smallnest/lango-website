@@ -83,18 +83,18 @@ class MapSchema {
 +NewMapSchema() *MapSchema
 +RegisterReducer(key string, reducer Reducer)
 +RegisterChannel(key string, reducer Reducer, isEphemeral bool)
-+Init() interface
-+Update(current, new interface) (interface, error)
-+Cleanup(state interface) interface
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
++Cleanup(state interface{}) interface{}
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state interface) interface
++Cleanup(state interface{}) interface{}
 }
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 }
 MapSchema ..|> StateSchema
 MapSchema ..|> CleaningStateSchema
@@ -112,12 +112,12 @@ MapSchema ..|> CleaningStateSchema
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state interface) interface
++Cleanup(state interface{}) interface{}
 }
 CleaningStateSchema --|> StateSchema
 ```

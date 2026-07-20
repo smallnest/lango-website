@@ -169,8 +169,8 @@ func WithCheckpointer(checkpointer graph.CheckpointStore) CreateAgentOption {
 classDiagram
 class StateRunnable {
 +graph *StateGraph
-+Invoke(ctx, state) interface
-+InvokeWithConfig(ctx, state, config) interface
++Invoke(ctx, state) interface{}
++InvokeWithConfig(ctx, state, config) interface{}
 }
 class StateGraph {
 +nodes map[string]Node
@@ -411,15 +411,15 @@ FinalAnswer --> End["结束执行"]
 classDiagram
 class StateManager {
 +RegisterReducer(key, reducer)
-+Update(state, result) interface
-+Cleanup(state) interface
++Update(state, result) interface{}
++Cleanup(state) interface{}
 }
 class AppendReducer {
-+Reduce(oldValue, newValue) interface
++Reduce(oldValue, newValue) interface{}
 }
 class MapSchema {
 +schema map[string]Reducer
-+Update(state, result) interface
++Update(state, result) interface{}
 }
 StateManager --> MapSchema
 MapSchema --> AppendReducer

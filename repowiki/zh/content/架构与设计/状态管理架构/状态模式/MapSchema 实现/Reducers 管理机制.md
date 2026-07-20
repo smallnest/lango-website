@@ -33,25 +33,25 @@
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new) (interface, error)
++Init() interface{}
++Update(current, new) (interface{}, error)
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state) interface
++Cleanup(state) interface{}
 }
 class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
 +RegisterReducer(key, reducer)
 +RegisterChannel(key, reducer, isEphemeral)
-+Init() interface
-+Update(current, new) (interface, error)
-+Cleanup(state) interface
++Init() interface{}
++Update(current, new) (interface{}, error)
++Cleanup(state) interface{}
 }
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 StateSchema <|-- MapSchema
 CleaningStateSchema <|-- MapSchema

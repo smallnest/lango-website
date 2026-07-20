@@ -94,8 +94,8 @@ class MemoryCheckpointStore {
 class Checkpoint {
 +string ID
 +string NodeName
-+interface State
-+map[string]interface Metadata
++interface{} State
++map[string]interface{} Metadata
 +time.Time Timestamp
 +int Version
 }

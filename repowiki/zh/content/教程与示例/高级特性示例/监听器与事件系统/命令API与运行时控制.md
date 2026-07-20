@@ -45,18 +45,18 @@ Command 结构体是 Command API 的核心数据结构，它允许节点函数�
 ```mermaid
 classDiagram
 class Command {
-+interface Update
-+interface Goto
++interface{} Update
++interface{} Goto
 +NewCommand(update, goto) Command
 +IsCommand(obj) bool
 }
 class StateGraph {
-+ExecuteNode(node, state) interface
-+ProcessCommand(cmd, state) interface
++ExecuteNode(node, state) interface{}
++ProcessCommand(cmd, state) interface{}
 +ResolveNextNodes(currentNodes) []string
 }
 class NodeFunction {
-+Execute(ctx, state) (interface, error)
++Execute(ctx, state) (interface{}, error)
 }
 Command --> StateGraph : "被处理"
 NodeFunction --> Command : "返回"

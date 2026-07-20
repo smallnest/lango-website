@@ -105,24 +105,24 @@ BinaryOperatorChannel 支持多种类型的二元操作函数：
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new) (interface, error)
++Init() interface{}
++Update(current, new) (interface{}, error)
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state) interface
++Cleanup(state) interface{}
 }
 class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
 +RegisterReducer(key, reducer)
 +RegisterChannel(key, reducer, isEphemeral)
-+Update(current, new) (interface, error)
-+Cleanup(state) interface
++Update(current, new) (interface{}, error)
++Cleanup(state) interface{}
 }
 class Reducer {
 <<function>>
-+(current, new) (interface, error)
++(current, new) (interface{}, error)
 }
 class StateGraph {
 +nodes map[string]Node
@@ -133,8 +133,8 @@ class StateGraph {
 }
 class StateRunnable {
 +graph *StateGraph
-+Invoke(ctx, initialState) (interface, error)
-+InvokeWithConfig(ctx, initialState, config) (interface, error)
++Invoke(ctx, initialState) (interface{}, error)
++InvokeWithConfig(ctx, initialState, config) (interface{}, error)
 }
 StateSchema <|-- CleaningStateSchema
 StateSchema <|.. MapSchema
@@ -192,13 +192,13 @@ class MapSchema {
 +NewMapSchema() *MapSchema
 +RegisterReducer(key, reducer)
 +RegisterChannel(key, reducer, isEphemeral)
-+Init() interface
-+Update(current, new) (interface, error)
-+Cleanup(state) interface
++Init() interface{}
++Update(current, new) (interface{}, error)
++Cleanup(state) interface{}
 }
 class Reducer {
 <<function>>
-+(current, new) (interface, error)
++(current, new) (interface{}, error)
 }
 MapSchema --> Reducer : 使用多个
 ```
@@ -338,10 +338,10 @@ classDiagram
 class Checkpoint {
 +ID string
 +NodeName string
-+State interface
++State interface{}
 +Timestamp time.Time
 +Version int
-+Metadata map[string]interface
++Metadata map[string]interface{}
 }
 class CheckpointStore {
 <<interface>>

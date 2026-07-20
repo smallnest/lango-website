@@ -43,19 +43,19 @@
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new) interface
++Init() interface{}
++Update(current, new) interface{}
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state) interface
++Cleanup(state) interface{}
 }
 class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
-+Init() interface
-+Update(current, new) interface
-+Cleanup(state) interface
++Init() interface{}
++Update(current, new) interface{}
++Cleanup(state) interface{}
 +RegisterChannel(key, reducer, isEphemeral)
 +RegisterReducer(key, reducer)
 }

@@ -74,11 +74,11 @@ class RAGState {
 +string Context
 +string Answer
 +[]string Citations
-+map[string]interface Metadata
++map[string]interface{} Metadata
 }
 class Document {
 +string PageContent
-+map[string]interface Metadata
++map[string]interface{} Metadata
 }
 class DocumentWithScore {
 +Document Document

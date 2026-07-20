@@ -170,8 +170,8 @@ class RedisCheckpointStore {
 class Checkpoint {
 +ID string
 +NodeName string
-+State interface
-+Metadata map[string]interface
++State interface{}
++Metadata map[string]interface{}
 +Timestamp time.Time
 +Version int
 }
@@ -334,8 +334,8 @@ G --> J["int<br/>DB"]
 G --> K["time.Duration<br/>TTL"]
 L["Checkpoint"] --> M["string<br/>ID"]
 L --> N["string<br/>NodeName"]
-L --> O["interface<br/>State"]
-L --> P["map[string]interface<br/>Metadata"]
+L --> O["interface{}<br/>State"]
+L --> P["map[string]interface{}<br/>Metadata"]
 L --> Q["time.Time<br/>Timestamp"]
 L --> R["int<br/>Version"]
 style A fill:#e8f5e8

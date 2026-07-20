@@ -32,21 +32,21 @@
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 }
 class MapSchema {
 +map[string]Reducer Reducers
 +map[string]bool EphemeralKeys
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 +RegisterReducer(key string, reducer Reducer)
 +RegisterChannel(key string, reducer Reducer, isEphemeral bool)
-+Cleanup(state interface) interface
++Cleanup(state interface{}) interface{}
 }
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 StateSchema <|-- MapSchema : 实现
 MapSchema --> Reducer : 使用
@@ -128,9 +128,9 @@ Method-->>Caller : 返回合并后的状态
 ```mermaid
 flowchart TD
 TypeValidation[类型验证] --> ValidateCurrent{current 类型检查}
-ValidateCurrent --> |失败| CurrentTypeError[返回 "current state is not a map[string]interface" 错误]
+ValidateCurrent --> |失败| CurrentTypeError[返回 "current state is not a map[string]interface{}" 错误]
 ValidateCurrent --> |成功| ValidateNew{new 类型检查}
-ValidateNew --> |失败| NewTypeError[返回 "new state is not a map[string]interface" 错误]
+ValidateNew --> |失败| NewTypeError[返回 "new state is not a map[string]interface{}" 错误]
 ValidateNew --> |成功| ContinueProcessing[继续处理]
 CurrentTypeError --> End([结束])
 NewTypeError --> End
@@ -150,10 +150,10 @@ ContinueProcessing --> End
 ```mermaid
 classDiagram
 class TypeValidation {
-+current interface
-+new interface
-+currMap map[string]interface
-+newMap map[string]interface
++current interface{}
++new interface{}
++currMap map[string]interface{}
++newMap map[string]interface{}
 +validateTypes() error
 }
 class TypeAssertion {

@@ -35,19 +35,19 @@ StateSchema 接口采用简洁而强大的设计，只包含两个核心方法�
 classDiagram
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new interface) (interface, error)
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
 }
 class CleaningStateSchema {
 <<interface>>
-+Cleanup(state interface) interface
++Cleanup(state interface{}) interface{}
 }
 class MapSchema {
 +Reducers map[string]Reducer
 +EphemeralKeys map[string]bool
-+Init() interface
-+Update(current, new interface) (interface, error)
-+Cleanup(state interface) interface
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
++Cleanup(state interface{}) interface{}
 +RegisterReducer(key string, reducer Reducer)
 +RegisterChannel(key string, reducer Reducer, isEphemeral bool)
 }
@@ -84,13 +84,13 @@ class MapSchema {
 +NewMapSchema() *MapSchema
 +RegisterReducer(key string, reducer Reducer)
 +RegisterChannel(key string, reducer Reducer, isEphemeral bool)
-+Init() interface
-+Update(current, new interface) (interface, error)
-+Cleanup(state interface) interface
++Init() interface{}
++Update(current, new interface{}) (interface{}, error)
++Cleanup(state interface{}) interface{}
 }
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 MapSchema --> Reducer : uses
 ```
@@ -201,8 +201,8 @@ class StateGraph {
 }
 class StateRunnable {
 +graph *StateGraph
-+Invoke(ctx, state) (interface, error)
-+InvokeWithConfig(ctx, state, config) (interface, error)
++Invoke(ctx, state) (interface{}, error)
++InvokeWithConfig(ctx, state, config) (interface{}, error)
 }
 StateGraph --> StateSchema : uses
 StateGraph --> StateRunnable : creates
@@ -296,16 +296,16 @@ StateSchema 支持自定义 Reducer 来实现特定的状态更新逻辑。
 classDiagram
 class Reducer {
 <<function>>
-+func(current, new interface) (interface, error)
++func(current, new interface{}) (interface{}, error)
 }
 class SumReducer {
-+SumReducer(current, new) (interface, error)
++SumReducer(current, new) (interface{}, error)
 }
 class AppendReducer {
-+AppendReducer(current, new) (interface, error)
++AppendReducer(current, new) (interface{}, error)
 }
 class OverwriteReducer {
-+OverwriteReducer(current, new) (interface, error)
++OverwriteReducer(current, new) (interface{}, error)
 }
 Reducer <|.. SumReducer
 Reducer <|.. AppendReducer

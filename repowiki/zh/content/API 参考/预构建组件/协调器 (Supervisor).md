@@ -130,10 +130,10 @@ class MapSchema {
 +MergeStates(states)
 }
 class AppendReducer {
-+Reduce(oldValue, newValue) interface
++Reduce(oldValue, newValue) interface{}
 }
 class StateRunnable {
-+Invoke(ctx, state) interface
++Invoke(ctx, state) interface{}
 +Compile() StateRunnable
 }
 StateSchema <|-- MapSchema

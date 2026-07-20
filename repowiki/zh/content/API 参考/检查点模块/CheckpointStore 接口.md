@@ -47,8 +47,8 @@ class CheckpointStore {
 class Checkpoint {
 +string ID
 +string NodeName
-+interface State
-+map[string]interface Metadata
++interface{} State
++map[string]interface{} Metadata
 +time.Time Timestamp
 +int Version
 }
@@ -264,8 +264,8 @@ classDiagram
 class Checkpoint {
 +string ID
 +string NodeName
-+interface State
-+map[string]interface Metadata
++interface{} State
++map[string]interface{} Metadata
 +time.Time Timestamp
 +int Version
 }
@@ -504,17 +504,17 @@ class CustomStore {
 class CheckpointableRunnable {
 -CheckpointStore store
 -CheckpointConfig config
-+Invoke(ctx Context, initialState interface) (interface, error)
-+SaveCheckpoint(ctx Context, nodeName string, state interface) error
++Invoke(ctx Context, initialState interface{}) (interface{}, error)
++SaveCheckpoint(ctx Context, nodeName string, state interface{}) error
 +LoadCheckpoint(ctx Context, checkpointID string) (*Checkpoint, error)
 +ListCheckpoints(ctx Context) ([]*Checkpoint, error)
-+ResumeFromCheckpoint(ctx Context, checkpointID string) (interface, error)
++ResumeFromCheckpoint(ctx Context, checkpointID string) (interface{}, error)
 +ClearCheckpoints(ctx Context) error
 }
 class GraphEngine {
 -CheckpointableRunnable runnable
-+Execute(config Config) (interface, error)
-+Resume(config Config) (interface, error)
++Execute(config Config) (interface{}, error)
++Resume(config Config) (interface{}, error)
 }
 CustomStore ..|> CheckpointStore
 CheckpointableRunnable --> CheckpointStore

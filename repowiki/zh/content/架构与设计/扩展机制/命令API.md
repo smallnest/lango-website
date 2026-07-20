@@ -36,26 +36,26 @@ LangGraphGo的命令API（Command API）是一个强大的动态控制流机制�
 ```mermaid
 classDiagram
 class Command {
-+interface Update
-+interface Goto
++interface{} Update
++interface{} Goto
 +String|[]String NextNodes
 +bool HasUpdate()
 +bool HasGoto()
 }
 class StateSchema {
 <<interface>>
-+Init() interface
-+Update(current, new) interface
++Init() interface{}
++Update(current, new) interface{}
 }
 class MapSchema {
 +map[string]Reducer Reducers
 +map[string]bool EphemeralKeys
 +RegisterReducer(key, reducer)
-+Update(current, new) interface
++Update(current, new) interface{}
 }
 class Reducer {
 <<function>>
-+func(current, new) interface
++func(current, new) interface{}
 }
 Command --> StateSchema : "uses"
 StateSchema <|-- MapSchema : "implements"
